@@ -8,67 +8,154 @@
     <title>ООО "АкваМир" Очистка воды в Самаре. Химический анализ воды.</title>
     <meta name="description"
         content="Продажа и установка фильтров для воды в квартирах и коттеджах, очистка воды из скважин, установки для промышленной очистки воды.">
-
+    <!-- Font Awesome -->
+    <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.css" rel="stylesheet" />
+    <!-- Your custom styles (optional) -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <!-- Start project-->
+    <!-- Start project here-->
 
-    <!-- header -->
-    <header class="header">
-        <!-- header__infoblock -->
-        <section class="header__infoblock">
-            <div class="header__logo">
-                <img class="header__logo--img" src="/media/logo-ru-hd.png" alt="ООО АкваМир">
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+                    aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#"><img class="navbar__logo" height="40" src="/media/logo-ru-hd.png"></a>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                    <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">О нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Наши проекты</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-expanded="false">
+                                Для дома
+                            </a>
+                            <!-- Dropdown menu -->
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Для коттеджа</a></li>
+                                <li><a class="dropdown-item" href="#">Для квартиры</a></li>
+                                <li><a class="dropdown-item" href="#">Бытовые фильтры (Экософт)</a></li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Анализ воды</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-expanded="false">
+                                Для офиса
+                            </a>
+                            <!-- Dropdown menu -->
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Для МКД (Фольмар)</a></li>
+                                <li><a class="dropdown-item" href="#">Для предприятий</a></li>
+                                <li><a class="dropdown-item" href="#">Для Теплоэнергетики</a></li>
+                                <li><a class="dropdown-item" href="#">Малый бизнес (кафе, гостиницы, фитнес)</a></li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Анализ воды</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Контакты</a>
+                        </li>
+                    </ul>
+                    <div class="navbar-text navbar-tel d-flex flex-column">
+                        <a href="tel:+78463103422">+7 (846) 310-34-22</a>
+                        <a href="tel:+79171033310">+7 (917) 10-333-10</a>
+                    </div>
+
+                </div>
             </div>
-            <div class="header__contacts"></div>
-            <div class="header__callback"></div>
-        </section>
+        </nav>
+        <!-- Navbar -->
 
-        <!-- header__menu -->
-        <section class="header__menu menu">
-            <nav class="menu__block">
-                <ul class="menu__list">
-                    <li class="menu__item menu__item--active">О нас</li>
-                    <li class="menu__item">Отзыввы</li>
-                    <li class="menu__item">Гарантии</li>
-                    <li class="menu__item">Физическим лицам</li>
-                    <li class="menu__item">Юридическим лицам</li>                    
-                    <li class="menu__item">Контакты</li>
-                    Для коттеджа
-                    Для квартиры
-                    Для офиса 
-                    Анализ воды
-                    Бытовые фильтры (Экософт)
-                    Для МКД (Фольмар)
-                    Для предприятий
-                    Для Теплоэнергетики
-                    Малый бизнес (кафе, гостиницы, фитнес)
-                </ul>
-
-            </nav>
-
-        </section>
-
-
+        <!-- Background image -->
+        <div class="p-5 text-center bg-image" style="
+                background-image: url('https://mdbootstrap.com/img/new/slides/041.jpg');
+                height: 100vh;
+              ">
+            <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+                <div class="d-flex justify-content-center align-items-center h-100">
+                    <div class="text-white">
+                        <h1 class="mb-3">Heading</h1>
+                        <h4 class="mb-3">Subheading</h4>
+                        <a class="btn btn-outline-light btn-lg" href="#!" role="button">Call to action</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Background image -->
     </header>
+    <main></main>
+    <footer class=" bg-light text-center text-lg-left">
+        <!-- Grid container -->
+        <div class="container  p-4 pb-0">
+            <form action="">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-auto mb-4 mb-md-0">
+                        <p class="pt-2"><strong>Подпишитесь на наши новости</strong></p>
+                    </div>
+                    <!--Grid column-->
 
-    <!-- main -->
-    <main>
+                    <!--Grid column-->
+                    <div class="col-md-5 col-12 mb-4 mb-md-0">
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <input type="email" id="form5Example2" class="form-control" />
+                            <label class="form-label" for="form5Example2">Оставьте свой Email</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
 
-    </main>
+                    <!--Grid column-->
+                    <div class="col-auto mb-4 mb-md-0">
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-primary mb-4">
+                            Подписаться
+                        </button>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </form>
+        </div>
+        <!-- Grid container -->
 
-    <!-- footer -->
-    <footer>
-
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2020 Все права защищены. ООО "АкваМир". Разработано
+            <a class="text-dark" target="_blank" href="http://dotdev.site">dotdev.site</a>
+        </div>
+        <!-- Copyright -->
     </footer>
 
-    <!-- End project-->
-
-    <!-- script -->
-    <script type="text/javascript" src="js/script.js"></script>
-
-</body>
+    <!-- End project here-->
+    <!-- My script -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/script.js">
+    </script>
 
 </html>
