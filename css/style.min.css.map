@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "ACCA,OAAO,CAAC,sGAAI",
+    "sources": [
+        "../scss/style.scss",
+        "../scss/_fonts.scss",
+        "../scss/_color.scss"
+    ],
+    "names": [],
+    "file": "style.min.css"
+}
