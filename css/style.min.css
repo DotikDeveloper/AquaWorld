@@ -121,4 +121,101 @@ header .navbar ul a :hover {
 #carouselExampleSlidesOnly .carousel__inner {
   margin: 25px auto;
 }
+
+.fa-play:before {
+  margin-left: .3rem;
+}
+
+/* Steps */
+.step {
+  list-style: none;
+  margin: 0;
+}
+
+.step-element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem 0;
+}
+
+.step-number {
+  position: relative;
+  width: 7rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  text-align: center;
+}
+
+.step-number .number {
+  color: #bfc5ca;
+  background-color: #eaeff4;
+  font-size: 1.5rem;
+}
+
+.step-number .number {
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+}
+
+.number {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 38px;
+  border-radius: 10rem;
+}
+
+.step-number::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 48px;
+  bottom: -2rem;
+  margin-left: -1px;
+  border-left: 2px dashed #eaeff4;
+}
+
+.step .step-element:last-child .step-number::before {
+  bottom: 1rem;
+}
+
+.conection {
+  height: 100vh;
+  margin-top: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 375px) {
+  .conection {
+    margin-top: 150px;
+    margin-bottom: 150px;
+  }
+}
+
+@media (max-height: 375px) {
+  .conection {
+    margin-top: 250px;
+  }
+}
+
+.conection__title {
+  font-weight: 500;
+  font-style: italic;
+}
 /*# sourceMappingURL=style.min.css.map */
