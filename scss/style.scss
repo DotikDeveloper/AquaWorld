@@ -18,13 +18,16 @@
     }
 }
 
-button.btn {
+button.btn, a.btn {
     font-weight: bold;
+        background-color: $pallete__primary--light;
+        border: 2px solid $pallete__primary--light;
+        color: #fff;
 
-    &:hover {
-        background-color: rgba(255, 255, 255, 0.85);
-        border: 2px solid $pallete__fonts--light;
-    }
+
+        &:hover {
+            opacity: .75;
+        }
 }
 
 
@@ -219,10 +222,6 @@ section.partners {
 
 section.contacts {
     height: 100vh;
-    // margin-top: 90px;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
 
     @media (max-width:375px) {
         margin-top: 150px;
@@ -238,4 +237,18 @@ section.contacts {
         font-weight: 500;
         font-style: italic;
     }
+
+    & button.btn {
+        font-weight: bold;
+        background-color: $pallete__primary--light;
+        border: 2px solid $pallete__primary--light;
+        color: #fff;
+
+
+        &:hover {
+            opacity: .75;
+        }
+    }
+
+
 }
