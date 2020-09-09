@@ -29,46 +29,52 @@ button.btn {
 
 
 //-------------------------header------------------------------//
-header{
+header {
     & .bg-image .text-title {
-        color: #ffffff;    
+        color: #ffffff;
     }
+
     & button.btn.header__btn {
         font-weight: bold;
         font-size: 24px;
-    
+
         &:hover {
-            background-color: rgba(255, 255, 255, 0.35);            
+            background-color: rgba(255, 255, 255, 0.35);
         }
-    
+
     }
-    & .navbar-tel{
+
+    & .navbar-tel {
         font-size: 24px;
-        :hover{
+
+        :hover {
             opacity: .55;
         }
     }
-    & .navbar ul a{
+
+    & .navbar ul a {
         font-size: 18px;
-        :hover{
+
+        :hover {
             color: $pallete__fonts--dark;
-        }        
+        }
     }
 
     @media (max-width:375px) {
         & #intro video {
-            display: none;        
+            display: none;
         }
+
         & .mask {
-            background: linear-gradient( 45deg, rgba(29, 236, 197, 0.7),rgba(91, 14, 214, 0.7) 100%);
+            background: linear-gradient(45deg, rgba(29, 236, 197, 0.7), rgba(91, 14, 214, 0.7) 100%);
         }
-        
+
     }
 
 
-    
 
-} 
+
+}
 
 
 //-------------------------about------------------------------//
@@ -78,20 +84,49 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+
     @media (max-width:375px) {
         margin-top: 150px;
+    }
+
+    @media (max-height:375px) {
+        margin-top: 250px;
     }
 
     // .about__title
 
     &__title {
         font-weight: 500;
-        font-style: italic;    
+        font-style: italic;
     }
 }
 
 //-------------------------partners------------------------------//
 
-#carouselExampleSlidesOnly img{
-    max-height: 90px;
+section.partners {
+    
+    @media (max-width:375px) {
+        margin-top: 250px;
+    }
+
+    @media (max-height:375px) {
+        margin-top: 350px;
+    }
+}
+
+#carouselExampleSlidesOnly {
+    & img {
+        height: 50px;
+
+        @media (max-width:375px) {
+            margin: 15px auto;
+        }
+
+        @media (max-height:375px) {
+            margin: 15px auto;
+        }
+    }
+    & .carousel__inner {
+        margin: 25px auto;
+    }
 }

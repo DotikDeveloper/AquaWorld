@@ -79,12 +79,46 @@ header .navbar ul a :hover {
   }
 }
 
+@media (max-height: 375px) {
+  .about {
+    margin-top: 250px;
+  }
+}
+
 .about__title {
   font-weight: 500;
   font-style: italic;
 }
 
+@media (max-width: 375px) {
+  section.partners {
+    margin-top: 250px;
+  }
+}
+
+@media (max-height: 375px) {
+  section.partners {
+    margin-top: 350px;
+  }
+}
+
 #carouselExampleSlidesOnly img {
-  max-height: 90px;
+  height: 50px;
+}
+
+@media (max-width: 375px) {
+  #carouselExampleSlidesOnly img {
+    margin: 15px auto;
+  }
+}
+
+@media (max-height: 375px) {
+  #carouselExampleSlidesOnly img {
+    margin: 15px auto;
+  }
+}
+
+#carouselExampleSlidesOnly .carousel__inner {
+  margin: 25px auto;
 }
 /*# sourceMappingURL=style.min.css.map */
