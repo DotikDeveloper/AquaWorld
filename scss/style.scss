@@ -216,3 +216,26 @@ section.partners {
     }
 
 }
+
+section.contacts {
+    height: 100vh;
+    // margin-top: 90px;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+
+    @media (max-width:375px) {
+        margin-top: 150px;
+    }
+
+    @media (max-height:375px) {
+        margin-top: 250px;
+    }
+
+    // .about__title
+
+    &__title {
+        font-weight: 500;
+        font-style: italic;
+    }
+}

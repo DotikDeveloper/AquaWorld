@@ -218,4 +218,25 @@ header .navbar ul a :hover {
   font-weight: 500;
   font-style: italic;
 }
+
+section.contacts {
+  height: 100vh;
+}
+
+@media (max-width: 375px) {
+  section.contacts {
+    margin-top: 150px;
+  }
+}
+
+@media (max-height: 375px) {
+  section.contacts {
+    margin-top: 250px;
+  }
+}
+
+section.contacts__title {
+  font-weight: 500;
+  font-style: italic;
+}
 /*# sourceMappingURL=style.min.css.map */
