@@ -7,6 +7,8 @@
 * {
     color: $pallete__fonts;
 
+    font-family: 'Raleway', sans-serif;
+
     &::-moz-selection {
         color: #cccccc;
     }
@@ -55,4 +57,22 @@ header{
 
 } 
 
+
+//-------------------------about------------------------------//
+.about {
+    height: 100vh;
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // .about__title
+
+    &__title {
+        font-weight: 500;
+        font-style: italic;    
+    }
+}
+
+//-------------------------about------------------------------//
 

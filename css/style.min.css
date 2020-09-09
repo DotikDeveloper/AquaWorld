@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,400;0,700;1,500&display=swap");
 * {
   color: #989798;
+  font-family: 'Raleway', sans-serif;
 }
 
 *::-moz-selection {
@@ -47,5 +48,24 @@ header .navbar ul a {
 
 header .navbar ul a :hover {
   color: #858485;
+}
+
+.about {
+  height: 100vh;
+  margin-top: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about__title {
+  font-weight: 500;
+  font-style: italic;
 }
 /*# sourceMappingURL=style.min.css.map */
