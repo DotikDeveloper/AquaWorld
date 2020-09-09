@@ -68,4 +68,8 @@ header .navbar ul a :hover {
   font-weight: 500;
   font-style: italic;
 }
+
+#carouselExampleSlidesOnly img {
+  max-height: 90px;
+}
 /*# sourceMappingURL=style.min.css.map */
