@@ -55,6 +55,19 @@ header{
         }        
     }
 
+    @media (max-width:375px) {
+        & #intro video {
+            display: none;        
+        }
+        & .mask {
+            background: linear-gradient( 45deg, rgba(29, 236, 197, 0.7),rgba(91, 14, 214, 0.7) 100%);
+        }
+        
+    }
+
+
+    
+
 } 
 
 
@@ -65,6 +78,9 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width:375px) {
+        margin-top: 150px;
+    }
 
     // .about__title
 

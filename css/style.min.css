@@ -50,6 +50,15 @@ header .navbar ul a :hover {
   color: #858485;
 }
 
+@media (max-width: 375px) {
+  header #intro video {
+    display: none;
+  }
+  header .mask {
+    background: linear-gradient(45deg, rgba(29, 236, 197, 0.7), rgba(91, 14, 214, 0.7) 100%);
+  }
+}
+
 .about {
   height: 100vh;
   margin-top: 90px;
@@ -62,6 +71,12 @@ header .navbar ul a :hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 375px) {
+  .about {
+    margin-top: 150px;
+  }
 }
 
 .about__title {
