@@ -1,2 +1,51 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,400;0,700;1,500&display=swap");
+* {
+  color: #989798;
+}
+
+*::-moz-selection {
+  color: #cccccc;
+}
+
+*::selection {
+  color: #cccccc;
+}
+
+button.btn {
+  font-weight: bold;
+}
+
+button.btn:hover {
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 2px solid #cccccc;
+}
+
+header .bg-image .text-title {
+  color: #ffffff;
+}
+
+header button.btn.header__btn {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+header button.btn.header__btn:hover {
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+header .navbar-tel {
+  font-size: 24px;
+}
+
+header .navbar-tel :hover {
+  opacity: .55;
+}
+
+header .navbar ul a {
+  font-size: 18px;
+}
+
+header .navbar ul a :hover {
+  color: #858485;
+}
 /*# sourceMappingURL=style.min.css.map */

@@ -3,3 +3,56 @@
 @import '_color.scss';
 
 
+//-------------------------basis------------------------------//
+* {
+    color: $pallete__fonts;
+
+    &::-moz-selection {
+        color: #cccccc;
+    }
+
+    &::selection {
+        color: #cccccc;
+    }
+}
+
+button.btn {
+    font-weight: bold;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.85);
+        border: 2px solid $pallete__fonts--light;
+    }
+}
+
+
+//-------------------------header------------------------------//
+header{
+    & .bg-image .text-title {
+        color: #ffffff;    
+    }
+    & button.btn.header__btn {
+        font-weight: bold;
+        font-size: 24px;
+    
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.35);            
+        }
+    
+    }
+    & .navbar-tel{
+        font-size: 24px;
+        :hover{
+            opacity: .55;
+        }
+    }
+    & .navbar ul a{
+        font-size: 18px;
+        :hover{
+            color: $pallete__fonts--dark;
+        }        
+    }
+
+} 
+
+
