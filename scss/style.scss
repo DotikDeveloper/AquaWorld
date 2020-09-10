@@ -104,6 +104,30 @@ header {
     }
 }
 
+
+//-------------------------diretion------------------------------//@at-root
+
+.direction {
+
+    // .direction__row
+
+    &__row {
+    }
+
+    // .direction__item
+
+    &__item {
+        background-image: url(/media/about.jpg);
+        height: 150px;
+        margin: 10px 15px;
+    }
+
+    // .direction__link
+
+    &__link {
+    }
+}
+
 //-------------------------partners------------------------------//
 
 section.partners {

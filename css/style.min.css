@@ -92,6 +92,12 @@ header .navbar ul a :hover {
   font-style: italic;
 }
 
+.direction__item {
+  background-image: url(/media/about.jpg);
+  height: 150px;
+  margin: 10px 15px;
+}
+
 @media (max-width: 375px) {
   section.partners {
     margin-top: 250px;
