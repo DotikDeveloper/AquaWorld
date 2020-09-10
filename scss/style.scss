@@ -142,7 +142,7 @@ header {
         padding: 0;
 
         &--cottage {
-            background-image: url(/media/cottage.jpg);
+            background-image: url(media/cottage.jpg);
 
         }
 
@@ -154,14 +154,14 @@ header {
         }
 
         &--house-hold {
-            background-image: url(/media/house-hold.jpg);
+            background-image: url(./media/house-hold.jpg);
             background-repeat: no-repeat;
             background-size: contain;
             background-position-y: 10px;
         }
 
         &--water-analysis {
-            background-image: url(/media/water-analysis.jpg);
+            background-image: url(../media/water-analysis.jpg);
 
         }
 

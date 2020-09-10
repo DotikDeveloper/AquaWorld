@@ -117,7 +117,7 @@ header .navbar ul a :hover {
 }
 
 .direction__item--cottage {
-  background-image: url(/media/cottage.jpg);
+  background-image: url(media/cottage.jpg);
 }
 
 .direction__item--flat {
@@ -127,14 +127,14 @@ header .navbar ul a :hover {
 }
 
 .direction__item--house-hold {
-  background-image: url(/media/house-hold.jpg);
+  background-image: url(./media/house-hold.jpg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position-y: 10px;
 }
 
 .direction__item--water-analysis {
-  background-image: url(/media/water-analysis.jpg);
+  background-image: url(../media/water-analysis.jpg);
 }
 
 .direction__item--protection-of-engineering-networks {
