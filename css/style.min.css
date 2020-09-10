@@ -12,14 +12,16 @@
   color: #cccccc;
 }
 
-button.btn, a.btn {
+button.btn,
+a.btn {
   font-weight: bold;
   background-color: #a9bfcf;
   border: 2px solid #a9bfcf;
   color: #fff;
 }
 
-button.btn:hover, a.btn:hover {
+button.btn:hover,
+a.btn:hover {
   opacity: .75;
 }
 
@@ -92,10 +94,30 @@ header .navbar ul a :hover {
   font-style: italic;
 }
 
+.direction__title {
+  color: #858485;
+  background-color: rgba(255, 255, 255, 0.85);
+  width: 100%;
+}
+
+.direction__title--general {
+  font-weight: 500;
+  font-style: italic;
+}
+
+.direction__row {
+  margin: 0;
+}
+
 .direction__item {
   background-image: url(/media/about.jpg);
   height: 150px;
-  margin: 10px 15px;
+  margin: 10px;
+  padding: 0;
+}
+
+.direction__link {
+  background-color: rgba(213, 219, 221, 0.35);
 }
 
 @media (max-width: 375px) {

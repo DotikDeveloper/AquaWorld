@@ -18,16 +18,17 @@
     }
 }
 
-button.btn, a.btn {
+button.btn,
+a.btn {
     font-weight: bold;
-        background-color: $pallete__primary--light;
-        border: 2px solid $pallete__primary--light;
-        color: #fff;
+    background-color: $pallete__primary--light;
+    border: 2px solid $pallete__primary--light;
+    color: #fff;
 
 
-        &:hover {
-            opacity: .75;
-        }
+    &:hover {
+        opacity: .75;
+    }
 }
 
 
@@ -109,9 +110,26 @@ header {
 
 .direction {
 
+    // .direction__title
+
+    &__title {
+        color: $pallete__fonts--dark;
+        background-color: rgba(255, 255, 255, 0.85);
+        width: 100%;
+        
+
+
+        &--general {
+            font-weight: 500;
+            font-style: italic;
+        }
+    }
+
     // .direction__row
 
     &__row {
+        margin: 0;
+
     }
 
     // .direction__item
@@ -119,14 +137,20 @@ header {
     &__item {
         background-image: url(/media/about.jpg);
         height: 150px;
-        margin: 10px 15px;
+        margin: 10px;
+        padding: 0;
+
     }
 
     // .direction__link
 
     &__link {
+        background-color: hsla(195, 11%, 85%, 0.35);
     }
 }
+
+
+
 
 //-------------------------partners------------------------------//
 
