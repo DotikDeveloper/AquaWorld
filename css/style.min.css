@@ -145,8 +145,7 @@ header .navbar ul a :hover {
 .direction__item--house-hold {
   background-image: url(../media/house-hold.jpg);
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position-y: 10px;
+  background-position-y: -100px;
 }
 
 .direction__item--water-analysis {
