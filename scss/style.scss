@@ -68,16 +68,10 @@ header {
         & #intro video {
             display: none;
         }
-
         & .mask {
             background: linear-gradient(45deg, rgba(29, 236, 197, 0.7), rgba(91, 14, 214, 0.7) 100%);
         }
-
     }
-
-
-
-
 }
 
 
@@ -90,7 +84,7 @@ header {
     align-items: center;
 
     @media (max-width:375px) {
-        margin-top: 150px;
+        margin-top: 250px;
     }
 
     @media (max-height:375px) {
@@ -109,6 +103,14 @@ header {
 //-------------------------diretion------------------------------//@at-root
 
 .direction {
+    margin-bottom: 150px;
+
+    @media (max-width:375px) {
+        margin-top: 350px;
+    }
+    @media (max-height:375px) {
+        margin-top: 350px;
+    }
 
     // .direction__title
 
