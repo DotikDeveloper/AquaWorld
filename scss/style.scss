@@ -68,6 +68,7 @@ header {
         & #intro video {
             display: none;
         }
+
         & .mask {
             background: linear-gradient(45deg, rgba(29, 236, 197, 0.7), rgba(91, 14, 214, 0.7) 100%);
         }
@@ -108,6 +109,7 @@ header {
     @media (max-width:375px) {
         margin-top: 350px;
     }
+
     @media (max-height:375px) {
         margin-top: 350px;
     }
@@ -358,3 +360,161 @@ section.contacts {
 
 
 }
+
+// ------------------- calc -----------------------//@at-root
+
+.calc {
+
+    // .calc__form
+
+    &__form {}
+
+    // .calc__fieldset
+
+    &__fieldset {
+        &--scheme-selection {}
+
+        &--option-selection {}
+
+        &--yours-contacts {}
+    }
+
+    // .calc__legend
+
+    &__legend {
+        &--scheme-selection {}
+
+        &--option-selection {}
+
+        &--yours-contacts {}
+    }
+
+    // .calc__label
+
+    &__label {
+        &--turbidity {}
+
+        &--chromaticity {}
+
+        &--smell {}
+
+        &--rigidity {}
+
+        &--iron {}
+
+        &--manganese {}
+
+        &--permanganate-oxidizability {}
+
+        &--hydrogen-sulfide {}
+
+        &--ph {}
+
+        &--ammonium {}
+
+        &--nitrates {}
+
+        &--number-of-residents {}
+
+        &--number-of-parsing-points {}
+
+        &--peak-flow {}
+
+        &--name {}
+
+        &--email {}
+
+        &--tel {}
+
+
+
+    }
+
+    // .calc__select
+
+    &__select {
+        &--turbidity {}
+
+        &--chromaticity {}
+
+        &--smell {}
+
+        &--rigidity {}
+
+        &--iron {}
+
+        &--manganese {}
+
+        &--permanganate-oxidizability {}
+
+        &--hydrogen-sulfide {}
+
+        &--ammonium {}
+
+        &--nitrates {}
+
+        &--number-of-parsing-points {}
+
+        &--name {}
+
+        &--email {}
+
+        &--tel {}
+
+    }
+
+    // .calc__option
+
+    &__option {
+        &--turbidity {}
+
+        &--chromaticity {}
+
+        &--smell {}
+
+        &--rigidity {}
+
+        &--iron {}
+
+        &--manganese {}
+
+        &--permanganate-oxidizability {}
+
+        &--hydrogen-sulfide {}
+
+        &--ammonium {}
+
+        &--nitrates {}
+
+        &--number-of-parsing-points {}
+    }
+
+
+
+    // .calc__input
+
+    &__input {
+
+        &--ph {}
+
+        &--mineralization {}
+
+        &--number-of-residents{}
+
+        &--peak-flow{}
+    }
+}
+
+
+.conection {
+
+    // .conection__content
+
+    &__content {}
+
+    // .conection__title
+
+    &__title {}
+}
+
+.form {}

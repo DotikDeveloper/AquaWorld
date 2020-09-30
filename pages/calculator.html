@@ -212,8 +212,8 @@
                                 <label class="calc__label calc__label--ph"  for="ph">рН, ед.рН</label>
                                 <input class="calc__input calc__input--ph" type="text" name="ph" id="ph" placeholder="уровень pH">
                                 
-                                <label class="calc__label calc__label--ph"  for="mineralization">Минерализация, мг/литр</label>
-                                <input class="calc__input calc__input--ph" type="text" name="mineralization" id="mineralization" placeholder="уровень минералицации">
+                                <label class="calc__label calc__label--mineralization"  for="mineralization">Минерализация, мг/литр</label>
+                                <input class="calc__input calc__input--mineralization" type="text" name="mineralization" id="mineralization" placeholder="уровень минералицации">
 
                                 <label class="calc__label calc__label--ammonium"  for="ammonium">Аммоний, мг/литр</label>
                                 <select class="calc__select calc__select--ammonium" name="ammonium">
@@ -232,7 +232,7 @@
                                 <legend class="calc__legend calc__legend--option-selection">Выбор варианта</legend>
                                 
                                 <label class="calc__label calc__label--number-of-residents"  for="number-of-residents">Кол-во проживающих</label>
-                                <input class="calc__select calc__select--number-of-residents" name="number-of-residents" type="text" id="number-of-residents" placeholder="Кол-во проживающих">
+                                <input class="calc__input calc__input--number-of-residents" name="number-of-residents" type="text" id="number-of-residents" placeholder="Кол-во проживающих">
                                 
                                 <label class="calc__label calc__label--number-of-parsing-points"  for="number-of-parsing-points">Кол-во точек разбора</label>
                                 <select class="calc__select calc__select--number-of-parsing-points" name="number-of-parsing-points">
@@ -243,20 +243,20 @@
                                 </select>
                                 
                                 <label class="calc__label calc__label--peak-flow"  for="peak-flow">Пиковый расход, м3/ч</label>
-                                <input class="calc__select calc__select--peak-flow" name="peak-flow" type="text" id="peak-flow" placeholder="Пиковый расход">
+                                <input class="calc__select calc__input--peak-flow" name="peak-flow" type="text" id="peak-flow" placeholder="Пиковый расход">
                             </fieldset>
 
                             <fieldset class="calc__fieldset calc__fieldset--yours-contacts">
                                 <legend class="calc__legend calc__legend--yours-contacts">Ваши контакты</legend>
                                 
                                 <label class="calc__label calc__label--name"  for="name">Имя</label>
-                                <input class="calc__select calc__select--name" name="text" type="name" id="name">
+                                <input class="calc__input calc__select--name" name="text" type="name" id="name">
 
                                 <label class="calc__label calc__label--email"  for="email">Ваш email</label>
-                                <input class="calc__select calc__select--email" name="email" type="email" id="email" placeholder="на него пришлем расчет">
+                                <input class="calc__input calc__select--email" name="email" type="email" id="email" placeholder="на него пришлем расчет">
 
                                 <label class="calc__label calc__label--tel"  for="tel">Ваш телефон</label>
-                                <input class="calc__select calc__select--tel" name="tel" type="tel" id="tel" placeholder="+7 _ _ _ - _ _ _ - _ _ - _ _">
+                                <input class="calc__input calc__select--tel" name="tel" type="tel" id="tel" placeholder="+7 _ _ _ - _ _ _ - _ _ - _ _">
                             </fieldset>
 
                             <button type="submit" class="btn btn-danger">Получить расчет на почту</button>
