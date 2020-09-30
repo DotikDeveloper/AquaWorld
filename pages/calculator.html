@@ -139,8 +139,8 @@
     </header>
     <main class="main mt-5 pt-5">
 
-        <!-- steps -->
-        <section class="text-center container my-5 conection h-100">
+        <!-- calc -->
+        <section class="calc text-center container my-5">
 
             <div class="row conection__content">
 
@@ -151,10 +151,116 @@
 
                 <div class="row align-items-center">
 
-                    <!--Grid row-->
+                    <!--calc block one input data-->
                     <div class="row shadow-3-strong rounded p-5">
 
-                        
+                        <form action="" method="post" class="calc__form form">
+                            <fieldset class="calc__fieldset calc__fieldset--scheme-selection">
+                                <legend class="calc__legend calc__legend--scheme-selection">Выбор схемы</legend>
+                                
+                                <label class="calc__label calc__label--turbidity"  for="turbidity">Мутность, ЕМФ</label>
+                                <select class="calc__select calc__select--turbidity" name="turbidity">
+                                    <option class="calc__option calc__option--turbidity" value="value1" selected>0 - 1.5</option>
+                                    <option class="calc__option calc__option--turbidity" value="value2">1.5 - 5</option>
+                                </select>
+
+                                <label class="calc__label calc__label--chromaticity"  for="chromaticity">Цветность, Град</label>
+                                <select class="calc__select calc__select--chromaticity" name="chromaticity">
+                                    <option class="calc__option calc__option--chromaticity" value="value1" selected>0 - 20</option>
+                                    <option class="calc__option calc__option--chromaticity" value="value2">20 - 30</option>
+                                    <option class="calc__option calc__option--chromaticity" value="value3">30 - 50</option>
+                                </select>
+
+                                <label class="calc__label calc__label--smell"  for="smell">Запах, Балл</label>
+                                <select class="calc__select calc__select--smell" name="smell">
+                                    <option class="calc__option calc__option--smell" value="value1" selected>0 - 2</option>
+                                    <option class="calc__option calc__option--smell" value="value2">2 - 4</option>
+                                </select>
+
+                                <label class="calc__label calc__label--rigidity"  for="rigidity">Жесткость, мг-экв./литр</label>
+                                <select class="calc__select calc__select--rigidity" name="rigidity">
+                                    <option class="calc__option calc__option--rigidity" value="value1" selected>0 - 7</option>
+                                    <option class="calc__option calc__option--rigidity" value="value2">7 - 12</option>
+                                    <option class="calc__option calc__option--rigidity" value="value3">12 - 15</option>
+                                    <option class="calc__option calc__option--rigidity" value="value4">15 - 25</option>
+                                </select>
+                                
+                                <label class="calc__label calc__label--iron"  for="iron">Железо, мг/литр</label>
+                                <select class="calc__select calc__select--iron" name="iron">
+                                    <option class="calc__option calc__option--iron" value="value1" selected>0 - 0.3</option>
+                                    <option class="calc__option calc__option--iron" value="value2">0.3 - 10</option>
+                                </select>
+
+                                <label class="calc__label calc__label--manganese"  for="manganese">Марганец, мг/литр</label>
+                                <select class="calc__select calc__select--manganese" name="manganese">
+                                    <option class="calc__option calc__option--manganese" value="value1" selected>0 - 0.1</option>
+                                    <option class="calc__option calc__option--manganese" value="value2">0.1 - 1</option>
+                                </select>
+                                
+                                <label class="calc__label calc__label--permanganate-oxidizability"  for="permanganate-oxidizability">Перманганатная окисляемость, мгO2/литр</label>
+                                <select class="calc__select calc__select--permanganate-oxidizability" name="permanganate-oxidizability">
+                                    <option class="calc__option calc__option--permanganate-oxidizability" value="value1" selected>0 - 5</option>
+                                    <option class="calc__option calc__option--permanganate-oxidizability" value="value2">5 - 7</option>
+                                </select>
+                                
+                                <label class="calc__label calc__label--hydrogen-sulfide"  for="hydrogen-sulfide">Сероводород, мг/литр</label>
+                                <select class="calc__select calc__select--hydrogen-sulfide" name="hydrogen-sulfide">
+                                    <option class="calc__option calc__option--hydrogen-sulfide" value="value1" selected>0 - 2</option>
+                                    <option class="calc__option calc__option--hydrogen-sulfide" value="value2">2 - 4</option>
+                                </select>
+                                
+                                <label class="calc__label calc__label--ph"  for="ph">рН, ед.рН</label>
+                                <input class="calc__input calc__input--ph" type="text" name="ph" id="ph" placeholder="уровень pH">
+                                
+                                <label class="calc__label calc__label--ph"  for="mineralization">Минерализация, мг/литр</label>
+                                <input class="calc__input calc__input--ph" type="text" name="mineralization" id="mineralization" placeholder="уровень минералицации">
+
+                                <label class="calc__label calc__label--ammonium"  for="ammonium">Аммоний, мг/литр</label>
+                                <select class="calc__select calc__select--ammonium" name="ammonium">
+                                    <option class="calc__option calc__option--ammonium" value="value1" selected>0 - 2</option>
+                                    <option class="calc__option calc__option--ammonium" value="value2">2 - 4</option>
+                                </select>
+                                
+                                <label class="calc__label calc__label--nitrates"  for="nitrates">Нитраты, мг/литр</label>
+                                <select class="calc__select calc__select--nitrates" name="nitrates">
+                                    <option class="calc__option calc__option--nitrates" value="value1" selected>0 - 45</option>
+                                    <option class="calc__option calc__option--nitrates" value="value2">45 - 60</option>
+                                </select>                                
+                            </fieldset>
+
+                            <fieldset class="calc__fieldset calc__fieldset--option-selection">
+                                <legend class="calc__legend calc__legend--option-selection">Выбор варианта</legend>
+                                
+                                <label class="calc__label calc__label--number-of-residents"  for="number-of-residents">Кол-во проживающих</label>
+                                <input class="calc__select calc__select--number-of-residents" name="number-of-residents" type="text" id="number-of-residents" placeholder="Кол-во проживающих">
+                                
+                                <label class="calc__label calc__label--number-of-parsing-points"  for="number-of-parsing-points">Кол-во точек разбора</label>
+                                <select class="calc__select calc__select--number-of-parsing-points" name="number-of-parsing-points">
+                                    <option class="calc__option calc__option--number-of-parsing-points" value="value1" selected>до 4</option>
+                                    <option class="calc__option calc__option--number-of-parsing-points" value="value2">4 - 6</option>
+                                    <option class="calc__option calc__option--number-of-parsing-points" value="value3">6 - 8</option>
+                                    <option class="calc__option calc__option--number-of-parsing-points" value="value4">более 8</option>
+                                </select>
+                                
+                                <label class="calc__label calc__label--peak-flow"  for="peak-flow">Пиковый расход, м3/ч</label>
+                                <input class="calc__select calc__select--peak-flow" name="peak-flow" type="text" id="peak-flow" placeholder="Пиковый расход">
+                            </fieldset>
+
+                            <fieldset class="calc__fieldset calc__fieldset--yours-contacts">
+                                <legend class="calc__legend calc__legend--yours-contacts">Ваши контакты</legend>
+                                
+                                <label class="calc__label calc__label--name"  for="name">Имя</label>
+                                <input class="calc__select calc__select--name" name="text" type="name" id="name">
+
+                                <label class="calc__label calc__label--email"  for="email">Ваш email</label>
+                                <input class="calc__select calc__select--email" name="email" type="email" id="email" placeholder="на него пришлем расчет">
+
+                                <label class="calc__label calc__label--tel"  for="tel">Ваш телефон</label>
+                                <input class="calc__select calc__select--tel" name="tel" type="tel" id="tel" placeholder="+7 _ _ _ - _ _ _ - _ _ - _ _">
+                            </fieldset>
+
+                            <button type="submit" class="btn btn-danger">Получить расчет на почту</button>
+                        </form>
 
                     </div>
                     <!--Grid row-->
