@@ -342,4 +342,10 @@ section.contacts button.btn {
 section.contacts button.btn:hover {
   opacity: .75;
 }
+
+.calc__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 /*# sourceMappingURL=style.min.css.map */

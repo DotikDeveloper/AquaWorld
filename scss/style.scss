@@ -367,7 +367,9 @@ section.contacts {
 
     // .calc__form
 
-    &__form {}
+    &__form {
+        display: flex;
+    }
 
     // .calc__fieldset
 
@@ -516,5 +518,3 @@ section.contacts {
 
     &__title {}
 }
-
-.form {}
