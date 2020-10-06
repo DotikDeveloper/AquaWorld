@@ -342,8 +342,27 @@ section.contacts button.btn:hover {
   opacity: .75;
 }
 
-.calc__form {
-  display: -ms-grid;
-  display: grid;
+.calc {
+  font-size: 1rem;
+}
+
+.calc__label {
+  text-align: left;
+  color: #858485;
+}
+
+.calc__select, .calc__input {
+  height: 35px;
+  padding: 5px 7px;
+  border: 2px solid #a9bfcf;
+  text-align: right;
+}
+
+.calc__select:hover, .calc__input:hover {
+  border: 2px solid #1b18c0;
+}
+
+.calc__select:focus, .calc__input:focus {
+  border: 2px solid #f80c35;
 }
 /*# sourceMappingURL=style.min.css.map */

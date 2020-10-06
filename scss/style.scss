@@ -364,148 +364,26 @@ section.contacts {
 
 .calc {
 
-    // .calc__form
-
-    &__form {     
-    }
-
-    // .calc__fieldset
-
-    &__fieldset {
-        &--scheme-selection {
-
-        }
-    }
-
-    // .calc__legend
-
-    &__legend {
-    }
-
-    // .calc__label
+    font-size: 1rem;
 
     &__label {
-        &--turbidity {}
-
-        &--chromaticity {}
-
-        &--smell {}
-
-        &--rigidity {}
-
-        &--iron {}
-
-        &--manganese {}
-
-        &--permanganate-oxidizability {}
-
-        &--hydrogen-sulfide {}
-
-        &--ph {}
-
-        &--ammonium {}
-
-        &--nitrates {}
-
-        &--number-of-residents {}
-
-        &--number-of-parsing-points {}
-
-        &--peak-flow {}
-
-        &--name {}
-
-        &--email {}
-
-        &--tel {}
-
-
-
+        text-align: left;
+        color: $pallete__fonts--dark;
     }
 
-    // .calc__select
-
-    &__select {
-        &--turbidity {}
-
-        &--chromaticity {}
-
-        &--smell {}
-
-        &--rigidity {}
-
-        &--iron {}
-
-        &--manganese {}
-
-        &--permanganate-oxidizability {}
-
-        &--hydrogen-sulfide {}
-
-        &--ammonium {}
-
-        &--nitrates {}
-
-        &--number-of-parsing-points {}
-
-        &--name {}
-
-        &--email {}
-
-        &--tel {}
-
-    }
-
-    // .calc__option
-
-    &__option {
-        &--turbidity {}
-
-        &--chromaticity {}
-
-        &--smell {}
-
-        &--rigidity {}
-
-        &--iron {}
-
-        &--manganese {}
-
-        &--permanganate-oxidizability {}
-
-        &--hydrogen-sulfide {}
-
-        &--ammonium {}
-
-        &--nitrates {}
-
-        &--number-of-parsing-points {}
-    }
-
-
-
-    // .calc__input
-
-    &__input {
-
-        &--ph {}
-
-        &--mineralization {}
-
-        &--number-of-residents{}
-
-        &--peak-flow{}
-    }
+    &__select, &__input{
+        height: 35px;
+        padding: 5px 7px;
+        border: 2px solid $pallete__primary--light;
+        text-align: right;
+        &:hover{
+            border: 2px solid rgb(27, 24, 192);
+        }
+        &:focus{
+            border: 2px solid #f80c35;
+        }
 }
 
-
-.conection {
-
-    // .conection__content
-
-    &__content {}
-
-    // .conection__title
-
-    &__title {}
+   
 }
+

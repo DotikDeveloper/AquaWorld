@@ -152,15 +152,16 @@
                 <div class="row align-items-center">
 
                     <!--calc block one input data-->
-                    <div class="row shadow-3-strong rounded p-5">
+                    <div class="shadow-3-strong rounded p-5">
 
-                        <form action="#" method="post" class="calc__form row ">
+                        <form action="#" method="post" class="calc__form">
 
-                            <div class="row row__calc--1">
+                            <div class="row row__calc row__calc--1 mt-2">
                                 <h3 class="calc__legend calc__legend--scheme-selection col-md-12">Выбор схемы</h3>
                             </div>
-                            <div class="row row__calc--2">
-                                <div class="calc__items col-md-2">
+                            <div class="row row__calc row__calc--2 mt-2">
+                                <div
+                                    class="calc__items col-md-2 text-center d-flex flex-column justify-content-between">
                                     <label class="calc__label calc__label--turbidity" for="turbidity">Мутность,
                                         ЕМФ</label>
                                     <select class="calc__select calc__select--turbidity" name="turbidity">
@@ -171,7 +172,8 @@
                                         </option>
                                     </select>
                                 </div>
-                                <div class="calc__items col-md-2">
+                                <div
+                                    class="calc__items col-md-2 text-center d-flex flex-column justify-content-between">
                                     <label class="calc__label calc__label--chromaticity" for="chromaticity">Цветность,
                                         Град</label>
                                     <select class="calc__select calc__select--chromaticity" name="chromaticity">
@@ -186,8 +188,8 @@
                                         </option>
                                     </select>
                                 </div>
-
-                                <div class="calc__items col-md-2">
+                                <div
+                                    class="calc__items col-md-2 text-center d-flex flex-column justify-content-between">
                                     <label class="calc__label calc__label--smell" for="smell">Запах, Балл</label>
                                     <select class="calc__select calc__select--smell" name="smell">
                                         <option class="calc__option calc__option--smell" value="value1" selected>0 -
@@ -197,8 +199,8 @@
                                         </option>
                                     </select>
                                 </div>
-
-                                <div class="calc__items col-md-2">
+                                <div
+                                    class="calc__items col-md-2 text-center d-flex flex-column justify-content-between">
                                     <label class="calc__label calc__label--rigidity" for="rigidity">Жесткость,
                                         мг-экв./литр</label>
                                     <select class="calc__select calc__select--rigidity" name="rigidity">
@@ -214,9 +216,8 @@
                                         </option>
                                     </select>
                                 </div>
-
-
-                                <div class="calc__items col-md-2">
+                                <div
+                                    class="calc__items col-md-2 text-center d-flex flex-column justify-content-between">
                                     <label class="calc__label calc__label--iron" for="iron">Железо, мг/литр</label>
                                     <select class="calc__select calc__select--iron" name="iron">
                                         <option class="calc__option calc__option--iron" value="value1" selected>0 -
@@ -226,8 +227,8 @@
                                         </option>
                                     </select>
                                 </div>
-
-                                <div class="calc__items col-md-2">
+                                <div
+                                    class="calc__items col-md-2 text-center d-flex flex-column justify-content-between">
                                     <label class="calc__label calc__label--manganese" for="manganese">Марганец,
                                         мг/литр</label>
                                     <select class="calc__select calc__select--manganese" name="manganese">
@@ -239,9 +240,8 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="row row__calc--3">
-
-                                <div class="calc__items col-md-2">
+                            <div class="row row__calc row__calc--3 mt-5">
+                                <div class="calc__items col-md-2 d-flex flex-column justify-content-between">
                                     <label class="calc__label calc__label--permanganate-oxidizability"
                                         for="permanganate-oxidizability">Перманганатная окисляемость,
                                         мгO2/литр</label>
@@ -254,8 +254,7 @@
                                             7</option>
                                     </select>
                                 </div>
-
-                                <div class="calc__items col-md-2">
+                                <div class="calc__items col-md-2 d-flex flex-column justify-content-between">
                                     <label class="calc__label calc__label--hydrogen-sulfide"
                                         for="hydrogen-sulfide">Сероводород,
                                         мг/литр</label>
@@ -268,22 +267,19 @@
                                         </option>
                                     </select>
                                 </div>
-
-                                <div class="calc__items col-md-2">
+                                <div class="calc__items col-md-2 d-flex flex-column justify-content-between">
                                     <label class="calc__label calc__label--ph" for="ph">рН, ед.рН</label>
                                     <input class="calc__input calc__input--ph" type="text" name="ph" id="ph"
                                         placeholder="уровень pH">
                                 </div>
-
-                                <div class="calc__items col-md-2">
+                                <div class="calc__items col-md-2 d-flex flex-column justify-content-between">
                                     <label class="calc__label calc__label--mineralization"
                                         for="mineralization">Минерализация,
                                         мг/литр</label>
                                     <input class="calc__input calc__input--mineralization" type="text"
                                         name="mineralization" id="mineralization" placeholder="уровень минералицации">
                                 </div>
-
-                                <div class="calc__items col-md-2">
+                                <div class="calc__items col-md-2 d-flex flex-column justify-content-between">
                                     <label class="calc__label calc__label--ammonium" for="ammonium">Аммоний,
                                         мг/литр</label>
                                     <select class="calc__select calc__select--ammonium" name="ammonium">
@@ -295,8 +291,7 @@
                                         </option>
                                     </select>
                                 </div>
-
-                                <div class="calc__items col-md-2">
+                                <div class="calc__items col-md-2 d-flex flex-column justify-content-between">
                                     <label class="calc__label calc__label--nitrates" for="nitrates">Нитраты,
                                         мг/литр</label>
                                     <select class="calc__select calc__select--nitrates" name="nitrates">
@@ -309,70 +304,103 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="row row__calc--4">
-                                
-                                <div class="row col-md-6">
-<h3 class="calc__legend calc__legend--option-selection">Выбор варианта</h3>
-                                <div class="calc__items">
-                                    <label class="calc__label calc__label--number-of-residents"
-                                        for="number-of-residents">Кол-во
-                                        проживающих</label>
-                                    <input class="calc__input calc__input--number-of-residents"
-                                        name="number-of-residents" type="text" id="number-of-residents"
-                                        placeholder="Кол-во проживающих">
+                            <div class="row row__calc row__calc--4 mt-5">
+
+                                <div class="row col-md-6 text-left">
+                                    <!-- <h3 class="calc__legend calc__legend--option-selection">Выбор варианта</h3> -->
+
+                                    <div class="row">
+                                        <div class="col-md-1"></div>
+                                        <div
+                                            class="calc__items col-md-8 d-flex justify-content-between align-items-center mb-2">
+                                            <label class="calc__label calc__label--number-of-residents"
+                                                for="number-of-residents">Кол-во
+                                                проживающих</label>
+                                            <input class="calc__input calc__input--number-of-residents"
+                                                name="number-of-residents" type="text" id="number-of-residents"
+                                                placeholder="Кол-во проживающих">
+                                        </div>
+                                        <div class="col-md-1"></div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-1"></div>
+                                        <div
+                                            class="calc__items col-md-8 d-flex justify-content-between align-items-center mb-2">
+                                            <label class="calc__label calc__label--number-of-parsing-points"
+                                                for="number-of-parsing-points">Кол-во точек разбора</label>
+                                            <select class="calc__select calc__select--number-of-parsing-points"
+                                                name="number-of-parsing-points">
+                                                <option class="calc__option calc__option--number-of-parsing-points"
+                                                    value="value1" selected>до 4</option>
+                                                <option class="calc__option calc__option--number-of-parsing-points"
+                                                    value="value2">4
+                                                    - 6</option>
+                                                <option class="calc__option calc__option--number-of-parsing-points"
+                                                    value="value3">6
+                                                    - 8</option>
+                                                <option class="calc__option calc__option--number-of-parsing-points"
+                                                    value="value4">
+                                                    более 8</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-1"></div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-1"></div>
+                                        <div
+                                            class="calc__items col-md-8 d-flex justify-content-between align-items-center mb-2">
+                                            <label class="calc__label calc__label--peak-flow" for="peak-flow">Пиковый
+                                                расход,
+                                                м3/ч</label>
+                                            <input class="calc__select calc__input--peak-flow" name="peak-flow"
+                                                type="text" id="peak-flow" placeholder="Пиковый расход">
+                                        </div>
+                                        <div class="col-md-1"></div>
+                                    </div>
+
                                 </div>
 
-                                <div class="calc__items">
-                                    <label class="calc__label calc__label--number-of-parsing-points"
-                                        for="number-of-parsing-points">Кол-во точек разбора</label>
-                                    <select class="calc__select calc__select--number-of-parsing-points"
-                                        name="number-of-parsing-points">
-                                        <option class="calc__option calc__option--number-of-parsing-points"
-                                            value="value1" selected>до 4</option>
-                                        <option class="calc__option calc__option--number-of-parsing-points"
-                                            value="value2">4
-                                            - 6</option>
-                                        <option class="calc__option calc__option--number-of-parsing-points"
-                                            value="value3">6
-                                            - 8</option>
-                                        <option class="calc__option calc__option--number-of-parsing-points"
-                                            value="value4">
-                                            более 8</option>
-                                    </select>
-                                </div>
+                                <div class="row col-md-6 text-left">
 
-                                <div class="calc__items">
-                                    <label class="calc__label calc__label--peak-flow" for="peak-flow">Пиковый
-                                        расход,
-                                        м3/ч</label>
-                                    <input class="calc__select calc__input--peak-flow" name="peak-flow" type="text"
-                                        id="peak-flow" placeholder="Пиковый расход">
-                                </div>
-                                </div>
+                                    <div class="row">
+                                        <div class="col-md-1"></div>
+                                        <div
+                                            class="calc__items col-md-8 d-flex justify-content-between align-items-center mb-2">
+                                            <label class="calc__label calc__label--name" for="name">Имя</label>
+                                            <input class="calc__input calc__select--name" name="text" type="name"
+                                                id="name">
+                                        </div>
+                                        <div class="col-md-1"></div>
+                                    </div>
 
-                                <div class="row col-md-6">
-<h3 class="calc__legend calc__legend--yours-contacts">Ваши контакты</h3>
+                                    <div class="row">
+                                        <div class="col-md-1"></div>
+                                        <div
+                                            class="calc__items col-md-8 d-flex justify-content-between align-items-center mb-2">
+                                            <label class="calc__label calc__label--email" for="email">Ваш email</label>
+                                            <input class="calc__input calc__select--email" name="email" type="email"
+                                                id="email" placeholder="email@mail.com">
+                                        </div>
+                                        <div class="col-md-1"></div>
+                                    </div>
 
-                                <div class="calc__items">
-                                    <label class="calc__label calc__label--name" for="name">Имя</label>
-                                    <input class="calc__input calc__select--name" name="text" type="name" id="name">
-                                </div>
+                                    <div class="row">
+                                        <div class="col-md-1"></div>
+                                        <div
+                                            class="calc__items col-md-8 d-flex justify-content-between align-items-center mb-2">
+                                            <label class="calc__label calc__label--tel" for="tel">Ваш телефон</label>
+                                            <input class="calc__input calc__select--tel" name="tel" type="tel" id="tel"
+                                                placeholder="+7 _ _ _ - _ _ _ - _ _ - _ _">
+                                        </div>
+                                        <div class="col-md-1"></div>
+                                    </div>
 
-                                <div class="calc__items">
-                                    <label class="calc__label calc__label--email" for="email">Ваш email</label>
-                                    <input class="calc__input calc__select--email" name="email" type="email" id="email"
-                                        placeholder="на него пришлем расчет">
-                                </div>
-
-                                <div class="calc__items">
-                                    <label class="calc__label calc__label--tel" for="tel">Ваш телефон</label>
-                                    <input class="calc__input calc__select--tel" name="tel" type="tel" id="tel"
-                                        placeholder="+7 _ _ _ - _ _ _ - _ _ - _ _">
-                                </div>
                                 </div>
 
                             </div>
-                            <div class="row row__calc--5">
+                            <div class="row row__calc row__calc--5 mt-5">
                                 <button type="submit" class="btn btn-danger">Получить расчет на почту</button>
                             </div>
 
