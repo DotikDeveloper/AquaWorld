@@ -1,5 +1,4 @@
 //-------------------------IMPORT------------------------------//
-@import '_fonts.scss';
 @import '_color.scss';
 
 
@@ -367,28 +366,20 @@ section.contacts {
 
     // .calc__form
 
-    &__form {
-        display: flex;
+    &__form {     
     }
 
     // .calc__fieldset
 
     &__fieldset {
-        &--scheme-selection {}
+        &--scheme-selection {
 
-        &--option-selection {}
-
-        &--yours-contacts {}
+        }
     }
 
     // .calc__legend
 
     &__legend {
-        &--scheme-selection {}
-
-        &--option-selection {}
-
-        &--yours-contacts {}
     }
 
     // .calc__label
