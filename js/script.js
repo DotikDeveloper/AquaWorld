@@ -2,7 +2,7 @@
 
 window.addEventListener("DOMContentLoaded", function () {
 
-    // scroll -----------------------
+    //------------------------scroll-----------------------//
 
     const anchors = document.querySelectorAll('a.scroll-to');
 
@@ -19,6 +19,7 @@ window.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // scroll --------------------------------------------------------
+    //------------------------scroll-end---------------------//
+
 
 });
