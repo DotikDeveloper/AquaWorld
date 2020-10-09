@@ -356,13 +356,16 @@ section.contacts button.btn:hover {
   padding: 5px 7px;
   border: 2px solid #a9bfcf;
   text-align: right;
+  color: #566e8f;
 }
 
 .calc__select:hover, .calc__input:hover {
-  border: 2px solid #1b18c0;
+  -webkit-box-shadow: 0 0 7px 3px #bccdda8a;
+          box-shadow: 0 0 7px 3px #bccdda8a;
+  background-color: #c0d9e71a;
 }
 
 .calc__select:focus, .calc__input:focus {
-  border: 2px solid #f80c35;
+  border: 2px solid #5378928a;
 }
 /*# sourceMappingURL=style.min.css.map */
