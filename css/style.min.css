@@ -29,12 +29,6 @@ a.btn:hover, div.btn:hover {
   display: none;
 }
 
-.show {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 header .bg-image .text-title {
   color: #ffffff;
 }

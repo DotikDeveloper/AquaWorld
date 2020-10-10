@@ -29,16 +29,51 @@ window.addEventListener("DOMContentLoaded", function () {
         calcFormPart2 = document.querySelector('.calc__form--part2'),
         calcForm = document.querySelector('.calc__form');
 
-        btnChangeScheme.addEventListener('click', () => {
-            calcFormPart2.classList.remove('hide');
-            calcFormPart1.classList.add('hide');
-        });
+    const optionData = document.querySelectorAll('.calc__option'),
+        inputData = document.querySelectorAll('.calc__input'),
+        userMail = document.querySelector('#email').value;
 
-        sendScheme.addEventListener('click', () => {
-            calcFormPart2.classList.add('hide');
-            // calcFormPart1.classList.remove('hide');
-            calcForm.innerHTML = '<h3>Расчет отправлен на указанную вами почту: ${user.mail}</h3>' ;
+    //func getData
+
+    function getInputData(selector) {
+        selector.forEach(data => {
+            console.log(data.id, +data.value);
         });
+    }
+
+    function getOptionData(selector) {
+        selector.forEach(data => {
+            if (data.selected === true) {
+                console.log(data.parentNode.id, +data.value);
+            }
+        });
+    }
+
+    btnChangeScheme.addEventListener('click', () => {
+        calcFormPart2.classList.remove('hide');
+        calcFormPart1.classList.add('hide');
+
+        getOptionData(optionData);
+        getInputData(inputData);
+    });
+
+
+
+
+
+    //send offer
+    sendScheme.addEventListener('click', () => {
+        calcFormPart2.classList.add('hide');
+
+        getOptionData(optionData);
+        getInputData(inputData);
+
+        calcForm.innerHTML = `<h3>Расчет отправлен на указанную вами почту: ${userMail}</h3>`;
+
+    });
+
+    //func getData
+
 
 
     //------------------------calc-end---------------------//
