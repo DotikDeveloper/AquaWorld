@@ -156,262 +156,283 @@
 
                         <div class="calc__form">
 
-                            <div class="row row__calc row__calc--1 mt-2">
-                                <h3 class="calc__legend calc__legend--scheme-selection col-md-12">Выбор схемы</h3>
+                            <div class="calc__form--part1 ">
+                                <div class="row row__calc mt-2">
+                                    <h3 class="calc__legend calc__legend--scheme-selection col-md-12">Выбор схемы</h3>
+                                </div>
+                                <div class="row row__calc mt-2">
+                                    <div
+                                        class="calc__items col-md-2 text-center d-flex flex-column justify-content-between">
+                                        <label class="calc__label calc__label--turbidity" for="turbidity">Мутность,
+                                            ЕМФ</label>
+                                        <select class="calc__select calc__select--turbidity" name="turbidity"
+                                            id="turbidity">
+                                            <option class="calc__option calc__option--turbidity" value="1" selected>0 -
+                                                1.5
+                                            </option>
+                                            <option class="calc__option calc__option--turbidity" value="2">1.5 - 5
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div
+                                        class="calc__items col-md-2 text-center d-flex flex-column justify-content-between">
+                                        <label class="calc__label calc__label--chromaticity"
+                                            for="chromaticity">Цветность,
+                                            Град</label>
+                                        <select class="calc__select calc__select--chromaticity" name="chromaticity"
+                                            id="chromaticity">
+                                            <option class="calc__option calc__option--chromaticity" value="1" selected>
+                                                0 -
+                                                20</option>
+                                            <option class="calc__option calc__option--chromaticity" value="2">20 -
+                                                30
+                                            </option>
+                                            <option class="calc__option calc__option--chromaticity" value="3">30 -
+                                                50
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div
+                                        class="calc__items col-md-2 text-center d-flex flex-column justify-content-between">
+                                        <label class="calc__label calc__label--smell" for="smell">Запах, Балл</label>
+                                        <select class="calc__select calc__select--smell" name="smell" id="smell">
+                                            <option class="calc__option calc__option--smell" value="1" selected>0 -
+                                                2
+                                            </option>
+                                            <option class="calc__option calc__option--smell" value="2">2 - 4
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div
+                                        class="calc__items col-md-2 text-center d-flex flex-column justify-content-between">
+                                        <label class="calc__label calc__label--rigidity" for="rigidity">Жесткость,
+                                            мг-экв./литр</label>
+                                        <select class="calc__select calc__select--rigidity" name="rigidity"
+                                            id="rigidity">
+                                            <option class="calc__option calc__option--rigidity" value="1" selected>
+                                                0 -
+                                                7
+                                            </option>
+                                            <option class="calc__option calc__option--rigidity" value="2">7 - 12
+                                            </option>
+                                            <option class="calc__option calc__option--rigidity" value="3">12 - 15
+                                            </option>
+                                            <option class="calc__option calc__option--rigidity" value="4">15 - 25
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div
+                                        class="calc__items col-md-2 text-center d-flex flex-column justify-content-between">
+                                        <label class="calc__label calc__label--iron" for="iron">Железо, мг/литр</label>
+                                        <select class="calc__select calc__select--iron" name="iron" id="iron">
+                                            <option class="calc__option calc__option--iron" value="1" selected>0 -
+                                                0.3
+                                            </option>
+                                            <option class="calc__option calc__option--iron" value="2">0.3 - 10
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div
+                                        class="calc__items col-md-2 text-center d-flex flex-column justify-content-between">
+                                        <label class="calc__label calc__label--manganese" for="manganese">Марганец,
+                                            мг/литр</label>
+                                        <select class="calc__select calc__select--manganese" name="manganese"
+                                            id="manganese">
+                                            <option class="calc__option calc__option--manganese" value="1" selected>0 -
+                                                0.1
+                                            </option>
+                                            <option class="calc__option calc__option--manganese" value="2">0.1 - 1
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row row__calc mt-5">
+                                    <div class="calc__items col-md-2 d-flex flex-column justify-content-between">
+                                        <label class="calc__label calc__label--permanganate-oxidizability"
+                                            for="permanganate">Перманганатная окисляемость,
+                                            мгO2/литр</label>
+                                        <select class="calc__select calc__select--permanganate-oxidizability"
+                                            name="permanganate" id="permanganate">
+                                            <option class="calc__option calc__option--permanganate-oxidizability"
+                                                value="1" selected>0 - 5</option>
+                                            <option class="calc__option calc__option--permanganate-oxidizability"
+                                                value="2">
+                                                5 -
+                                                7</option>
+                                        </select>
+                                    </div>
+                                    <div class="calc__items col-md-2 d-flex flex-column justify-content-between">
+                                        <label class="calc__label calc__label--hydrogen-sulfide"
+                                            for="hydrogen">Сероводород,
+                                            мг/литр</label>
+                                        <select class="calc__select calc__select--hydrogen-sulfide" name="hydrogen"
+                                            id="hydrogen">
+                                            <option class="calc__option calc__option--hydrogen-sulfide" value="1"
+                                                selected>
+                                                0 - 2</option>
+                                            <option class="calc__option calc__option--hydrogen-sulfide" value="2">2
+                                                - 4
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="calc__items col-md-2 d-flex flex-column justify-content-between">
+                                        <label class="calc__label calc__label--ph" for="ph">рН, ед.рН</label>
+                                        <input class="calc__input calc__input--ph" pattern="\d{1,2}\.\d{1,2}"
+                                            type="text" name="ph" id="ph" placeholder="например 7.4 ">
+                                    </div>
+                                    <div class="calc__items col-md-2 d-flex flex-column justify-content-between">
+                                        <label class="calc__label calc__label--mineralization"
+                                            for="mineralization">Минерализация,
+                                            мг/литр</label>
+                                        <input class="calc__input calc__input--mineralization" pattern="\d{1,}\.\d{1,2}"
+                                            type="text" name="mineralization" id="mineralization"
+                                            placeholder="уровень минералицации">
+                                    </div>
+                                    <div class="calc__items col-md-2 d-flex flex-column justify-content-between">
+                                        <label class="calc__label calc__label--ammonium" for="ammonium">Аммоний,
+                                            мг/литр</label>
+                                        <select class="calc__select calc__select--ammonium" name="ammonium"
+                                            id="ammonium">
+                                            <option class="calc__option calc__option--ammonium" value="1" selected>
+                                                0 -
+                                                2
+                                            </option>
+                                            <option class="calc__option calc__option--ammonium" value="2">2 - 4
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="calc__items col-md-2 d-flex flex-column justify-content-between">
+                                        <label class="calc__label calc__label--nitrates" for="nitrates">Нитраты,
+                                            мг/литр</label>
+                                        <select class="calc__select calc__select--nitrates" name="nitrates"
+                                            id="nitrates">
+                                            <option class="calc__option calc__option--nitrates" value="1" selected>
+                                                0 -
+                                                45
+                                            </option>
+                                            <option class="calc__option calc__option--nitrates" value="2">45 - 60
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row row__calc mt-5 ">
+                                    <div id="btnChangeScheme" class="btn">Подобрать оборудование</div>
+                                </div>
                             </div>
-                            <div class="row row__calc row__calc--2 mt-2">
-                                <div
-                                    class="calc__items col-md-2 text-center d-flex flex-column justify-content-between">
-                                    <label class="calc__label calc__label--turbidity" for="turbidity">Мутность,
-                                        ЕМФ</label>
-                                    <select class="calc__select calc__select--turbidity" name="turbidity"
-                                        id="turbidity">
-                                        <option class="calc__option calc__option--turbidity" value="1" selected>0 -
-                                            1.5
-                                        </option>
-                                        <option class="calc__option calc__option--turbidity" value="2">1.5 - 5
-                                        </option>
-                                    </select>
-                                </div>
-                                <div
-                                    class="calc__items col-md-2 text-center d-flex flex-column justify-content-between">
-                                    <label class="calc__label calc__label--chromaticity" for="chromaticity">Цветность,
-                                        Град</label>
-                                    <select class="calc__select calc__select--chromaticity" name="chromaticity"
-                                        id="chromaticity">
-                                        <option class="calc__option calc__option--chromaticity" value="1" selected>
-                                            0 -
-                                            20</option>
-                                        <option class="calc__option calc__option--chromaticity" value="2">20 -
-                                            30
-                                        </option>
-                                        <option class="calc__option calc__option--chromaticity" value="3">30 -
-                                            50
-                                        </option>
-                                    </select>
-                                </div>
-                                <div
-                                    class="calc__items col-md-2 text-center d-flex flex-column justify-content-between">
-                                    <label class="calc__label calc__label--smell" for="smell">Запах, Балл</label>
-                                    <select class="calc__select calc__select--smell" name="smell" id="smell">
-                                        <option class="calc__option calc__option--smell" value="1" selected>0 -
-                                            2
-                                        </option>
-                                        <option class="calc__option calc__option--smell" value="2">2 - 4
-                                        </option>
-                                    </select>
-                                </div>
-                                <div
-                                    class="calc__items col-md-2 text-center d-flex flex-column justify-content-between">
-                                    <label class="calc__label calc__label--rigidity" for="rigidity">Жесткость,
-                                        мг-экв./литр</label>
-                                    <select class="calc__select calc__select--rigidity" name="rigidity" id="rigidity">
-                                        <option class="calc__option calc__option--rigidity" value="1" selected>
-                                            0 -
-                                            7
-                                        </option>
-                                        <option class="calc__option calc__option--rigidity" value="2">7 - 12
-                                        </option>
-                                        <option class="calc__option calc__option--rigidity" value="3">12 - 15
-                                        </option>
-                                        <option class="calc__option calc__option--rigidity" value="4">15 - 25
-                                        </option>
-                                    </select>
-                                </div>
-                                <div
-                                    class="calc__items col-md-2 text-center d-flex flex-column justify-content-between">
-                                    <label class="calc__label calc__label--iron" for="iron">Железо, мг/литр</label>
-                                    <select class="calc__select calc__select--iron" name="iron" id="iron">
-                                        <option class="calc__option calc__option--iron" value="1" selected>0 -
-                                            0.3
-                                        </option>
-                                        <option class="calc__option calc__option--iron" value="2">0.3 - 10
-                                        </option>
-                                    </select>
-                                </div>
-                                <div
-                                    class="calc__items col-md-2 text-center d-flex flex-column justify-content-between">
-                                    <label class="calc__label calc__label--manganese" for="manganese">Марганец,
-                                        мг/литр</label>
-                                    <select class="calc__select calc__select--manganese" name="manganese"
-                                        id="manganese">
-                                        <option class="calc__option calc__option--manganese" value="1" selected>0 -
-                                            0.1
-                                        </option>
-                                        <option class="calc__option calc__option--manganese" value="2">0.1 - 1
-                                        </option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="row row__calc row__calc--3 mt-5">
-                                <div class="calc__items col-md-2 d-flex flex-column justify-content-between">
-                                    <label class="calc__label calc__label--permanganate-oxidizability"
-                                        for="permanganate">Перманганатная окисляемость,
-                                        мгO2/литр</label>
-                                    <select class="calc__select calc__select--permanganate-oxidizability"
-                                        name="permanganate" id="permanganate">
-                                        <option class="calc__option calc__option--permanganate-oxidizability" value="1"
-                                            selected>0 - 5</option>
-                                        <option class="calc__option calc__option--permanganate-oxidizability" value="2">
-                                            5 -
-                                            7</option>
-                                    </select>
-                                </div>
-                                <div class="calc__items col-md-2 d-flex flex-column justify-content-between">
-                                    <label class="calc__label calc__label--hydrogen-sulfide" for="hydrogen">Сероводород,
-                                        мг/литр</label>
-                                    <select class="calc__select calc__select--hydrogen-sulfide" name="hydrogen"
-                                        id="hydrogen">
-                                        <option class="calc__option calc__option--hydrogen-sulfide" value="1" selected>
-                                            0 - 2</option>
-                                        <option class="calc__option calc__option--hydrogen-sulfide" value="2">2
-                                            - 4
-                                        </option>
-                                    </select>
-                                </div>
-                                <div class="calc__items col-md-2 d-flex flex-column justify-content-between">
-                                    <label class="calc__label calc__label--ph" for="ph">рН, ед.рН</label>
-                                    <input class="calc__input calc__input--ph" pattern="\d{1,2}\.\d{1,2}" type="text"
-                                        name="ph" id="ph" placeholder="например 7.4 ">
-                                </div>
-                                <div class="calc__items col-md-2 d-flex flex-column justify-content-between">
-                                    <label class="calc__label calc__label--mineralization"
-                                        for="mineralization">Минерализация,
-                                        мг/литр</label>
-                                    <input class="calc__input calc__input--mineralization" pattern="\d{1,}\.\d{1,2}"
-                                        type="text" name="mineralization" id="mineralization"
-                                        placeholder="уровень минералицации">
-                                </div>
-                                <div class="calc__items col-md-2 d-flex flex-column justify-content-between">
-                                    <label class="calc__label calc__label--ammonium" for="ammonium">Аммоний,
-                                        мг/литр</label>
-                                    <select class="calc__select calc__select--ammonium" name="ammonium" id="ammonium">
-                                        <option class="calc__option calc__option--ammonium" value="1" selected>
-                                            0 -
-                                            2
-                                        </option>
-                                        <option class="calc__option calc__option--ammonium" value="2">2 - 4
-                                        </option>
-                                    </select>
-                                </div>
-                                <div class="calc__items col-md-2 d-flex flex-column justify-content-between">
-                                    <label class="calc__label calc__label--nitrates" for="nitrates">Нитраты,
-                                        мг/литр</label>
-                                    <select class="calc__select calc__select--nitrates" name="nitrates" id="nitrates">
-                                        <option class="calc__option calc__option--nitrates" value="1" selected>
-                                            0 -
-                                            45
-                                        </option>
-                                        <option class="calc__option calc__option--nitrates" value="2">45 - 60
-                                        </option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="row row__calc row__calc--4 mt-5 hide">
+                            <div class="calc__form--part2 ">
+                                <div class="row row__calc mt-5 ">
 
-                                <div class="row col-md-6 text-left">
-                                    <!-- <h3 class="calc__legend calc__legend--option-selection">Выбор варианта</h3> -->
+                                    <div class="row col-md-6 text-left">
+                                        <!-- <h3 class="calc__legend calc__legend--option-selection">Выбор варианта</h3> -->
 
-                                    <div class="row">
-                                        <div class="col-md-1"></div>
-                                        <div
-                                            class="calc__items col-md-10 d-flex justify-content-between align-items-center mb-2">
-                                            <label class="calc__label calc__label--number-of-residents"
-                                                for="residents">Кол-во
-                                                проживающих</label>
-                                            <input class="calc__input calc__input--number-of-residents" name="residents"
-                                                type="text" pattern="\d{1,}" id="residents"
-                                                placeholder="Кол-во проживающих">
+                                        <div class="row">
+                                            <div class="col-md-1"></div>
+                                            <div
+                                                class="calc__items col-md-10 d-flex justify-content-between align-items-center mb-2">
+                                                <label class="calc__label calc__label--number-of-residents"
+                                                    for="residents">Кол-во
+                                                    проживающих</label>
+                                                <input class="calc__input calc__input--number-of-residents"
+                                                    name="residents" type="text" pattern="\d{1,}" id="residents"
+                                                    placeholder="Кол-во проживающих">
+                                            </div>
+                                            <div class="col-md-1"></div>
                                         </div>
-                                        <div class="col-md-1"></div>
+
+                                        <div class="row">
+                                            <div class="col-md-1"></div>
+                                            <div
+                                                class="calc__items col-md-10 d-flex justify-content-between align-items-center mb-2">
+                                                <label class="calc__label calc__label--number-of-parsing-points"
+                                                    for="points">Кол-во точек разбора</label>
+                                                <select class="calc__select calc__select--number-of-parsing-points"
+                                                    name="points" id="points">
+                                                    <option class="calc__option calc__option--number-of-parsing-points"
+                                                        value="1" selected>до 4</option>
+                                                    <option class="calc__option calc__option--number-of-parsing-points"
+                                                        value="2">4
+                                                        - 6</option>
+                                                    <option class="calc__option calc__option--number-of-parsing-points"
+                                                        value="3">6
+                                                        - 8</option>
+                                                    <option class="calc__option calc__option--number-of-parsing-points"
+                                                        value="4">
+                                                        более 8</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-1"></div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-1"></div>
+                                            <div
+                                                class="calc__items col-md-10 d-flex justify-content-between align-items-center mb-2">
+                                                <label class="calc__label calc__label--peak-flow" for="peak">Пиковый
+                                                    расход,
+                                                    м3/ч</label>
+                                                <input class="calc__select calc__input--peak-flow" pattern="\d{1,}"
+                                                    name="peak" id="peak" type="text" placeholder="Пиковый расход">
+                                            </div>
+                                            <div class="col-md-1"></div>
+                                        </div>
+
                                     </div>
 
-                                    <div class="row">
-                                        <div class="col-md-1"></div>
-                                        <div
-                                            class="calc__items col-md-10 d-flex justify-content-between align-items-center mb-2">
-                                            <label class="calc__label calc__label--number-of-parsing-points"
-                                                for="points">Кол-во точек разбора</label>
-                                            <select class="calc__select calc__select--number-of-parsing-points"
-                                                name="points" id="points">
-                                                <option class="calc__option calc__option--number-of-parsing-points"
-                                                    value="1" selected>до 4</option>
-                                                <option class="calc__option calc__option--number-of-parsing-points"
-                                                    value="2">4
-                                                    - 6</option>
-                                                <option class="calc__option calc__option--number-of-parsing-points"
-                                                    value="3">6
-                                                    - 8</option>
-                                                <option class="calc__option calc__option--number-of-parsing-points"
-                                                    value="4">
-                                                    более 8</option>
-                                            </select>
+                                    <div class="row col-md-6 text-left">
+
+                                        <div class="row">
+                                            <div class="col-md-1"></div>
+                                            <div
+                                                class="calc__items col-md-10 d-flex justify-content-between align-items-center mb-2">
+                                                <label class="calc__label calc__label--name" for="name">Имя</label>
+                                                <input class="calc__input calc__select--name" pattern="\D{1,15}"
+                                                    placeholder="Введите имя" name="text" type="name" id="name">
+                                            </div>
+                                            <div class="col-md-1"></div>
                                         </div>
-                                        <div class="col-md-1"></div>
-                                    </div>
 
-                                    <div class="row">
-                                        <div class="col-md-1"></div>
-                                        <div
-                                            class="calc__items col-md-10 d-flex justify-content-between align-items-center mb-2">
-                                            <label class="calc__label calc__label--peak-flow" for="peak">Пиковый
-                                                расход,
-                                                м3/ч</label>
-                                            <input class="calc__select calc__input--peak-flow" pattern="\d{1,}"
-                                                name="peak" id="peak" type="text" placeholder="Пиковый расход">
+                                        <div class="row">
+                                            <div class="col-md-1"></div>
+                                            <div
+                                                class="calc__items col-md-10 d-flex justify-content-between align-items-center mb-2">
+                                                <label class="calc__label calc__label--email" for="email">Ваш
+                                                    email</label>
+                                                <input class="calc__input calc__select--email"
+                                                    pattern="/^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i" name="email"
+                                                    type="email" id="email" placeholder="email@mail.com">
+                                            </div>
+                                            <div class="col-md-1"></div>
                                         </div>
-                                        <div class="col-md-1"></div>
-                                    </div>
 
-                                </div>
+                                        <div class="row">
+                                            <div class="col-md-1"></div>
+                                            <div
+                                                class="calc__items col-md-10 d-flex justify-content-between align-items-center mb-2">
+                                                <label class="calc__label calc__label--tel" for="tel">Ваш
+                                                    телефон</label>
+                                                <input class="calc__input calc__select--tel"
+                                                    pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+                                                    name="tel" type="tel" id="tel" placeholder="+7 000 000 00 00"
+                                                    required>
 
-                                <div class="row col-md-6 text-left">
-
-                                    <div class="row">
-                                        <div class="col-md-1"></div>
-                                        <div
-                                            class="calc__items col-md-10 d-flex justify-content-between align-items-center mb-2">
-                                            <label class="calc__label calc__label--name" for="name">Имя</label>
-                                            <input class="calc__input calc__select--name" pattern="\D{1,15}"
-                                                placeholder="Введите имя" name="text" type="name" id="name">
+                                            </div>
+                                            <div class="col-md-1"></div>
                                         </div>
-                                        <div class="col-md-1"></div>
-                                    </div>
 
-                                    <div class="row">
-                                        <div class="col-md-1"></div>
-                                        <div
-                                            class="calc__items col-md-10 d-flex justify-content-between align-items-center mb-2">
-                                            <label class="calc__label calc__label--email" for="email">Ваш email</label>
-                                            <input class="calc__input calc__select--email"
-                                                pattern="/^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i" name="email"
-                                                type="email" id="email" placeholder="email@mail.com">
-                                        </div>
-                                        <div class="col-md-1"></div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-1"></div>
-                                        <div
-                                            class="calc__items col-md-10 d-flex justify-content-between align-items-center mb-2">
-                                            <label class="calc__label calc__label--tel" for="tel">Ваш телефон</label>
-                                            <input class="calc__input calc__select--tel"
-                                                pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" name="tel"
-                                                type="tel" id="tel" placeholder="+7 000 000 00 00" required>
-
-                                        </div>
-                                        <div class="col-md-1"></div>
                                     </div>
 
                                 </div>
+                                <div class="row row__calc mt-5">
+                                    <div id="sendScheme" class="btn">Отправить на почту</div>
+                                </div>
+                            </div>
 
-                            </div>
-                            <div class="row row__calc row__calc--5 mt-5 show">
-                                <div id="btnChangeScheme" class="btn">Подобрать оборудование</div>
-                            </div>
-                            <div class="row row__calc row__calc--5 mt-5 hide">
-                                <div id="sendScheme" class="btn">Подобрать оборудование</div>
-                            </div>
+
+
+
+
+
+
 
                         </div>
 
