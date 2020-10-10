@@ -12,7 +12,7 @@
 }
 
 button.btn,
-a.btn {
+a.btn, div.btn {
   font-weight: bold;
   background-color: #a9bfcf;
   border: 2px solid #a9bfcf;
@@ -20,8 +20,9 @@ a.btn {
 }
 
 button.btn:hover,
-a.btn:hover {
+a.btn:hover, div.btn:hover {
   opacity: .75;
+  color: #fff;
 }
 
 header .bg-image .text-title {
@@ -366,6 +367,10 @@ section.contacts button.btn:hover {
 }
 
 .calc__select:focus, .calc__input:focus {
+  border: 2px solid #5378928a;
+}
+
+.calc__select:active, .calc__input:active {
   border: 2px solid #5378928a;
 }
 /*# sourceMappingURL=style.min.css.map */

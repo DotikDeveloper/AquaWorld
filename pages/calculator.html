@@ -154,7 +154,7 @@
                     <!--calc block one input data-->
                     <div class="shadow-3-strong rounded p-5">
 
-                        <form action="#" class="calc__form">
+                        <div class="calc__form">
 
                             <div class="row row__calc row__calc--1 mt-2">
                                 <h3 class="calc__legend calc__legend--scheme-selection col-md-12">Выбор схемы</h3>
@@ -383,8 +383,9 @@
                                         <div
                                             class="calc__items col-md-10 d-flex justify-content-between align-items-center mb-2">
                                             <label class="calc__label calc__label--email" for="email">Ваш email</label>
-                                            <input class="calc__input calc__select--email" name="email" type="email"
-                                                id="email" placeholder="email@mail.com">
+                                            <input class="calc__input calc__select--email"
+                                                pattern="/^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i" name="email"
+                                                type="email" id="email" placeholder="email@mail.com">
                                         </div>
                                         <div class="col-md-1"></div>
                                     </div>
@@ -406,11 +407,11 @@
 
                             </div>
                             <div class="row row__calc row__calc--5 mt-5">
-                                <button type="submit" id="calcSubmit" class="btn btn-danger">Получить расчет на
-                                    почту</button>
+                                <div id="calcSubmit" class="btn">Получить расчет на
+                                    почту</div>
                             </div>
 
-                        </form>
+                        </div>
 
                     </div>
                     <!--Grid row-->

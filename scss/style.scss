@@ -18,7 +18,7 @@
 }
 
 button.btn,
-a.btn {
+a.btn, div.btn {
     font-weight: bold;
     background-color: $pallete__primary--light;
     border: 2px solid $pallete__primary--light;
@@ -27,6 +27,7 @@ a.btn {
 
     &:hover {
         opacity: .75;
+        color: #fff;
     }
 }
 
@@ -387,6 +388,9 @@ section.contacts {
         }
 
         &:focus {
+            border: 2px solid #5378928a;
+        }
+        &:active {
             border: 2px solid #5378928a;
         }
     }
