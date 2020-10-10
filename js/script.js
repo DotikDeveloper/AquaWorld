@@ -23,8 +23,22 @@ window.addEventListener("DOMContentLoaded", function () {
 
     //------------------------calc-------------------------//
 
-const btnChangeScheme = document.querySelector()
+    const btnChangeScheme = document.querySelector('#btnChangeScheme'),
+        sendScheme = document.querySelector('#sendScheme'),
+        calcFormPart1 = document.querySelector('.calc__form--part1'),
+        calcFormPart2 = document.querySelector('.calc__form--part2'),
+        calcForm = document.querySelector('.calc__form');
 
+        btnChangeScheme.addEventListener('click', () => {
+            calcFormPart2.classList.remove('hide');
+            calcFormPart1.classList.add('hide');
+        });
+
+        sendScheme.addEventListener('click', () => {
+            calcFormPart2.classList.add('hide');
+            // calcFormPart1.classList.remove('hide');
+            calcForm.innerHTML = '<h3>Расчет отправлен на указанную вами почту: ${user.mail}</h3>' ;
+        });
 
 
     //------------------------calc-end---------------------//

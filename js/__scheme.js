@@ -14,7 +14,7 @@ nitrates = document.querySelector('#nitrates').value,
 residents = document.querySelector('#residents').value,
 points = document.querySelector('#points').value,
 peak = document.querySelector('#peak').value,
-name = document.querySelector('#name').value,
+// name = document.querySelector('#name').value,
 email = document.querySelector('#email').value,
 tel = document.querySelector('#tel').value;
 
