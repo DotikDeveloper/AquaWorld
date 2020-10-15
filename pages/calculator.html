@@ -275,17 +275,17 @@
                                             </option>
                                         </select>
                                     </div>
-                                    <div class="calc__items col-md-2 d-flex flex-column justify-content-between">
+                                    <div class="calc__items col-md-2 d-flex flex-column justify-content-between" id="ph">
                                         <label class="calc__label" for="ph">рН, ед.рН</label>
                                         <input class="calc__input" pattern="\d{1,2}\.\d{1,2}"
-                                            type="text" name="ph" id="ph" placeholder="например 7.4 ">
+                                            type="text" name="ph" placeholder="например 7.4 ">
                                     </div>
-                                    <div class="calc__items col-md-2 d-flex flex-column justify-content-between">
+                                    <div class="calc__items col-md-2 d-flex flex-column justify-content-between" id="mineralization">
                                         <label class="calc__label"
                                             for="mineralization">Минерализация,
                                             мг/литр</label>
                                         <input class="calc__input" pattern="\d{1,}\.\d{1,2}"
-                                            type="text" name="mineralization" id="mineralization"
+                                            type="text" name="mineralization" 
                                             placeholder="уровень минералицации">
                                     </div>
                                     <div class="calc__items col-md-2 d-flex flex-column justify-content-between">
@@ -331,12 +331,12 @@
                                         <div class="row">
                                             <div class="col-md-1"></div>
                                             <div
-                                                class="calc__items col-md-10 d-flex justify-content-between align-items-center mb-2">
+                                                class="calc__items col-md-10 d-flex justify-content-between align-items-center mb-2" id="residents">
                                                 <label class="calc__label"
                                                     for="residents">Кол-во
                                                     проживающих</label>
                                                 <input class="calc__input"
-                                                    name="residents" type="text" pattern="\d{1,}" id="residents"
+                                                    name="residents" type="text" pattern="\d{1,}" 
                                                     placeholder="Кол-во проживающих">
                                             </div>
                                             <div class="col-md-1"></div>
@@ -369,12 +369,12 @@
                                         <div class="row">
                                             <div class="col-md-1"></div>
                                             <div
-                                                class="calc__items col-md-10 d-flex justify-content-between align-items-center mb-2">
+                                                class="calc__items col-md-10 d-flex justify-content-between align-items-center mb-2" id="peak">
                                                 <label class="calc__label" for="peak">Пиковый
                                                     расход,
                                                     м3/ч</label>
-                                                <input class="calc__select" pattern="\d{1,}"
-                                                    name="peak" id="peak" type="text" placeholder="Пиковый расход">
+                                                <input class="calc__input" pattern="\d{1,}"
+                                                    name="peak"  type="text" placeholder="Пиковый расход">
                                             </div>
                                             <div class="col-md-1"></div>
                                         </div>
@@ -386,10 +386,10 @@
                                         <div class="row">
                                             <div class="col-md-1"></div>
                                             <div
-                                                class="calc__items col-md-10 d-flex justify-content-between align-items-center mb-2">
+                                                class="calc__items col-md-10 d-flex justify-content-between align-items-center mb-2" id="name">
                                                 <label class="calc__label" for="name">Имя</label>
                                                 <input class="calc__input" pattern="\D{1,15}"
-                                                    placeholder="Введите имя" name="text" type="name" id="name">
+                                                    placeholder="Введите имя" name="text" type="name" >
                                             </div>
                                             <div class="col-md-1"></div>
                                         </div>
@@ -397,12 +397,12 @@
                                         <div class="row">
                                             <div class="col-md-1"></div>
                                             <div
-                                                class="calc__items col-md-10 d-flex justify-content-between align-items-center mb-2">
+                                                class="calc__items col-md-10 d-flex justify-content-between align-items-center mb-2" id="email">
                                                 <label class="calc__label" for="email">Ваш
                                                     email</label>
                                                 <input class="calc__input"
                                                     pattern="/^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i" name="email"
-                                                    type="email" id="email" placeholder="email@mail.com">
+                                                    type="email" placeholder="email@mail.com">
                                             </div>
                                             <div class="col-md-1"></div>
                                         </div>
@@ -410,12 +410,12 @@
                                         <div class="row">
                                             <div class="col-md-1"></div>
                                             <div
-                                                class="calc__items col-md-10 d-flex justify-content-between align-items-center mb-2">
+                                                class="calc__items col-md-10 d-flex justify-content-between align-items-center mb-2" id="tel">
                                                 <label class="calc__label" for="tel">Ваш
                                                     телефон</label>
                                                 <input class="calc__input "
                                                     pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
-                                                    name="tel" type="tel" id="tel" placeholder="+7 000 000 00 00"
+                                                    name="tel" type="tel" placeholder="+7 000 000 00 00"
                                                     required>
 
                                             </div>

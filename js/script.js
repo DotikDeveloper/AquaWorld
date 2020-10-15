@@ -29,44 +29,65 @@ window.addEventListener("DOMContentLoaded", function () {
         calcFormPart2 = document.querySelector('.calc__form--part2'),
         calcForm = document.querySelector('.calc__form');
 
-    const optionData = document.querySelectorAll('.calc__option'),
-        inputData = document.querySelectorAll('.calc__input'),
-        userMail = document.querySelector('#email').value;
-
     //func getData
 
-    function getInputData(selector) {
-        selector.forEach(data => {
-            console.log(data.id, +data.value);
-        });
-    }
+    function getData(selector) {
+        const elements = document.querySelectorAll(selector);
 
-    function getOptionData(selector) {
-        selector.forEach(data => {
-            if (data.selected === true) {
-                console.log(data.parentNode.id, +data.value);
+        elements.forEach(elem => {
+
+            if (elem.selected || elem.className === 'calc__input') {
+                // console.log(elem.parentNode.id, elem.value);
+
+                // turbidity
+                // chromaticity
+                // smell
+                // rigidity
+                // iron
+                // manganese
+                // permanganate
+                // hydrogen
+                // ammonium
+                // nitrates
+
+                switch (elem.parentNode.id) {
+                    case 'ph':
+                    case 'mineralization':
+                    case 'residents':
+                    case 'peak':
+                        console.log(elem.parentNode.id, elem.value);
+                        break;
+                    case 'turbidity':
+                        console.log(elem.parentNode.id, elem.value);
+                        break;
+
+
+
+                }
+
             }
+
         });
     }
+    // changeScheme
 
     btnChangeScheme.addEventListener('click', () => {
         calcFormPart2.classList.remove('hide');
         calcFormPart1.classList.add('hide');
-
-        getOptionData(optionData);
-        getInputData(inputData);
+        // getData(selector);
+        getData('.calc__form--part1 .calc__input');
+        getData('.calc__form--part1 .calc__option');
     });
-
-
-
-
 
     //send offer
     sendScheme.addEventListener('click', () => {
         calcFormPart2.classList.add('hide');
 
-        getOptionData(optionData);
-        getInputData(inputData);
+        // getData(selector);
+        getData('.calc__form--part2 .calc__input');
+        getData('.calc__form--part2 .calc__option');
+
+        const userMail = 'test@test.com';
 
         calcForm.innerHTML = `<h3>Расчет отправлен на указанную вами почту: ${userMail}</h3>`;
 
