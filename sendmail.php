@@ -16,8 +16,10 @@ $mail->IsHTML(true);
 
 // Set mail from
 
-$mail->setFrom('info@aquaworld63.ru', 'AquaWorld63.ru'); // от кого
-$mail->addAddress('info@aquaworld63.ru');     // кому
+// $mail->setFrom('info@aquaworld63.ru', 'AquaWorld63.ru'); // от кого
+// $mail->addAddress('info@aquaworld63.ru');     // кому
+$mail->setFrom('dotikdeveloper@gmail.com', 'AquaWorld63.ru'); // от кого
+$mail->addAddress('dotikdeveloper@gmail.com');     // кому
 $mail->Subject = 'Запрос на расчет калькулятора с сайта AquaWorld63.ru';
 
 // Тело письма
