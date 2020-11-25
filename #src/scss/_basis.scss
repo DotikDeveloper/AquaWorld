@@ -17,15 +17,22 @@
 button.btn,
 a.btn, div.btn {
     font-weight: bold;
-    background-color: $pallete__primary--light;
-    border: 2px solid $pallete__primary--light;
+    background-color: $pallete__btn--light;
+    border: 2px solid $pallete__btn--light;
     color: #fff;
 
 
     &:hover {
+        background-color: $pallete__btn--light;
         opacity: .75;
         color: #fff;
     }
+}
+
+.section__tittle {
+    color: $pallete__tittle;
+    font-weight: 500;
+    font-style: italic;
 }
 
 .hide {

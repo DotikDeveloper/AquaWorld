@@ -15,16 +15,23 @@ button.btn,
 a.btn,
 div.btn {
   font-weight: bold;
-  background-color: #a9bfcf;
-  border: 2px solid #a9bfcf;
+  background-color: #3fab2d;
+  border: 2px solid #3fab2d;
   color: #fff;
 }
 
 button.btn:hover,
 a.btn:hover,
 div.btn:hover {
+  background-color: #3fab2d;
   opacity: .75;
   color: #fff;
+}
+
+.section__tittle {
+  color: #0075b8;
+  font-weight: 500;
+  font-style: italic;
 }
 
 .hide {
@@ -260,8 +267,8 @@ section.contacts__title {
 
 section.contacts button.btn {
   font-weight: bold;
-  background-color: #a9bfcf;
-  border: 2px solid #a9bfcf;
+  background-color: #3fab2d;
+  border: 2px solid #3fab2d;
   color: #fff;
 }
 
