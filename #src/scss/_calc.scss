@@ -1,0 +1,37 @@
+// ------------------- calc -----------------------//
+
+.calc {
+
+    font-size: 1rem;
+
+    &__label {
+        text-align: left;
+        color: $pallete__fonts--dark;
+    }
+
+    &__select,
+    &__input {
+        height: 35px;
+        padding: 5px 7px;
+        border: 2px solid $pallete__primary--light;
+        text-align: right;
+        color: $pallete__primary;
+
+        &:hover {
+            // border: 2px solid rgba(27, 24, 192, 0.267);
+            box-shadow: 0 0 7px 3px #bccdda8a;
+            background-color: #c0d9e71a;
+            
+        }
+
+        &:focus {
+            border: 2px solid #5378928a;
+        }
+        &:active {
+            border: 2px solid #5378928a;
+        }
+    
+    }
+
+
+}

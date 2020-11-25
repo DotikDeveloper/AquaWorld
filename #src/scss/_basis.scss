@@ -1,0 +1,33 @@
+
+//-------------------------basis------------------------------//
+* {
+    color: $pallete__fonts;
+
+    font-family: 'Raleway', sans-serif;
+
+    &::-moz-selection {
+        color: #cccccc;
+    }
+
+    &::selection {
+        color: #cccccc;
+    }
+}
+
+button.btn,
+a.btn, div.btn {
+    font-weight: bold;
+    background-color: $pallete__primary--light;
+    border: 2px solid $pallete__primary--light;
+    color: #fff;
+
+
+    &:hover {
+        opacity: .75;
+        color: #fff;
+    }
+}
+
+.hide {
+    display: none;
+}

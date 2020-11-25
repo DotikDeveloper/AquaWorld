@@ -1,0 +1,106 @@
+
+//-------------------------direction------------------------------//
+.direction {
+    margin-bottom: 150px;
+
+    @media (max-width:375px) {
+        margin-top: 350px;
+    }
+
+    @media (max-height:375px) {
+        margin-top: 350px;
+    }
+
+    // .direction__title
+
+    &__title {
+        color: $pallete__fonts--dark;
+        background: rgb(246, 246, 246);
+        background: radial-gradient(circle, rgba(246, 246, 246, 0.95) 56%, rgba(159, 188, 228, 0.15) 97%);
+        width: 100%;
+
+
+
+        &--general {
+            font-weight: 500;
+            font-style: italic;
+        }
+    }
+
+    // .direction__row
+
+    &__row {
+        margin: 0;
+
+    }
+
+    // .direction__item
+
+    &__item {
+        height: 150px;
+        margin: 10px;
+        padding: 0;
+
+        &--cottage {
+            background-image: url(../media/cottage.jpg);
+
+        }
+
+        &--flat {
+            background-image: url(../media/flat.jpg);
+            background-repeat: no-repeat;
+            background-position-y: -50px;
+
+        }
+
+        &--house-hold {
+            background-image: url(../media/house-hold.jpg);
+            background-repeat: no-repeat;
+            background-position-y: -100px;
+        }
+
+        &--water-analysis {
+            background-image: url(../media/water-analysis.jpg);
+
+        }
+
+        &--protection-of-engineering-networks {
+            background-image: url(../media/protection-of-engineering-networks.jpg);
+
+        }
+
+        &--installing-purifiers {
+            background-image: url(../media/installing-purifiers.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        &--small-business {
+            background-image: url(../media/small-business.jpg);
+        }
+
+        &--for-enterprises {
+            background-image: url(../media/for-enterprises.jpg);
+            background-repeat: no-repeat;
+            background-position-y: -50px;
+
+        }
+
+        &--for-heat-and-power-industry {
+            background-image: url(../media/for-heat-and-power-industry.jpg);
+            background-repeat: no-repeat;
+            background-position-y: -150px;
+        }
+
+    }
+
+    // .direction__link
+
+    &__link {
+        background-color: hsla(195, 11%, 85%, 0.35);
+    }
+
+
+
+}
+

@@ -1,0 +1,30 @@
+//-------------------------partners------------------------------//
+
+section.partners {
+
+    @media (max-width:375px) {
+        margin-top: 250px;
+    }
+
+    @media (max-height:375px) {
+        margin-top: 350px;
+    }
+}
+
+#carouselExampleSlidesOnly {
+    & img {
+        height: 50px;
+
+        @media (max-width:375px) {
+            margin: 15px auto;
+        }
+
+        @media (max-height:375px) {
+            margin: 15px auto;
+        }
+    }
+
+    & .carousel__inner {
+        margin: 25px auto;
+    }
+}
