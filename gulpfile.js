@@ -8,7 +8,8 @@ let path = {
         html: projectFolder + "/",
         css: projectFolder + "/css/",
         js: projectFolder + "/js/",
-        jsmap: sourceFolder + "/js/",
+        jsmap: projectFolder + "/js/",        
+        doc: projectFolder + "/doc/",
         img: projectFolder + "/media/",
         video: projectFolder + "/media/",
         fonts: projectFolder + "/fonts/",
@@ -17,6 +18,7 @@ let path = {
         html: [sourceFolder + "/**/*.html", "!" + sourceFolder + "/**/_*.html"],
         css: sourceFolder + "/scss/style.scss",
         js: sourceFolder + "/js/bundle.js",
+        doc: sourceFolder + "/doc/*.pdf",
         jsmap: sourceFolder + "/js/bundle.js.map",
         img: sourceFolder + "/media/**/*.{jpg,png,svg,gif,ico,webp}",
         video: sourceFolder + "/media/**/*.mp4",
@@ -27,6 +29,7 @@ let path = {
         css: sourceFolder + "/scss/**/*.scss",
         js: sourceFolder + "/js/**/*.js",
         jsmap: sourceFolder + "/js/bundle.js.map",
+        doc: sourceFolder + "/doc/*.pdf",
         img: sourceFolder + "/media/**/*.{jpg,png,svg,gif,ico,webp}",
         video: sourceFolder + "/media/**/*.mp4",
     },
@@ -119,8 +122,12 @@ function js(params) {
 
 function jsmap(params) {
     return src(path.src.jsmap)
-        .pipe(dest(path.build.jsmap))
         .pipe(dest(path.build.jsmap));
+}
+
+function doc(params) {
+    return src(path.src.doc)
+        .pipe(dest(path.build.doc));
 }
 
 function images(params) {
@@ -215,13 +222,14 @@ function watchFiles(params) {
     gulp.watch([path.watch.js], js);
     gulp.watch([path.watch.img], images);
     gulp.watch([path.watch.video], video);
+    gulp.watch([path.watch.doc], doc);
 }
 
 function clean(params) {
     return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, jsmap, css, html, images, video, fonts), fontsStyle);
+let build = gulp.series(clean, gulp.parallel(js, jsmap, doc, css, html, images, video, fonts), fontsStyle);
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.fontsStyle = fontsStyle;
@@ -230,6 +238,7 @@ exports.images = images;
 exports.video = video;
 exports.js = js;
 exports.jsmap = jsmap;
+exports.doc = doc;
 exports.css = css;
 exports.html = html;
 exports.build = build;
