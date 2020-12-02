@@ -321,9 +321,23 @@ __webpack_require__.r(__webpack_exports__);
 
 
 window.addEventListener("DOMContentLoaded", function () {
-  Object(_modules_scroll_to__WEBPACK_IMPORTED_MODULE_0__["default"])('a.scroll-to');
-  Object(_modules_date__WEBPACK_IMPORTED_MODULE_1__["default"])('.footer__date');
-  Object(_modules_calc__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  try {
+    Object(_modules_scroll_to__WEBPACK_IMPORTED_MODULE_0__["default"])('a.scroll-to');
+  } catch (error) {
+    console.log(error);
+  }
+
+  try {
+    Object(_modules_date__WEBPACK_IMPORTED_MODULE_1__["default"])('.footer__date');
+  } catch (error) {
+    console.log(error);
+  }
+
+  try {
+    Object(_modules_calc__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 /***/ }),
