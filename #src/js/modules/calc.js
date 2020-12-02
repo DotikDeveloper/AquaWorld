@@ -63,6 +63,7 @@ function calc() {
 
     }
 
+    
     function setData(formSelector) {
 
         let formData = new FormData(formSelector);
