@@ -220,6 +220,36 @@ function date(selector) {
 
 /***/ }),
 
+/***/ "./#src/js/modules/dateOffer.js":
+/*!**************************************!*\
+  !*** ./#src/js/modules/dateOffer.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function dateOffer(selector) {
+  var date = new Date();
+  var month = date.getMonth() + 1; //months from 1-12
+
+  var day = date.getDate();
+  var year = date.getFullYear();
+  var dateForOffer;
+
+  if (day < 10) {
+    dateForOffer = 'от ' + '0' + day + "/" + month + "/" + year;
+  } else {
+    dateForOffer = 'от ' + day + "/" + month + "/" + year;
+  }
+
+  document.querySelector(selector).innerHTML = dateForOffer;
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (dateOffer);
+
+/***/ }),
+
 /***/ "./#src/js/modules/scroll-to.js":
 /*!**************************************!*\
   !*** ./#src/js/modules/scroll-to.js ***!
@@ -314,7 +344,9 @@ function scrollTo(selector) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_scroll_to__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/scroll-to */ "./#src/js/modules/scroll-to.js");
 /* harmony import */ var _modules_date__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/date */ "./#src/js/modules/date.js");
-/* harmony import */ var _modules_calc__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/calc */ "./#src/js/modules/calc.js");
+/* harmony import */ var _modules_dateOffer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/dateOffer */ "./#src/js/modules/dateOffer.js");
+/* harmony import */ var _modules_calc__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/calc */ "./#src/js/modules/calc.js");
+
 
 
 
@@ -334,7 +366,13 @@ window.addEventListener("DOMContentLoaded", function () {
   }
 
   try {
-    Object(_modules_calc__WEBPACK_IMPORTED_MODULE_2__["default"])();
+    Object(_modules_dateOffer__WEBPACK_IMPORTED_MODULE_2__["default"])('[data-toggle=dataOffer]');
+  } catch (error) {
+    console.log(error);
+  }
+
+  try {
+    Object(_modules_calc__WEBPACK_IMPORTED_MODULE_3__["default"])();
   } catch (error) {
     console.log(error);
   }
@@ -3526,9 +3564,9 @@ for (var COLLECTION_NAME in DOMIterables) {
 /***/ }),
 
 /***/ "./node_modules/webpack/buildin/global.js":
-/*!***********************************!*\
-  !*** (webpack)/buildin/global.js ***!
-  \***********************************/
+/*!************************************************!*\
+  !*** ./node_modules/webpack/buildin/global.js ***!
+  \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 

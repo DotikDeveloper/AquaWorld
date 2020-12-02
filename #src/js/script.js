@@ -2,6 +2,7 @@
 
 import scrollTo from './modules/scroll-to';
 import date from './modules/date';
+import dateOffer from './modules/dateOffer';
 import calc from './modules/calc';
 
 
@@ -13,11 +14,19 @@ window.addEventListener("DOMContentLoaded", () => {
     } catch (error) {
         console.log(error);
     }
+
     try {
-        date('.footer__date');
+        date('.footer__date');        
     } catch (error) {
         console.log(error);
     }
+
+    try {
+        dateOffer('[data-toggle=dataOffer]');        
+    } catch (error) {
+        console.log(error);
+    }
+
     try {
         calc();
     } catch (error) {
