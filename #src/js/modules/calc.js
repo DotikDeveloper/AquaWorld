@@ -22,6 +22,10 @@ function calc() {
         tableBlockThirdTitle = document.querySelector('[data-form=tableBlockThirdTitle]'),
         tableBlockThirdText = document.querySelector('[data-form=tableBlockThirdText]'),
         tableBlockThirdImg = document.querySelector('[data-form=tableBlockThirdImg]'),
+        tableBlockFiveBlock = document.querySelector('[data-form=tableBlockFiveBlock]'),
+        tableBlockFiveTitle = document.querySelector('[data-form=tableBlockFiveTitle]'),
+        tableBlockFiveText = document.querySelector('[data-form=tableBlockFiveText]'),
+        tableBlockFiveImg = document.querySelector('[data-form=tableBlockFiveImg]'),
         tableBlockFourTitle = document.querySelector('[data-form=tableBlockFourTitle]'),
         tableBlockFourText = document.querySelector('[data-form=tableBlockFourText]'),
         tableBlockFourImg = document.querySelector('[data-form=tableBlockFourImg]');
@@ -29,8 +33,7 @@ function calc() {
 
         modalBtnClose.forEach((btn) => {
             btn.addEventListener('click', () => {
-                document.location.href = "/";
-                // window.location.reload();
+                window.location.reload();
             });
         });
 
@@ -52,7 +55,9 @@ function calc() {
             case '1114111111':
                 console.log('Схема 1');
                 schemeTitle.textContent = 'СХЕМА 1. Установка умягчения';
-                schemeImg.src = '../media/offer/scheme-1/1.png';
+                schemeImg.innerHTML = `
+                <img src="../media/offer/scheme-1/1.png" alt="Схема" class="img-fluid">
+                `;
                 schemeImg.alt = schemeTitle;
                 tableBlockOneTitle.textContent = 'Фильтр механический';
                 tableBlockOneText.innerHTML = `
@@ -69,7 +74,9 @@ function calc() {
                     дисков разожмется. В разжатом состоянии диски легко промываются водой под незначительным напором.
                     </p>
                 `;
-                tableBlockOneImg.src = '../media/offer/filter.png';
+                tableBlockOneImg.innerHTML = `
+                <img src="../media/offer/filter.png">
+                `;
                 tableBlockTwoTitle.textContent = 'Установка умягчения';
                 tableBlockTwoText.innerHTML = `
                     <p class="text-muted">Ионообменная загрузка создана для комплексного решения задач в системах
@@ -91,43 +98,587 @@ function calc() {
                     <p class="text-muted">Срок службы загрузки до 4-6 лет.
                     </p>
                 `;
-                tableBlockTwoImg.src = '../media/offer/iron.png';
-                // tableBlockThirdBlock.innerHTML = '';
-                // tableBlockThirdTitle.textContent = '';
-                // tableBlockThirdText.innerHTML = '';
-                // tableBlockThirdImg.src = '../media/offer/filter.png';
+                tableBlockTwoImg.innerHTML = `
+                <img src="../media/offer/iron.png">
+                `;
+                tableBlockThirdBlock.style.display = 'none';  
+                tableBlockThirdTitle.style.display = 'none';  
+                tableBlockThirdText.style.display = 'none';
+                tableBlockThirdImg.style.display = 'none';                 
+                tableBlockFiveBlock.style.display = 'none';  
+                tableBlockFiveTitle.style.display = 'none';  
+                tableBlockFiveText.style.display = 'none';
+                tableBlockFiveImg.style.display = 'none';                 
                 tableBlockFourTitle.textContent = 'Фильтр с угольным блоком ВВ10';
                 tableBlockFourText.innerHTML = `
-                    <p class="text-muted">Удаляет из воды бытового назначения неприятный запах и цвет, а также хлор, хлорорганические соединения и другие агрессивные вещества.</p>     
+                    <p class="text-muted">
+                    Удаляет из воды бытового назначения неприятный запах и цвет, а также хлор, хлорорганические соединения и другие агрессивные вещества.
+                    </p>     
                 `;
-                tableBlockFourImg.src = '../media/offer/smell.png';
+                tableBlockFourImg.innerHTML = `
+                <img src="../media/offer/smell.png">
+                `;
                 break;
             case '1113221111':
                 console.log('Схема 2');
+                schemeTitle.textContent = 'СХЕМА 2. Фильтр для удаления железа и жесткости';
+                schemeImg.innerHTML = `
+                <img src="../media/offer/scheme-2/1.png" alt="Схема" class="img-fluid">
+                `;
+                schemeImg.alt = schemeTitle;
+                tableBlockOneTitle.textContent = 'Фильтр механический';
+                tableBlockOneText.innerHTML = `
+                    <p class="text-muted font-weight-bold">Фильтр CEPEX LF 1" (130мкм)</p>
+                    <p class="text-muted">Тонкость очистки (мкм) 130 </p>
+                    <p class="text-muted"></p>Дисковые фильтры CEPEX обладают высокой производительностью и повышенной
+                    грязеемкостью по сравнению с сетчатыми фильтрами. </p>
+                    <p class="text-muted"></p>В качестве фильтрующего элемента используются диски из полимеров, на
+                    поверхности которых имеются канавки определенной ширины и глубины. </p>
+                    <p class="text-muted"></p>При сжатии дисков между ними появляется объемная сетчатая структура,
+                    являющаяся рабочим фильтрующим элементом. Вода проходит через плотно сжатые диски, а нерастворенные
+                    частицы остаются в междисковом пространстве. Для того чтобы промыть дисковый фильтр, нужно сбросить
+                    давление в магистрали, затем снять кожух фильтра и достать фильтрующий элемент, при этом пакет
+                    дисков разожмется. В разжатом состоянии диски легко промываются водой под незначительным напором.
+                    </p>
+                `;
+                tableBlockOneImg.innerHTML = `
+                <img src="../media/offer/filter.png">
+                `;
+                tableBlockTwoTitle.textContent = 'Фильтр для удаления железа и жесткости';
+                tableBlockTwoText.innerHTML = `
+                    <p class="text-muted">Ионообменная загрузка создана для комплексного решения задач в системах
+                    водоподготовки и предназначена для удаления солей жесткости, а так же предотвращает образование
+                    накипи в котлах, бойлерах, стиральных и посудомоечных машинах и другой бытовой техники, что
+                    продлевают срок службы всей без исключения техники. Обеспечивает комфорт водных процедур,
+                    экономию моющих средств и электроэнергии. Данная загрузка состоит из нескольких ионообменных
+                    смол разного гранулометрического состава позволяющих эффективно удалять из исходной воды соли
+                    жесткости (Ca2+ и Mg2+)</p>
+                    <p class="text-muted">В качестве фильтрующей среды используются ионообменные смолы, обладающие
+                        следующими свойствами;</p>
+                    <ul class="text-muted">
+                        <li class="list-item offer__list-item">высокие скорости потока при насыщении и регенерации;</li>
+                        <li class="list-item offer__list-item">низкий расход воды на отмывку - до 150-200л;</li>
+                        <li class="list-item offer__list-item">равномерное распределение реагентов, воды и растворов;
+                        </li>
+                        <li class="list-item offer__list-item"> однородная рабочая зона;</li>
+                    </ul>
+                    <p class="text-muted">Срок службы загрузки до 4-6 лет.
+                    </p>
+                `;
+                tableBlockTwoImg.innerHTML = `
+                <img src="../media/offer/iron.png">
+                `;
+                tableBlockThirdBlock.style.display = 'none';  
+                tableBlockThirdTitle.style.display = 'none';  
+                tableBlockThirdText.style.display = 'none';
+                tableBlockThirdImg.style.display = 'none';                 
+                tableBlockFiveBlock.style.display = 'none';  
+                tableBlockFiveTitle.style.display = 'none';  
+                tableBlockFiveText.style.display = 'none';
+                tableBlockFiveImg.style.display = 'none';                 
+                tableBlockFourTitle.textContent = 'Фильтр с угольным блоком ВВ10';
+                tableBlockFourText.innerHTML = `
+                    <p class="text-muted">
+                    Удаляет из воды бытового назначения неприятный запах и цвет, а также хлор, хлорорганические соединения и другие агрессивные вещества.
+                    </p>     
+                `;
+                tableBlockFourImg.innerHTML = `
+                <img src="../media/offer/smell.png">
+                `;
                 break;
             case '2211221111':
                 console.log('Схема 3');
+                schemeTitle.textContent = 'СХЕМА 3. Комплекс обезжелезивания и осветления';
+                schemeImg.innerHTML = `
+                <img src="../media/offer/scheme-3/1.png" alt="Схема" class="img-fluid">
+                `;
+                schemeImg.alt = schemeTitle;
+                tableBlockOneTitle.textContent = 'Фильтр механический';
+                tableBlockOneText.innerHTML = `
+                    <p class="text-muted font-weight-bold">Фильтр CEPEX LF 1" (130мкм)</p>
+                    <p class="text-muted">Тонкость очистки (мкм) 130 </p>
+                    <p class="text-muted"></p>Дисковые фильтры CEPEX обладают высокой производительностью и повышенной
+                    грязеемкостью по сравнению с сетчатыми фильтрами. </p>
+                    <p class="text-muted"></p>В качестве фильтрующего элемента используются диски из полимеров, на
+                    поверхности которых имеются канавки определенной ширины и глубины. </p>
+                    <p class="text-muted"></p>При сжатии дисков между ними появляется объемная сетчатая структура,
+                    являющаяся рабочим фильтрующим элементом. Вода проходит через плотно сжатые диски, а нерастворенные
+                    частицы остаются в междисковом пространстве. Для того чтобы промыть дисковый фильтр, нужно сбросить
+                    давление в магистрали, затем снять кожух фильтра и достать фильтрующий элемент, при этом пакет
+                    дисков разожмется. В разжатом состоянии диски легко промываются водой под незначительным напором.
+                    </p>
+                `;
+                tableBlockOneImg.innerHTML = `
+                <img src="../media/offer/filter.png">
+                `;
+                tableBlockTwoTitle.textContent = 'Комплекс  обезжелезивания и осветления';
+                tableBlockTwoText.innerHTML = `
+                    <p class="text-muted">Фильтр ускоряет процесс окисления железа и задерживает его окисленные соединения в слое фильтрующего материала.  Фильтр работает в автоматическом режиме. В качестве  фильтрующего материала используется Экоферокс и МСФерокс.  Промывка фильтра осуществляется  обратным током исходной водой.</p>
+                    <p class="text-muted">ЭКОФЕРОКС действует как катализатор окисления в реакциях взаимодействия растворенного кислорода с соединениями железа (II) и (III), в результате чего образуется гидрооксид железа (III), который является нерастворимым соединением и легко удаляется обратным током воды.</p>                   
+                    <p class="text-muted">«MSFerox» действует как катализатор окисления в реакциях взаимодействия растворенного кислорода с соединениями железа (II) и (III) валентного, в результате реакции образуется гидроксид железа (III), который является не растворимым соединением и легко удаляется обратным током воды. Сероводород и марганец также окисляются и оседают в слоях фильтрующего материала, с последующим удалением обратным током воды. «MSFerox» не требует для регенерации применение реагентов. Необходима своевременная периодическая промывка водой или для более эффективной промывки - водо-воздушная.</p>
+                `;
+                tableBlockTwoImg.innerHTML = `
+                <img src="../media/offer/color.png">
+                `;
+                tableBlockThirdBlock.style.display = 'none';  
+                tableBlockThirdTitle.style.display = 'none';  
+                tableBlockThirdText.style.display = 'none';
+                tableBlockThirdImg.style.display = 'none';                 
+                tableBlockFiveBlock.style.display = 'none';  
+                tableBlockFiveTitle.style.display = 'none';  
+                tableBlockFiveText.style.display = 'none';
+                tableBlockFiveImg.style.display = 'none';                 
+                tableBlockFourTitle.textContent = 'Фильтр с угольным блоком ВВ10';
+                tableBlockFourText.innerHTML = `
+                    <p class="text-muted">
+                    Удаляет из воды бытового назначения неприятный запах и цвет, а также хлор, хлорорганические соединения и другие агрессивные вещества.
+                    </p>     
+                `;
+                tableBlockFourImg.innerHTML = `
+                <img src="../media/offer/smell.png">
+                `;
                 break;
             case '2214221111':
                 console.log('Схема 4');
+                schemeTitle.textContent = 'СХЕМА 4. Обезжелезивание + Умягчение';
+                schemeImg.innerHTML = `
+                <img src="../media/offer/scheme-4/1.png" alt="Схема" class="img-fluid">
+                `;
+                schemeImg.alt = schemeTitle;
+                tableBlockOneTitle.textContent = 'Фильтр механический';
+                tableBlockOneText.innerHTML = `
+                    <p class="text-muted font-weight-bold">Фильтр CEPEX LF 1" (130мкм)</p>
+                    <p class="text-muted">Тонкость очистки (мкм) 130 </p>
+                    <p class="text-muted"></p>Дисковые фильтры CEPEX обладают высокой производительностью и повышенной
+                    грязеемкостью по сравнению с сетчатыми фильтрами. </p>
+                    <p class="text-muted"></p>В качестве фильтрующего элемента используются диски из полимеров, на
+                    поверхности которых имеются канавки определенной ширины и глубины. </p>
+                    <p class="text-muted"></p>При сжатии дисков между ними появляется объемная сетчатая структура,
+                    являющаяся рабочим фильтрующим элементом. Вода проходит через плотно сжатые диски, а нерастворенные
+                    частицы остаются в междисковом пространстве. Для того чтобы промыть дисковый фильтр, нужно сбросить
+                    давление в магистрали, затем снять кожух фильтра и достать фильтрующий элемент, при этом пакет
+                    дисков разожмется. В разжатом состоянии диски легко промываются водой под незначительным напором.
+                    </p>
+                `;
+                tableBlockOneImg.innerHTML = `
+                <img src="../media/offer/filter.png">
+                `;
+                tableBlockTwoTitle.textContent = 'Комплекс  обезжелезивания и осветления';
+                tableBlockTwoText.innerHTML = `
+                    <p class="text-muted">Фильтр ускоряет процесс окисления железа и задерживает его окисленные соединения в слое фильтрующего материала.  Фильтр работает в автоматическом режиме. В качестве  фильтрующего материала используется Экоферокс и МСФерокс.  Промывка фильтра осуществляется  обратным током исходной водой.</p>
+                    <p class="text-muted">ЭКОФЕРОКС действует как катализатор окисления в реакциях взаимодействия растворенного кислорода с соединениями железа (II) и (III), в результате чего образуется гидрооксид железа (III), который является нерастворимым соединением и легко удаляется обратным током воды.</p>                   
+                    <p class="text-muted">«MSFerox» действует как катализатор окисления в реакциях взаимодействия растворенного кислорода с соединениями железа (II) и (III) валентного, в результате реакции образуется гидроксид железа (III), который является не растворимым соединением и легко удаляется обратным током воды. Сероводород и марганец также окисляются и оседают в слоях фильтрующего материала, с последующим удалением обратным током воды. «MSFerox» не требует для регенерации применение реагентов. Необходима своевременная периодическая промывка водой или для более эффективной промывки - водо-воздушная.</p>
+                `;
+                tableBlockTwoImg.innerHTML = `
+                <img src="../media/offer/color.png">
+                `;
+                // tableBlockThirdBlock.style.display = 'block';  
+                tableBlockThirdTitle.textContent = 'Фильтр для удаления жесткости';  
+                tableBlockThirdText.innerHTML = `
+                <p class="text-muted">Фильтр ускоряет процесс окисления железа и задерживает его окисленные соединения в слое фильтрующего материала.  Фильтр работает в автоматическом режиме. В качестве  фильтрующего материала используется Экоферокс и МСФерокс.  Промывка фильтра осуществляется  обратным током исходной водой.</p>
+                <p class="text-muted">ЭКОФЕРОКС действует как катализатор окисления в реакциях взаимодействия растворенного кислорода с соединениями железа (II) и (III), в результате чего образуется гидрооксид железа (III), который является нерастворимым соединением и легко удаляется обратным током воды.</p>                   
+                <p class="text-muted">«MSFerox» действует как катализатор окисления в реакциях взаимодействия растворенного кислорода с соединениями железа (II) и (III) валентного, в результате реакции образуется гидроксид железа (III), который является не растворимым соединением и легко удаляется обратным током воды. Сероводород и марганец также окисляются и оседают в слоях фильтрующего материала, с последующим удалением обратным током воды. «MSFerox» не требует для регенерации применение реагентов. Необходима своевременная периодическая промывка водой или для более эффективной промывки - водо-воздушная.</p>
+            `;
+                tableBlockThirdImg.innerHTML = `
+                <img src="../media/offer/iron.png">
+                `;
+                tableBlockFiveBlock.style.display = 'none';  
+                tableBlockFiveTitle.style.display = 'none';  
+                tableBlockFiveText.style.display = 'none';
+                tableBlockFiveImg.style.display = 'none';                   
+                tableBlockFourTitle.textContent = 'Фильтр с угольным блоком ВВ10';
+                tableBlockFourText.innerHTML = `
+                    <p class="text-muted">
+                    Удаляет из воды бытового назначения неприятный запах и цвет, а также хлор, хлорорганические соединения и другие агрессивные вещества.
+                    </p>     
+                `;
+                tableBlockFourImg.innerHTML = `
+                <img src="../media/offer/smell.png">
+                `;
                 break;
             case '2212222111':
                 console.log('Схема 5');
+                schemeTitle.textContent = 'СХЕМА 5. Удаление железа, жесткости и ПМО';
+                schemeImg.innerHTML = `
+                <img src="../media/offer/scheme-5/1.png" alt="Схема" class="img-fluid">
+                `;
+                schemeImg.alt = schemeTitle;
+                tableBlockOneTitle.textContent = 'Фильтр механический';
+                tableBlockOneText.innerHTML = `
+                    <p class="text-muted font-weight-bold">Фильтр CEPEX LF 1" (130мкм)</p>
+                    <p class="text-muted">Тонкость очистки (мкм) 130 </p>
+                    <p class="text-muted"></p>Дисковые фильтры CEPEX обладают высокой производительностью и повышенной
+                    грязеемкостью по сравнению с сетчатыми фильтрами. </p>
+                    <p class="text-muted"></p>В качестве фильтрующего элемента используются диски из полимеров, на
+                    поверхности которых имеются канавки определенной ширины и глубины. </p>
+                    <p class="text-muted"></p>При сжатии дисков между ними появляется объемная сетчатая структура,
+                    являющаяся рабочим фильтрующим элементом. Вода проходит через плотно сжатые диски, а нерастворенные
+                    частицы остаются в междисковом пространстве. Для того чтобы промыть дисковый фильтр, нужно сбросить
+                    давление в магистрали, затем снять кожух фильтра и достать фильтрующий элемент, при этом пакет
+                    дисков разожмется. В разжатом состоянии диски легко промываются водой под незначительным напором.
+                    </p>
+                `;
+                tableBlockOneImg.innerHTML = `
+                <img src="../media/offer/filter.png">
+                `;
+                tableBlockTwoTitle.textContent = 'Фильтр для удаления железа, жесткости и перманганатной окисляемости (ПМО)';
+                tableBlockTwoText.innerHTML = `
+                <p class="text-muted">Ионообменная загрузка создана для комплексного решения задач в системах
+                водоподготовки и предназначена для удаления солей жесткости, а так же предотвращает образование
+                накипи в котлах, бойлерах, стиральных и посудомоечных машинах и другой бытовой техники, что
+                продлевают срок службы всей без исключения техники. Обеспечивает комфорт водных процедур,
+                экономию моющих средств и электроэнергии. Данная загрузка состоит из нескольких ионообменных
+                смол разного гранулометрического состава позволяющих эффективно удалять из исходной воды соли
+                жесткости (Ca2+ и Mg2+)</p>
+                <p class="text-muted">В качестве фильтрующей среды используются ионообменные смолы, обладающие
+                    следующими свойствами;</p>
+                <ul class="text-muted">
+                    <li class="list-item offer__list-item">высокие скорости потока при насыщении и регенерации;</li>
+                    <li class="list-item offer__list-item">низкий расход воды на отмывку - до 150-200л;</li>
+                    <li class="list-item offer__list-item">равномерное распределение реагентов, воды и растворов;
+                    </li>
+                    <li class="list-item offer__list-item"> однородная рабочая зона;</li>
+                </ul>
+                <p class="text-muted">Срок службы загрузки до 4-6 лет.
+                </p>
+            `;
+                tableBlockTwoImg.innerHTML = `
+                <img src="../media/offer/color.png">
+                `;
+                tableBlockThirdBlock.style.display = 'none';  
+                tableBlockThirdTitle.style.display = 'none';  
+                tableBlockThirdText.style.display = 'none';
+                tableBlockThirdImg.style.display = 'none'; 
+                tableBlockFiveBlock.style.display = 'none';  
+                tableBlockFiveTitle.style.display = 'none';  
+                tableBlockFiveText.style.display = 'none';
+                tableBlockFiveImg.style.display = 'none';                     
+                tableBlockFourTitle.textContent = 'Фильтр с угольным блоком ВВ10';
+                tableBlockFourText.innerHTML = `
+                    <p class="text-muted">
+                    Удаляет из воды бытового назначения неприятный запах и цвет, а также хлор, хлорорганические соединения и другие агрессивные вещества.
+                    </p>     
+                `;
+                tableBlockFourImg.innerHTML = `
+                <img src="../media/offer/smell.png">
+                `;
                 break;
             case '2213221112':
                 console.log('Схема 6');
+                schemeTitle.textContent = 'СХЕМА 6. Фильтр для удаления железа, жесткости и нитратов';
+                schemeImg.innerHTML = `
+                <img src="../media/offer/scheme-6/1.png" alt="Схема" class="img-fluid">
+                `;
+                schemeImg.alt = schemeTitle;
+                tableBlockOneTitle.textContent = 'Фильтр механический';
+                tableBlockOneText.innerHTML = `
+                    <p class="text-muted font-weight-bold">Фильтр CEPEX LF 1" (130мкм)</p>
+                    <p class="text-muted">Тонкость очистки (мкм) 130 </p>
+                    <p class="text-muted"></p>Дисковые фильтры CEPEX обладают высокой производительностью и повышенной
+                    грязеемкостью по сравнению с сетчатыми фильтрами. </p>
+                    <p class="text-muted"></p>В качестве фильтрующего элемента используются диски из полимеров, на
+                    поверхности которых имеются канавки определенной ширины и глубины. </p>
+                    <p class="text-muted"></p>При сжатии дисков между ними появляется объемная сетчатая структура,
+                    являющаяся рабочим фильтрующим элементом. Вода проходит через плотно сжатые диски, а нерастворенные
+                    частицы остаются в междисковом пространстве. Для того чтобы промыть дисковый фильтр, нужно сбросить
+                    давление в магистрали, затем снять кожух фильтра и достать фильтрующий элемент, при этом пакет
+                    дисков разожмется. В разжатом состоянии диски легко промываются водой под незначительным напором.
+                    </p>
+                `;
+                tableBlockOneImg.innerHTML = `
+                <img src="../media/offer/filter.png">
+                `;
+                tableBlockTwoTitle.textContent = 'Фильтр для удаления железа, жесткости и нитратов';
+                tableBlockTwoText.innerHTML = `
+                <p class="text-muted">Ионообменная загрузка создана для комплексного решения задач в системах
+                водоподготовки и предназначена для удаления солей жесткости, а так же предотвращает образование
+                накипи в котлах, бойлерах, стиральных и посудомоечных машинах и другой бытовой техники, что
+                продлевают срок службы всей без исключения техники. Обеспечивает комфорт водных процедур,
+                экономию моющих средств и электроэнергии. Данная загрузка состоит из нескольких ионообменных
+                смол разного гранулометрического состава позволяющих эффективно удалять из исходной воды соли
+                жесткости (Ca2+ и Mg2+)</p>
+                <p class="text-muted">В качестве фильтрующей среды используются ионообменные смолы, обладающие
+                    следующими свойствами;</p>
+                <ul class="text-muted">
+                    <li class="list-item offer__list-item">высокие скорости потока при насыщении и регенерации;</li>
+                    <li class="list-item offer__list-item">низкий расход воды на отмывку - до 150-200л;</li>
+                    <li class="list-item offer__list-item">равномерное распределение реагентов, воды и растворов;
+                    </li>
+                    <li class="list-item offer__list-item"> однородная рабочая зона;</li>
+                </ul>
+                <p class="text-muted">Срок службы загрузки до 4-6 лет.
+                </p>
+            `;
+                tableBlockTwoImg.innerHTML = `
+                <img src="../media/offer/iron.png">
+                `;
+                tableBlockThirdBlock.style.display = 'none';  
+                tableBlockThirdTitle.style.display = 'none';  
+                tableBlockThirdText.style.display = 'none';
+                tableBlockThirdImg.style.display = 'none';
+                tableBlockFiveBlock.style.display = 'none';  
+                tableBlockFiveTitle.style.display = 'none';  
+                tableBlockFiveText.style.display = 'none';
+                tableBlockFiveImg.style.display = 'none';                      
+                tableBlockFourTitle.textContent = 'Фильтр с угольным блоком ВВ10';
+                tableBlockFourText.innerHTML = `
+                    <p class="text-muted">
+                    Удаляет из воды бытового назначения неприятный запах и цвет, а также хлор, хлорорганические соединения и другие агрессивные вещества.
+                    </p>     
+                `;
+                tableBlockFourImg.innerHTML = `
+                <img src="../media/offer/smell.png">
+                `;
                 break;
             case '2213222121':
                 console.log('Схема 7');
+                schemeTitle.textContent = 'СХЕМА 7. Фильтр для удаления железа, жесткости, аммония и ПМО';
+                schemeImg.innerHTML = `
+                <img src="../media/offer/scheme-7/1.png" alt="Схема" class="img-fluid">
+                `;
+                schemeImg.alt = schemeTitle;
+                tableBlockOneTitle.textContent = 'Фильтр механический';
+                tableBlockOneText.innerHTML = `
+                    <p class="text-muted font-weight-bold">Фильтр CEPEX LF 1" (130мкм)</p>
+                    <p class="text-muted">Тонкость очистки (мкм) 130 </p>
+                    <p class="text-muted"></p>Дисковые фильтры CEPEX обладают высокой производительностью и повышенной
+                    грязеемкостью по сравнению с сетчатыми фильтрами. </p>
+                    <p class="text-muted"></p>В качестве фильтрующего элемента используются диски из полимеров, на
+                    поверхности которых имеются канавки определенной ширины и глубины. </p>
+                    <p class="text-muted"></p>При сжатии дисков между ними появляется объемная сетчатая структура,
+                    являющаяся рабочим фильтрующим элементом. Вода проходит через плотно сжатые диски, а нерастворенные
+                    частицы остаются в междисковом пространстве. Для того чтобы промыть дисковый фильтр, нужно сбросить
+                    давление в магистрали, затем снять кожух фильтра и достать фильтрующий элемент, при этом пакет
+                    дисков разожмется. В разжатом состоянии диски легко промываются водой под незначительным напором.
+                    </p>
+                `;
+                tableBlockOneImg.innerHTML = `
+                <img src="../media/offer/filter.png">
+                `;
+                tableBlockTwoTitle.textContent = 'Фильтр для удаления железа, жесткости, аммония и ПМО';
+                tableBlockTwoText.innerHTML = `
+                <p class="text-muted">Ионообменная загрузка создана для комплексного решения задач в системах
+                водоподготовки и предназначена для удаления солей жесткости, а так же предотвращает образование
+                накипи в котлах, бойлерах, стиральных и посудомоечных машинах и другой бытовой техники, что
+                продлевают срок службы всей без исключения техники. Обеспечивает комфорт водных процедур,
+                экономию моющих средств и электроэнергии. Данная загрузка состоит из нескольких ионообменных
+                смол разного гранулометрического состава позволяющих эффективно удалять из исходной воды соли
+                жесткости (Ca2+ и Mg2+)</p>
+                <p class="text-muted">В качестве фильтрующей среды используются ионообменные смолы, обладающие
+                    следующими свойствами;</p>
+                <ul class="text-muted">
+                    <li class="list-item offer__list-item">высокие скорости потока при насыщении и регенерации;</li>
+                    <li class="list-item offer__list-item">низкий расход воды на отмывку - до 150-200л;</li>
+                    <li class="list-item offer__list-item">равномерное распределение реагентов, воды и растворов;
+                    </li>
+                    <li class="list-item offer__list-item"> однородная рабочая зона;</li>
+                </ul>
+                <p class="text-muted">Срок службы загрузки до 4-6 лет.
+                </p>
+            `;
+                tableBlockTwoImg.innerHTML = `
+                <img src="../media/offer/iron.png">
+                `;
+                tableBlockThirdBlock.style.display = 'none';  
+                tableBlockThirdTitle.style.display = 'none';  
+                tableBlockThirdText.style.display = 'none';
+                tableBlockThirdImg.style.display = 'none';
+                tableBlockFiveBlock.style.display = 'none';  
+                tableBlockFiveTitle.style.display = 'none';  
+                tableBlockFiveText.style.display = 'none';
+                tableBlockFiveImg.style.display = 'none';                      
+                tableBlockFourTitle.textContent = 'Фильтр с угольным блоком ВВ10';
+                tableBlockFourText.innerHTML = `
+                    <p class="text-muted">
+                    Удаляет из воды бытового назначения неприятный запах и цвет, а также хлор, хлорорганические соединения и другие агрессивные вещества.
+                    </p>     
+                `;
+                tableBlockFourImg.innerHTML = `
+                <img src="../media/offer/smell.png">
+                `;
                 break;
             case '2221221211':
                 console.log('Схема 8');
+                schemeTitle.textContent = 'СХЕМА 8. Обезжелезивание + Сероводород + Запах';
+                schemeImg.innerHTML = `
+                <img src="../media/offer/scheme-8/1.png" alt="Схема" class="img-fluid">
+                `;
+                schemeImg.alt = schemeTitle;
+                tableBlockOneTitle.textContent = 'Фильтр механический';
+                tableBlockOneText.innerHTML = `
+                    <p class="text-muted font-weight-bold">Фильтр CEPEX LF 1" (130мкм)</p>
+                    <p class="text-muted">Тонкость очистки (мкм) 130 </p>
+                    <p class="text-muted"></p>Дисковые фильтры CEPEX обладают высокой производительностью и повышенной
+                    грязеемкостью по сравнению с сетчатыми фильтрами. </p>
+                    <p class="text-muted"></p>В качестве фильтрующего элемента используются диски из полимеров, на
+                    поверхности которых имеются канавки определенной ширины и глубины. </p>
+                    <p class="text-muted"></p>При сжатии дисков между ними появляется объемная сетчатая структура,
+                    являющаяся рабочим фильтрующим элементом. Вода проходит через плотно сжатые диски, а нерастворенные
+                    частицы остаются в междисковом пространстве. Для того чтобы промыть дисковый фильтр, нужно сбросить
+                    давление в магистрали, затем снять кожух фильтра и достать фильтрующий элемент, при этом пакет
+                    дисков разожмется. В разжатом состоянии диски легко промываются водой под незначительным напором.
+                    </p>
+                `;
+                tableBlockOneImg.innerHTML = `
+                <img src="../media/offer/filter.png">
+                `;
+                tableBlockTwoTitle.textContent = 'Установка аэрации';
+                tableBlockTwoText.innerHTML = `
+                    <p class="text-muted">Аэрация основана на принципе принудительной подачи воздуха в аэрационную колонну с водой. Аэрационные колонны используются зачастую в схемах водоочистки с небольшой производительностью. С помощью   компрессора производится нагнетание воздуха. Таким образом, происходит насыщение воды кислородом и окисление железа и марганца. </p>
+                `;
+                tableBlockTwoImg.innerHTML = `
+                <img src="../media/offer/aero.png">
+                `;
+                // tableBlockThirdBlock.style.display = 'block';  
+                tableBlockThirdTitle.textContent = 'Комплекс  обезжелезивания и осветления';  
+                tableBlockThirdText.innerHTML = `
+                <p class="text-muted">Фильтр ускоряет процесс окисления железа и задерживает его окисленные соединения в слое фильтрующего материала.  Фильтр работает в автоматическом режиме. В качестве  фильтрующего материала используется Экоферокс и МСФерокс.  Промывка фильтра осуществляется  обратным током исходной водой.</p>
+                <p class="text-muted">ЭКОФЕРОКС действует как катализатор окисления в реакциях взаимодействия растворенного кислорода с соединениями железа (II) и (III), в результате чего образуется гидрооксид железа (III), который является нерастворимым соединением и легко удаляется обратным током воды.</p>                   
+                <p class="text-muted">«MSFerox» действует как катализатор окисления в реакциях взаимодействия растворенного кислорода с соединениями железа (II) и (III) валентного, в результате реакции образуется гидроксид железа (III), который является не растворимым соединением и легко удаляется обратным током воды. Сероводород и марганец также окисляются и оседают в слоях фильтрующего материала, с последующим удалением обратным током воды. «MSFerox» не требует для регенерации применение реагентов. Необходима своевременная периодическая промывка водой или для более эффективной промывки - водо-воздушная.</p>
+            `;
+                tableBlockThirdImg.innerHTML = `
+                <img src="../media/offer/color.png">
+                `;
+                tableBlockFiveBlock.style.display = 'none';  
+                tableBlockFiveTitle.style.display = 'none';  
+                tableBlockFiveText.style.display = 'none';
+                tableBlockFiveImg.style.display = 'none';                      
+                tableBlockFourTitle.textContent = 'Фильтр с угольным блоком ВВ10';
+                tableBlockFourText.innerHTML = `
+                    <p class="text-muted">
+                    Удаляет из воды бытового назначения неприятный запах и цвет, а также хлор, хлорорганические соединения и другие агрессивные вещества.
+                    </p>     
+                `;
+                tableBlockFourImg.innerHTML = `
+                <img src="../media/offer/smell.png">
+                `;
                 break;
             case '2321111111':
                 console.log('Схема 9');
+                schemeTitle.textContent = 'СХЕМА 9. Осветление (Мутность + Цветность)';
+                schemeImg.innerHTML = `
+                <img src="../media/offer/scheme-9/1.png" alt="Схема" class="img-fluid">
+                `;
+                schemeImg.alt = schemeTitle;
+                tableBlockOneTitle.textContent = 'Фильтр механический';
+                tableBlockOneText.innerHTML = `
+                    <p class="text-muted font-weight-bold">Фильтр CEPEX LF 1" (130мкм)</p>
+                    <p class="text-muted">Тонкость очистки (мкм) 130 </p>
+                    <p class="text-muted"></p>Дисковые фильтры CEPEX обладают высокой производительностью и повышенной
+                    грязеемкостью по сравнению с сетчатыми фильтрами. </p>
+                    <p class="text-muted"></p>В качестве фильтрующего элемента используются диски из полимеров, на
+                    поверхности которых имеются канавки определенной ширины и глубины. </p>
+                    <p class="text-muted"></p>При сжатии дисков между ними появляется объемная сетчатая структура,
+                    являющаяся рабочим фильтрующим элементом. Вода проходит через плотно сжатые диски, а нерастворенные
+                    частицы остаются в междисковом пространстве. Для того чтобы промыть дисковый фильтр, нужно сбросить
+                    давление в магистрали, затем снять кожух фильтра и достать фильтрующий элемент, при этом пакет
+                    дисков разожмется. В разжатом состоянии диски легко промываются водой под незначительным напором.
+                    </p>
+                `;
+                tableBlockOneImg.innerHTML = `
+                <img src="../media/offer/filter.png">
+                `;
+                tableBlockTwoTitle.textContent = 'Комплекс  обезжелезивания и осветления';
+                tableBlockTwoText.innerHTML = `
+                    <p class="text-muted">Автоматические угольные фильтры серии служат для дехлорирования воды, удаления посторонних запахов, цветности, органики, хлорорганических производных и других вредных загрязнений. Активированный уголь имеет большую удельную поверхность и является эффективным сорбентом, который поглощает из воды и задерживает в фильтрующей среде растворенные примеси и органику, удаляет неприятный запах и улучшает вкус воды. Кроме того, активированный уголь обладает каталитическими свойствами и способен очищать воду от свободного хлора -дехлорировать.  При этом загрузка фильтра не расходуется, а также не требуется дозирования химических реагентов в процессе эксплуатации.</p>
+                `;
+                tableBlockTwoImg.innerHTML = `
+                <img src="../media/offer/color.png">
+                `;
+                tableBlockThirdBlock.style.display = 'none';  
+                tableBlockThirdTitle.style.display = 'none';  
+                tableBlockThirdText.style.display = 'none';
+                tableBlockThirdImg.style.display = 'none';
+                tableBlockFiveBlock.style.display = 'none';  
+                tableBlockFiveTitle.style.display = 'none';  
+                tableBlockFiveText.style.display = 'none';
+                tableBlockFiveImg.style.display = 'none';                      
+                tableBlockFourTitle.textContent = 'Фильтр с угольным блоком ВВ10';
+                tableBlockFourText.innerHTML = `
+                    <p class="text-muted">
+                    Удаляет из воды бытового назначения неприятный запах и цвет, а также хлор, хлорорганические соединения и другие агрессивные вещества.
+                    </p>     
+                `;
+                tableBlockFourImg.innerHTML = `
+                <img src="../media/offer/smell.png">
+                `;
                 break;
             case '2224221211':
                 console.log('Схема 10');
+                schemeTitle.textContent = 'СХЕМА 10. Аэрация (Сероводород) + Обезжелезивание + Умягчение';
+                schemeImg.innerHTML = `
+                <img src="../media/offer/scheme-10/1.png" alt="Схема" class="img-fluid">
+                `;
+                schemeImg.alt = schemeTitle;
+                tableBlockOneTitle.textContent = 'Фильтр механический';
+                tableBlockOneText.innerHTML = `
+                    <p class="text-muted font-weight-bold">Фильтр CEPEX LF 1" (130мкм)</p>
+                    <p class="text-muted">Тонкость очистки (мкм) 130 </p>
+                    <p class="text-muted"></p>Дисковые фильтры CEPEX обладают высокой производительностью и повышенной
+                    грязеемкостью по сравнению с сетчатыми фильтрами. </p>
+                    <p class="text-muted"></p>В качестве фильтрующего элемента используются диски из полимеров, на
+                    поверхности которых имеются канавки определенной ширины и глубины. </p>
+                    <p class="text-muted"></p>При сжатии дисков между ними появляется объемная сетчатая структура,
+                    являющаяся рабочим фильтрующим элементом. Вода проходит через плотно сжатые диски, а нерастворенные
+                    частицы остаются в междисковом пространстве. Для того чтобы промыть дисковый фильтр, нужно сбросить
+                    давление в магистрали, затем снять кожух фильтра и достать фильтрующий элемент, при этом пакет
+                    дисков разожмется. В разжатом состоянии диски легко промываются водой под незначительным напором.
+                    </p>
+                `;
+                tableBlockOneImg.innerHTML = `
+                <img src="../media/offer/filter.png">
+                `;
+                tableBlockTwoTitle.textContent = 'Установка аэрации';
+                tableBlockTwoText.innerHTML = `
+                    <p class="text-muted">Аэрация основана на принципе принудительной подачи воздуха в аэрационную колонну с водой. Аэрационные колонны используются зачастую в схемах водоочистки с небольшой производительностью. С помощью   компрессора производится нагнетание воздуха. Таким образом, происходит насыщение воды кислородом и окисление железа и марганца. </p>
+                `;
+                tableBlockTwoImg.innerHTML = `
+                <img src="../media/offer/aero.png">
+                `;
+                // tableBlockThirdBlock.style.display = 'block';  
+                tableBlockThirdTitle.textContent = 'Комплекс  обезжелезивания и осветления';  
+                tableBlockThirdText.innerHTML = `
+                <p class="text-muted">Фильтр ускоряет процесс окисления железа и задерживает его окисленные соединения в слое фильтрующего материала.  Фильтр работает в автоматическом режиме. В качестве  фильтрующего материала используется Экоферокс и МСФерокс.  Промывка фильтра осуществляется  обратным током исходной водой.</p>
+                <p class="text-muted">ЭКОФЕРОКС действует как катализатор окисления в реакциях взаимодействия растворенного кислорода с соединениями железа (II) и (III), в результате чего образуется гидрооксид железа (III), который является нерастворимым соединением и легко удаляется обратным током воды.</p>                   
+                <p class="text-muted">«MSFerox» действует как катализатор окисления в реакциях взаимодействия растворенного кислорода с соединениями железа (II) и (III) валентного, в результате реакции образуется гидроксид железа (III), который является не растворимым соединением и легко удаляется обратным током воды. Сероводород и марганец также окисляются и оседают в слоях фильтрующего материала, с последующим удалением обратным током воды. «MSFerox» не требует для регенерации применение реагентов. Необходима своевременная периодическая промывка водой или для более эффективной промывки - водо-воздушная.</p>
+            `;
+                tableBlockThirdImg.innerHTML = `
+                <img src="../media/offer/color.png">
+                `;                 
+                // tableBlockFiveBlock.style.display = 'block';  
+                tableBlockFiveTitle.textContent = 'Установка умягчения';  
+                tableBlockFiveText.innerHTML = `
+                <p class="text-muted">Ионообменная загрузка создана для комплексного решения задач в системах
+                водоподготовки и предназначена для удаления солей жесткости, а так же предотвращает образование
+                накипи в котлах, бойлерах, стиральных и посудомоечных машинах и другой бытовой техники, что
+                продлевают срок службы всей без исключения техники. Обеспечивает комфорт водных процедур,
+                экономию моющих средств и электроэнергии. Данная загрузка состоит из нескольких ионообменных
+                смол разного гранулометрического состава позволяющих эффективно удалять из исходной воды соли
+                жесткости (Ca2+ и Mg2+)</p>
+                <p class="text-muted">В качестве фильтрующей среды используются ионообменные смолы, обладающие
+                    следующими свойствами;</p>
+                <ul class="text-muted">
+                    <li class="list-item offer__list-item">высокие скорости потока при насыщении и регенерации;</li>
+                    <li class="list-item offer__list-item">низкий расход воды на отмывку - до 150-200л;</li>
+                    <li class="list-item offer__list-item">равномерное распределение реагентов, воды и растворов;
+                    </li>
+                    <li class="list-item offer__list-item"> однородная рабочая зона;</li>
+                </ul>
+                <p class="text-muted">Срок службы загрузки до 4-6 лет.
+                </p>
+            `;
+                tableBlockFiveImg.innerHTML = `
+                <img src="../media/offer/iron.png">
+                `;                 
+                tableBlockFourTitle.textContent = 'Фильтр с угольным блоком ВВ10';
+                tableBlockFourText.innerHTML = `
+                    <p class="text-muted">
+                    Удаляет из воды бытового назначения неприятный запах и цвет, а также хлор, хлорорганические соединения и другие агрессивные вещества.
+                    </p>     
+                `;
+                tableBlockFourImg.innerHTML = `
+                <img src="../media/offer/smell.png">
+                `;
                 break;
             case '':
                 console.log('начало архива');
@@ -151,6 +702,11 @@ function calc() {
                     </div>
                 </div>
                 `;
+
+                setTimeout( () => {
+                     window.location.reload();
+                    }, 3000);
+
                 console.log('По вашим данным требуется индивидуальный расчет. Оставьте контактные данные и наш менеджер свяжется с вами.');
                 break;
         }
@@ -182,7 +738,7 @@ function calc() {
 
         const userMail = 'test@test.com';
 
-        calcForm.innerHTML = `<h3>Расчет отправлен на указанную вами почту: ${userMail}</h3>`;
+        calcForm.innerHTML = `<h3>Расчет отправлен на указанную вами почту</h3>`;
 
     });
 
