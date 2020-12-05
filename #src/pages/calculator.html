@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,18 +8,15 @@
     <meta name="description"
         content="Продажа и установка фильтров для воды в квартирах и коттеджах, очистка воды из скважин, установки для промышленной очистки воды.">
     <link rel="shortcut icon" href="../media/favicon.ico" type="image/x-icon">
-
     <!-- Font Awesome -->
     <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet" />
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.css" rel="stylesheet" />
-
     <!-- Custom styles -->
     <link rel="stylesheet" href="../css/style.min.css">
 </head>
-
 <body>
     <!-- Start project here-->
     <header>
@@ -129,10 +125,8 @@
 
     </header>
     <main class="main mt-5 pt-5">
-
         <!-- calc -->
         <section class="calc text-center container my-5">
-
             <div class="row conection__content">
 
                 <h2 class="conection__title display-2"><strong class="section__tittle">Калькулятор водоочистки</strong></h2>
@@ -308,6 +302,11 @@
                                 </div>
                                 <div class="row row__calc mt-5 ">
                                     <button id="btnChangeScheme" class="btn">Подобрать оборудование</button>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn mt-3" data-toggle="modal" data-target="#basicExampleModal">
+                                        Показать оборудование
+                                    </button> 
+                                    <!-- Button trigger modal -->
                                 </div>
                             </div>
                             <div class="calc__form--part2 hide">
@@ -427,9 +426,10 @@
 
                 </div>
 
-            </div>
-        </section>
 
+            </div>
+
+        </section>
         <!-- contacts -->
         <section id="contacts" class="container contacts text-center dark-grey-text h-100">
 
@@ -537,13 +537,9 @@
             </div>
             <!--Grid row-->
         </section>
-    </main>
-   
-    
-    <!-- Коммерческое предложение первая часть-->
-    @@include('_offer__part-one.html')
-    <!-- Коммерческое предложение первая часть-->
+    </main>   
 
+    @@include('_modal_page.html');
 
     @@include('_footer.html')
     <!-- End project here-->
@@ -553,7 +549,5 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" defer src="../js/bundle.min.js">
     </script>
-
 </body>
-
 </html>
