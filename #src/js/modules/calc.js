@@ -11,25 +11,25 @@ function calc() {
         modalBtnClose = document.querySelectorAll('[data-form=btnClose]'),
         userName = document.querySelector('[data-form=userName]'),
         userEmail = document.querySelector('[data-form=userEmail]'),
-        schemeTitle = document.querySelectorAll('[data-form=schemeTitle]'),
-        schemeImg = document.querySelectorAll('[data-form=schemeImg]'),
-        tableBlockOneTitle = document.querySelectorAll('[data-form=tableBlockOneTitle]'),
-        tableBlockOneText = document.querySelectorAll('[data-form=tableBlockOneText]'),
-        tableBlockOneImg = document.querySelectorAll('[data-form=tableBlockOneImg]'),
-        tableBlockTwoTitle = document.querySelectorAll('[data-form=tableBlockTwoTitle]'),
-        tableBlockTwoText = document.querySelectorAll('[data-form=tableBlockTwoText]'),
-        tableBlockTwoImg = document.querySelectorAll('[data-form=tableBlockTwoImg]'),
-        tableBlockThirdBlock = document.querySelectorAll('[data-form=tableBlockThirdBlock]'),
-        tableBlockThirdTitle = document.querySelectorAll('[data-form=tableBlockThirdTitle]'),
-        tableBlockThirdText = document.querySelectorAll('[data-form=tableBlockThirdText]'),
-        tableBlockThirdImg = document.querySelectorAll('[data-form=tableBlockThirdImg]'),
-        tableBlockFiveBlock = document.querySelectorAll('[data-form=tableBlockFiveBlock]'),
-        tableBlockFiveTitle = document.querySelectorAll('[data-form=tableBlockFiveTitle]'),
-        tableBlockFiveText = document.querySelectorAll('[data-form=tableBlockFiveText]'),
-        tableBlockFiveImg = document.querySelectorAll('[data-form=tableBlockFiveImg]'),
-        tableBlockFourTitle = document.querySelectorAll('[data-form=tableBlockFourTitle]'),
-        tableBlockFourText = document.querySelectorAll('[data-form=tableBlockFourText]'),
-        tableBlockFourImg = document.querySelectorAll('[data-form=tableBlockFourImg]');
+        schemeTitle = document.querySelector('[data-form=schemeTitle]'),
+        schemeImg = document.querySelector('[data-form=schemeImg]'),
+        tableBlockOneTitle = document.querySelector('[data-form=tableBlockOneTitle]'),
+        tableBlockOneText = document.querySelector('[data-form=tableBlockOneText]'),
+        tableBlockOneImg = document.querySelector('[data-form=tableBlockOneImg]'),
+        tableBlockTwoTitle = document.querySelector('[data-form=tableBlockTwoTitle]'),
+        tableBlockTwoText = document.querySelector('[data-form=tableBlockTwoText]'),
+        tableBlockTwoImg = document.querySelector('[data-form=tableBlockTwoImg]'),
+        tableBlockThirdBlock = document.querySelector('[data-form=tableBlockThirdBlock]'),
+        tableBlockThirdTitle = document.querySelector('[data-form=tableBlockThirdTitle]'),
+        tableBlockThirdText = document.querySelector('[data-form=tableBlockThirdText]'),
+        tableBlockThirdImg = document.querySelector('[data-form=tableBlockThirdImg]'),
+        tableBlockFiveBlock = document.querySelector('[data-form=tableBlockFiveBlock]'),
+        tableBlockFiveTitle = document.querySelector('[data-form=tableBlockFiveTitle]'),
+        tableBlockFiveText = document.querySelector('[data-form=tableBlockFiveText]'),
+        tableBlockFiveImg = document.querySelector('[data-form=tableBlockFiveImg]'),
+        tableBlockFourTitle = document.querySelector('[data-form=tableBlockFourTitle]'),
+        tableBlockFourText = document.querySelector('[data-form=tableBlockFourText]'),
+        tableBlockFourImg = document.querySelector('[data-form=tableBlockFourImg]');
 
     let schemeNumber;
     let points = document.querySelector('#points');
@@ -61,9 +61,7 @@ function calc() {
             case '1114111111':
                 schemeNumber = '1';
                 console.log(schemeNumber);
-                schemeTitle.forEach((t) => {
-                    t.textContent = 'СХЕМА 1. Установка умягчения';
-                });
+                schemeTitle.textContent = 'СХЕМА 1. Установка умягчения';
                 schemeImg.innerHTML = `
                    <img src="../media/offer/scheme-1/1.png" alt="Схема" class="img-fluid">
                    `;
@@ -742,11 +740,7 @@ function calc() {
     });
 
     //send offer
-    sendScheme.addEventListener('click', 
-        async () => {
-          await getData('.calc__form--part1 .calc__input');
-          await getData('.calc__form--part1 .calc__option');
-
+    sendScheme.addEventListener('click', () => {
         calcFormPart2.classList.add('hide');
         setData('.calc__form');
         calcForm.innerHTML = `
