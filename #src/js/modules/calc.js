@@ -11,29 +11,29 @@ function calc() {
         modalBtnClose = document.querySelectorAll('[data-form=btnClose]'),
         userName = document.querySelector('[data-form=userName]'),
         userEmail = document.querySelector('[data-form=userEmail]'),
-        schemeTitle = document.querySelector('[data-form=schemeTitle]'),
-        schemeImg = document.querySelector('[data-form=schemeImg]'),
-        tableBlockOneTitle = document.querySelector('[data-form=tableBlockOneTitle]'),
-        tableBlockOneText = document.querySelector('[data-form=tableBlockOneText]'),
-        tableBlockOneImg = document.querySelector('[data-form=tableBlockOneImg]'),
-        tableBlockTwoTitle = document.querySelector('[data-form=tableBlockTwoTitle]'),
-        tableBlockTwoText = document.querySelector('[data-form=tableBlockTwoText]'),
-        tableBlockTwoImg = document.querySelector('[data-form=tableBlockTwoImg]'),
-        tableBlockThirdBlock = document.querySelector('[data-form=tableBlockThirdBlock]'),
-        tableBlockThirdTitle = document.querySelector('[data-form=tableBlockThirdTitle]'),
-        tableBlockThirdText = document.querySelector('[data-form=tableBlockThirdText]'),
-        tableBlockThirdImg = document.querySelector('[data-form=tableBlockThirdImg]'),
-        tableBlockFiveBlock = document.querySelector('[data-form=tableBlockFiveBlock]'),
-        tableBlockFiveTitle = document.querySelector('[data-form=tableBlockFiveTitle]'),
-        tableBlockFiveText = document.querySelector('[data-form=tableBlockFiveText]'),
-        tableBlockFiveImg = document.querySelector('[data-form=tableBlockFiveImg]'),
-        tableBlockFourTitle = document.querySelector('[data-form=tableBlockFourTitle]'),
-        tableBlockFourText = document.querySelector('[data-form=tableBlockFourText]'),
-        tableBlockFourImg = document.querySelector('[data-form=tableBlockFourImg]');
+        schemeTitle = document.querySelectorAll('[data-form=schemeTitle]'),
+        schemeImg = document.querySelectorAll('[data-form=schemeImg]'),
+        tableBlockOneTitle = document.querySelectorAll('[data-form=tableBlockOneTitle]'),
+        tableBlockOneText = document.querySelectorAll('[data-form=tableBlockOneText]'),
+        tableBlockOneImg = document.querySelectorAll('[data-form=tableBlockOneImg]'),
+        tableBlockTwoTitle = document.querySelectorAll('[data-form=tableBlockTwoTitle]'),
+        tableBlockTwoText = document.querySelectorAll('[data-form=tableBlockTwoText]'),
+        tableBlockTwoImg = document.querySelectorAll('[data-form=tableBlockTwoImg]'),
+        tableBlockThirdBlock = document.querySelectorAll('[data-form=tableBlockThirdBlock]'),
+        tableBlockThirdTitle = document.querySelectorAll('[data-form=tableBlockThirdTitle]'),
+        tableBlockThirdText = document.querySelectorAll('[data-form=tableBlockThirdText]'),
+        tableBlockThirdImg = document.querySelectorAll('[data-form=tableBlockThirdImg]'),
+        tableBlockFiveBlock = document.querySelectorAll('[data-form=tableBlockFiveBlock]'),
+        tableBlockFiveTitle = document.querySelectorAll('[data-form=tableBlockFiveTitle]'),
+        tableBlockFiveText = document.querySelectorAll('[data-form=tableBlockFiveText]'),
+        tableBlockFiveImg = document.querySelectorAll('[data-form=tableBlockFiveImg]'),
+        tableBlockFourTitle = document.querySelectorAll('[data-form=tableBlockFourTitle]'),
+        tableBlockFourText = document.querySelectorAll('[data-form=tableBlockFourText]'),
+        tableBlockFourImg = document.querySelectorAll('[data-form=tableBlockFourImg]');
 
-        let schemeNumber;
-        let points = document.querySelector('#points');
-        let offerNumber;
+    let schemeNumber;
+    let points = document.querySelector('#points');
+    let offerNumber;
 
     // перезагрузка страницы при закрытии модального окна
     modalBtnClose.forEach((btn) => {
@@ -48,7 +48,6 @@ function calc() {
 
         const elements = document.querySelectorAll(selector);
         let result = [];
-        
 
         elements.forEach(elem => {
             if (elem.selected) {
@@ -62,7 +61,9 @@ function calc() {
             case '1114111111':
                 schemeNumber = '1';
                 console.log(schemeNumber);
-                schemeTitle.textContent = 'СХЕМА 1. Установка умягчения';
+                schemeTitle.forEach((t) => {
+                    t.textContent = 'СХЕМА 1. Установка умягчения';
+                });
                 schemeImg.innerHTML = `
                    <img src="../media/offer/scheme-1/1.png" alt="Схема" class="img-fluid">
                    `;
@@ -71,11 +72,11 @@ function calc() {
                 tableBlockOneText.innerHTML = `
                        <p class="text-muted font-weight-bold">Фильтр CEPEX LF 1" (130мкм)</p>
                        <p class="text-muted">Тонкость очистки (мкм) 130 </p>
-                       <p class="text-muted"></p>Дисковые фильтры CEPEX обладают высокой производительностью и повышенной
+                       <p class="text-muted">Дисковые фильтры CEPEX обладают высокой производительностью и повышенной
                        грязеемкостью по сравнению с сетчатыми фильтрами. </p>
-                       <p class="text-muted"></p>В качестве фильтрующего элемента используются диски из полимеров, на
+                       <p class="text-muted">В качестве фильтрующего элемента используются диски из полимеров, на
                        поверхности которых имеются канавки определенной ширины и глубины. </p>
-                       <p class="text-muted"></p>При сжатии дисков между ними появляется объемная сетчатая структура,
+                       <p class="text-muted">При сжатии дисков между ними появляется объемная сетчатая структура,
                        являющаяся рабочим фильтрующим элементом. Вода проходит через плотно сжатые диски, а нерастворенные
                        частицы остаются в междисковом пространстве. Для того чтобы промыть дисковый фильтр, нужно сбросить
                        давление в магистрали, затем снять кожух фильтра и достать фильтрующий элемент, при этом пакет
@@ -139,11 +140,11 @@ function calc() {
                 tableBlockOneText.innerHTML = `
                        <p class="text-muted font-weight-bold">Фильтр CEPEX LF 1" (130мкм)</p>
                        <p class="text-muted">Тонкость очистки (мкм) 130 </p>
-                       <p class="text-muted"></p>Дисковые фильтры CEPEX обладают высокой производительностью и повышенной
+                       <p class="text-muted">Дисковые фильтры CEPEX обладают высокой производительностью и повышенной
                        грязеемкостью по сравнению с сетчатыми фильтрами. </p>
-                       <p class="text-muted"></p>В качестве фильтрующего элемента используются диски из полимеров, на
+                       <p class="text-muted">В качестве фильтрующего элемента используются диски из полимеров, на
                        поверхности которых имеются канавки определенной ширины и глубины. </p>
-                       <p class="text-muted"></p>При сжатии дисков между ними появляется объемная сетчатая структура,
+                       <p class="text-muted">При сжатии дисков между ними появляется объемная сетчатая структура,
                        являющаяся рабочим фильтрующим элементом. Вода проходит через плотно сжатые диски, а нерастворенные
                        частицы остаются в междисковом пространстве. Для того чтобы промыть дисковый фильтр, нужно сбросить
                        давление в магистрали, затем снять кожух фильтра и достать фильтрующий элемент, при этом пакет
@@ -207,11 +208,11 @@ function calc() {
                 tableBlockOneText.innerHTML = `
                        <p class="text-muted font-weight-bold">Фильтр CEPEX LF 1" (130мкм)</p>
                        <p class="text-muted">Тонкость очистки (мкм) 130 </p>
-                       <p class="text-muted"></p>Дисковые фильтры CEPEX обладают высокой производительностью и повышенной
+                       <p class="text-muted">Дисковые фильтры CEPEX обладают высокой производительностью и повышенной
                        грязеемкостью по сравнению с сетчатыми фильтрами. </p>
-                       <p class="text-muted"></p>В качестве фильтрующего элемента используются диски из полимеров, на
+                       <p class="text-muted">В качестве фильтрующего элемента используются диски из полимеров, на
                        поверхности которых имеются канавки определенной ширины и глубины. </p>
-                       <p class="text-muted"></p>При сжатии дисков между ними появляется объемная сетчатая структура,
+                       <p class="text-muted">При сжатии дисков между ними появляется объемная сетчатая структура,
                        являющаяся рабочим фильтрующим элементом. Вода проходит через плотно сжатые диски, а нерастворенные
                        частицы остаются в междисковом пространстве. Для того чтобы промыть дисковый фильтр, нужно сбросить
                        давление в магистрали, затем снять кожух фильтра и достать фильтрующий элемент, при этом пакет
@@ -260,11 +261,11 @@ function calc() {
                 tableBlockOneText.innerHTML = `
                        <p class="text-muted font-weight-bold">Фильтр CEPEX LF 1" (130мкм)</p>
                        <p class="text-muted">Тонкость очистки (мкм) 130 </p>
-                       <p class="text-muted"></p>Дисковые фильтры CEPEX обладают высокой производительностью и повышенной
+                       <p class="text-muted">Дисковые фильтры CEPEX обладают высокой производительностью и повышенной
                        грязеемкостью по сравнению с сетчатыми фильтрами. </p>
-                       <p class="text-muted"></p>В качестве фильтрующего элемента используются диски из полимеров, на
+                       <p class="text-muted">В качестве фильтрующего элемента используются диски из полимеров, на
                        поверхности которых имеются канавки определенной ширины и глубины. </p>
-                       <p class="text-muted"></p>При сжатии дисков между ними появляется объемная сетчатая структура,
+                       <p class="text-muted">При сжатии дисков между ними появляется объемная сетчатая структура,
                        являющаяся рабочим фильтрующим элементом. Вода проходит через плотно сжатые диски, а нерастворенные
                        частицы остаются в междисковом пространстве. Для того чтобы промыть дисковый фильтр, нужно сбросить
                        давление в магистрали, затем снять кожух фильтра и достать фильтрующий элемент, при этом пакет
@@ -319,11 +320,11 @@ function calc() {
                 tableBlockOneText.innerHTML = `
                        <p class="text-muted font-weight-bold">Фильтр CEPEX LF 1" (130мкм)</p>
                        <p class="text-muted">Тонкость очистки (мкм) 130 </p>
-                       <p class="text-muted"></p>Дисковые фильтры CEPEX обладают высокой производительностью и повышенной
+                       <p class="text-muted">Дисковые фильтры CEPEX обладают высокой производительностью и повышенной
                        грязеемкостью по сравнению с сетчатыми фильтрами. </p>
-                       <p class="text-muted"></p>В качестве фильтрующего элемента используются диски из полимеров, на
+                       <p class="text-muted">В качестве фильтрующего элемента используются диски из полимеров, на
                        поверхности которых имеются канавки определенной ширины и глубины. </p>
-                       <p class="text-muted"></p>При сжатии дисков между ними появляется объемная сетчатая структура,
+                       <p class="text-muted">При сжатии дисков между ними появляется объемная сетчатая структура,
                        являющаяся рабочим фильтрующим элементом. Вода проходит через плотно сжатые диски, а нерастворенные
                        частицы остаются в междисковом пространстве. Для того чтобы промыть дисковый фильтр, нужно сбросить
                        давление в магистрали, затем снять кожух фильтра и достать фильтрующий элемент, при этом пакет
@@ -387,11 +388,11 @@ function calc() {
                 tableBlockOneText.innerHTML = `
                        <p class="text-muted font-weight-bold">Фильтр CEPEX LF 1" (130мкм)</p>
                        <p class="text-muted">Тонкость очистки (мкм) 130 </p>
-                       <p class="text-muted"></p>Дисковые фильтры CEPEX обладают высокой производительностью и повышенной
+                       <p class="text-muted">Дисковые фильтры CEPEX обладают высокой производительностью и повышенной
                        грязеемкостью по сравнению с сетчатыми фильтрами. </p>
-                       <p class="text-muted"></p>В качестве фильтрующего элемента используются диски из полимеров, на
+                       <p class="text-muted">В качестве фильтрующего элемента используются диски из полимеров, на
                        поверхности которых имеются канавки определенной ширины и глубины. </p>
-                       <p class="text-muted"></p>При сжатии дисков между ними появляется объемная сетчатая структура,
+                       <p class="text-muted">При сжатии дисков между ними появляется объемная сетчатая структура,
                        являющаяся рабочим фильтрующим элементом. Вода проходит через плотно сжатые диски, а нерастворенные
                        частицы остаются в междисковом пространстве. Для того чтобы промыть дисковый фильтр, нужно сбросить
                        давление в магистрали, затем снять кожух фильтра и достать фильтрующий элемент, при этом пакет
@@ -455,11 +456,11 @@ function calc() {
                 tableBlockOneText.innerHTML = `
                        <p class="text-muted font-weight-bold">Фильтр CEPEX LF 1" (130мкм)</p>
                        <p class="text-muted">Тонкость очистки (мкм) 130 </p>
-                       <p class="text-muted"></p>Дисковые фильтры CEPEX обладают высокой производительностью и повышенной
+                       <p class="text-muted">Дисковые фильтры CEPEX обладают высокой производительностью и повышенной
                        грязеемкостью по сравнению с сетчатыми фильтрами. </p>
-                       <p class="text-muted"></p>В качестве фильтрующего элемента используются диски из полимеров, на
+                       <p class="text-muted">В качестве фильтрующего элемента используются диски из полимеров, на
                        поверхности которых имеются канавки определенной ширины и глубины. </p>
-                       <p class="text-muted"></p>При сжатии дисков между ними появляется объемная сетчатая структура,
+                       <p class="text-muted">При сжатии дисков между ними появляется объемная сетчатая структура,
                        являющаяся рабочим фильтрующим элементом. Вода проходит через плотно сжатые диски, а нерастворенные
                        частицы остаются в междисковом пространстве. Для того чтобы промыть дисковый фильтр, нужно сбросить
                        давление в магистрали, затем снять кожух фильтра и достать фильтрующий элемент, при этом пакет
@@ -523,11 +524,11 @@ function calc() {
                 tableBlockOneText.innerHTML = `
                        <p class="text-muted font-weight-bold">Фильтр CEPEX LF 1" (130мкм)</p>
                        <p class="text-muted">Тонкость очистки (мкм) 130 </p>
-                       <p class="text-muted"></p>Дисковые фильтры CEPEX обладают высокой производительностью и повышенной
+                       <p class="text-muted">Дисковые фильтры CEPEX обладают высокой производительностью и повышенной
                        грязеемкостью по сравнению с сетчатыми фильтрами. </p>
-                       <p class="text-muted"></p>В качестве фильтрующего элемента используются диски из полимеров, на
+                       <p class="text-muted">В качестве фильтрующего элемента используются диски из полимеров, на
                        поверхности которых имеются канавки определенной ширины и глубины. </p>
-                       <p class="text-muted"></p>При сжатии дисков между ними появляется объемная сетчатая структура,
+                       <p class="text-muted">При сжатии дисков между ними появляется объемная сетчатая структура,
                        являющаяся рабочим фильтрующим элементом. Вода проходит через плотно сжатые диски, а нерастворенные
                        частицы остаются в междисковом пространстве. Для того чтобы промыть дисковый фильтр, нужно сбросить
                        давление в магистрали, затем снять кожух фильтра и достать фильтрующий элемент, при этом пакет
@@ -580,16 +581,11 @@ function calc() {
                 tableBlockOneText.innerHTML = `
                        <p class="text-muted font-weight-bold">Фильтр CEPEX LF 1" (130мкм)</p>
                        <p class="text-muted">Тонкость очистки (мкм) 130 </p>
-                       <p class="text-muted"></p>Дисковые фильтры CEPEX обладают высокой производительностью и повышенной
-                       грязеемкостью по сравнению с сетчатыми фильтрами. </p>
-                       <p class="text-muted"></p>В качестве фильтрующего элемента используются диски из полимеров, на
+                       <p class="text-muted">Дисковые фильтры CEPEX обладают высокой производительностью и повышенной грязеемкостью по сравнению с сетчатыми фильтрами.</p>
+                       <p class="text-muted">В качестве фильтрующего элемента используются диски из полимеров, на
                        поверхности которых имеются канавки определенной ширины и глубины. </p>
-                       <p class="text-muted"></p>При сжатии дисков между ними появляется объемная сетчатая структура,
-                       являющаяся рабочим фильтрующим элементом. Вода проходит через плотно сжатые диски, а нерастворенные
-                       частицы остаются в междисковом пространстве. Для того чтобы промыть дисковый фильтр, нужно сбросить
-                       давление в магистрали, затем снять кожух фильтра и достать фильтрующий элемент, при этом пакет
-                       дисков разожмется. В разжатом состоянии диски легко промываются водой под незначительным напором.
-                       </p>
+                       <p class="text-muted">При сжатии дисков между ними появляется объемная сетчатая структура,
+                       являющаяся рабочим фильтрующим элементом. Вода проходит через плотно сжатые диски, а нерастворенные частицы остаются в междисковом пространстве. Для того чтобы промыть дисковый фильтр, нужно сбросить давление в магистрали, затем снять кожух фильтра и достать фильтрующий элемент, при этом пакет дисков разожмется. В разжатом состоянии диски легко промываются водой под незначительным напором.</p>
                    `;
                 tableBlockOneImg.innerHTML = `
                    <img src="../media/offer/filter.png">
@@ -631,11 +627,11 @@ function calc() {
                 tableBlockOneText.innerHTML = `
                        <p class="text-muted font-weight-bold">Фильтр CEPEX LF 1" (130мкм)</p>
                        <p class="text-muted">Тонкость очистки (мкм) 130 </p>
-                       <p class="text-muted"></p>Дисковые фильтры CEPEX обладают высокой производительностью и повышенной
+                       <p class="text-muted">Дисковые фильтры CEPEX обладают высокой производительностью и повышенной
                        грязеемкостью по сравнению с сетчатыми фильтрами. </p>
-                       <p class="text-muted"></p>В качестве фильтрующего элемента используются диски из полимеров, на
+                       <p class="text-muted">В качестве фильтрующего элемента используются диски из полимеров, на
                        поверхности которых имеются канавки определенной ширины и глубины. </p>
-                       <p class="text-muted"></p>При сжатии дисков между ними появляется объемная сетчатая структура,
+                       <p class="text-muted">При сжатии дисков между ними появляется объемная сетчатая структура,
                        являющаяся рабочим фильтрующим элементом. Вода проходит через плотно сжатые диски, а нерастворенные
                        частицы остаются в междисковом пространстве. Для того чтобы промыть дисковый фильтр, нужно сбросить
                        давление в магистрали, затем снять кожух фильтра и достать фильтрующий элемент, при этом пакет
@@ -727,7 +723,6 @@ function calc() {
                 console.log('По вашим данным требуется индивидуальный расчет. Оставьте контактные данные и наш менеджер свяжется с вами.');
                 break;
         }
-
     }
 
     function setData(formSelector) {
@@ -736,29 +731,27 @@ function calc() {
         console.log('points ', points);
         offerNumber = schemeNumber + Number(points.selectedIndex + 1);
         console.log('offerNumber ', offerNumber);
-
-        console.log('userName', userName.value);
-        console.log('userEmail', userEmail.value);
-
+        console.log(schemeImg);
     }
 
     btnChangeScheme.addEventListener('click', () => {
         calcFormPart2.classList.remove('hide');
         calcFormPart1.classList.add('hide');
-        // getData(selector);
         getData('.calc__form--part1 .calc__input');
         getData('.calc__form--part1 .calc__option');
     });
 
     //send offer
-    sendScheme.addEventListener('click', () => {
+    sendScheme.addEventListener('click', 
+        async () => {
+          await getData('.calc__form--part1 .calc__input');
+          await getData('.calc__form--part1 .calc__option');
+
         calcFormPart2.classList.add('hide');
-        // getData(selector);
         setData('.calc__form');
         calcForm.innerHTML = `
             <h3 class="text-success">${userName.value} расчет отправлен на указанную вами почту ${userEmail.value}*</h3>
-            <p class="text-danger">*иногда письма попадают в спам</p>
-        
+            <p class="text-danger">*иногда письма попадают в спам</p>        
         `;
     });
 
