@@ -10,6 +10,7 @@ function calc() {
         modalBody = document.querySelector('#basicExampleModal'),
         modalBtnClose = document.querySelectorAll('[data-form=btnClose]'),
         userName = document.querySelector('[data-form=userName]'),
+        userEmail = document.querySelector('[data-form=userEmail]'),
         schemeTitle = document.querySelector('[data-form=schemeTitle]'),
         schemeImg = document.querySelector('[data-form=schemeImg]'),
         tableBlockOneTitle = document.querySelector('[data-form=tableBlockOneTitle]'),
@@ -30,6 +31,9 @@ function calc() {
         tableBlockFourText = document.querySelector('[data-form=tableBlockFourText]'),
         tableBlockFourImg = document.querySelector('[data-form=tableBlockFourImg]');
 
+        let schemeNumber;
+        let points = document.querySelector('#points');
+        let offerNumber;
 
     // перезагрузка страницы при закрытии модального окна
     modalBtnClose.forEach((btn) => {
@@ -44,7 +48,7 @@ function calc() {
 
         const elements = document.querySelectorAll(selector);
         let result = [];
-        let schemeNumber = 0;
+        
 
         elements.forEach(elem => {
             if (elem.selected) {
@@ -724,13 +728,17 @@ function calc() {
                 break;
         }
 
-        console.log(schemeNumber);
     }
 
     function setData(formSelector) {
-        // let formData = new FormData(formSelector);
-        // let 
-        console.log(formSelector);
+        // let formData = new FormData(formSelector);        
+        console.log('schemeNumber ', schemeNumber);
+        console.log('points ', points);
+        offerNumber = schemeNumber + Number(points.selectedIndex + 1);
+        console.log('offerNumber ', offerNumber);
+
+        console.log('userName', userName.value);
+        console.log('userEmail', userEmail.value);
 
     }
 
@@ -747,8 +755,11 @@ function calc() {
         calcFormPart2.classList.add('hide');
         // getData(selector);
         setData('.calc__form');
-        const userMail = 'test@test.com';
-        calcForm.innerHTML = `<h3>Расчет отправлен на указанную вами почту</h3>`;
+        calcForm.innerHTML = `
+            <h3 class="text-success">${userName.value} расчет отправлен на указанную вами почту ${userEmail.value}*</h3>
+            <p class="text-danger">*иногда письма попадают в спам</p>
+        
+        `;
     });
 
     //func getData
