@@ -113,12 +113,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
 function calc() {
   var btnChangeScheme = document.querySelector('[data-form=btnChangeScheme]'),
       sendScheme = document.querySelector('#sendScheme'),
       calcFormPart1 = document.querySelector('.calc__form--part1'),
       calcFormPart2 = document.querySelector('.calc__form--part2'),
       calcForm = document.querySelector('.calc__form'),
+      offerBlock = document.querySelector('[data-content=offerBlock]'),
+      offerPrice = document.querySelector('[data-content=offerPrice]'),
+      offerDescription = document.querySelector('[data-content=offerDescription]'),
       modalBody = document.querySelector('#basicExampleModal'),
       modalBtnClose = document.querySelectorAll('[data-form=btnClose]'),
       userName = document.querySelector('[data-form=userName]'),
@@ -141,7 +150,11 @@ function calc() {
       tableBlockFiveImg = document.querySelector('[data-form=tableBlockFiveImg]'),
       tableBlockFourTitle = document.querySelector('[data-form=tableBlockFourTitle]'),
       tableBlockFourText = document.querySelector('[data-form=tableBlockFourText]'),
-      tableBlockFourImg = document.querySelector('[data-form=tableBlockFourImg]');
+      tableBlockFourImg = document.querySelector('[data-form=tableBlockFourImg]'),
+      bodyItemPrice = document.querySelector('[data-price=bodyItemPrice]'),
+      sumLowPriceItemPrice = document.querySelector('[data-price=sumLowPriceItemPrice]'),
+      sumHightPriceItemPrice = document.querySelector('[data-price=sumHightPriceItemPrice]'); // создание счетчика схемы
+
   var schemeNumber;
   var points = document.querySelector('#points');
   var offerNumber; // перезагрузка страницы при закрытии модального окна
@@ -427,26 +440,402 @@ function calc() {
     }
   }
 
-  function setData(formSelector) {
-    // let formData = new FormData(formSelector);        
-    console.log('schemeNumber ', schemeNumber);
-    console.log('points ', points);
-    offerNumber = schemeNumber + Number(points.selectedIndex + 1);
-    console.log('offerNumber ', offerNumber);
-    console.log(schemeImg);
-  }
-
   btnChangeScheme.addEventListener('click', function () {
+    // offerPrice.classList.add('hide');
     calcFormPart2.classList.remove('hide');
     calcFormPart1.classList.add('hide');
     getData('.calc__form--part1 .calc__input');
     getData('.calc__form--part1 .calc__option');
-  }); //send offer
+  });
+  console.log('sumLowPriceItemPrice pre', sumLowPriceItemPrice.innerText);
+  console.log('sumHightPriceItemPrice pre', sumHightPriceItemPrice.innerText); // создаем класс прайса
+
+  var PriceLine = /*#__PURE__*/function () {
+    function PriceLine(numberItem, nameItem, unitsItem, volumeItem, lowPriceItem, highPriceItem) {
+      _classCallCheck(this, PriceLine);
+
+      this.numberItem = numberItem;
+      this.nameItem = nameItem;
+      this.unitsItem = unitsItem;
+      this.volumeItem = volumeItem;
+      this.lowPriceItem = lowPriceItem;
+      this.highPriceItem = highPriceItem;
+    }
+
+    _createClass(PriceLine, [{
+      key: "render",
+      value: function render() {
+        var element = document.createElement('tr');
+        element.innerHTML = "\n                                   <th scope=\"row\">".concat(this.numberItem, "</th>\n                                   <td>").concat(this.nameItem, "</td>\n                                   <td>").concat(this.unitsItem, "</td>\n                                   <td>").concat(this.volumeItem, "</td>\n                                   <td>").concat(this.lowPriceItem, "</td>\n                                   <td>").concat(this.highPriceItem, "</td>\n                     ");
+        bodyItemPrice.prepend(element);
+        var sumLowPrice = +sumLowPriceItemPrice.innerText + +this.lowPriceItem;
+        var sumHightPrice = +sumHightPriceItemPrice.innerText + +this.highPriceItem;
+        sumLowPriceItemPrice.textContent = sumLowPrice;
+        sumHightPriceItemPrice.textContent = sumHightPrice;
+      }
+    }]);
+
+    return PriceLine;
+  }();
+
+  function getPrice() {
+    // собираем прайс
+    offerNumber = String(schemeNumber) + Number(points.selectedIndex + 1);
+    console.log('offerNumber ', offerNumber);
+
+    switch (offerNumber) {
+      //схема 1
+      case '14':
+        console.log('price 14');
+        new PriceLine('4', 'Фильтр угольный ВВ СР20”', 'шт.', '1', '5500', '5500').render();
+        new PriceLine('3', 'Соль таблетированная (25кг)', 'меш.', '1', '600', '600').render();
+        new PriceLine('2', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('1', 'Фильтр умягчения 1354 в сборе  Солевой бак на 70 л', 'шт.', '1', '47250', '66750').render();
+        break;
+
+      case '13':
+        console.log('price 13');
+        new PriceLine('4', 'Фильтр угольный ВВ СР20”', 'шт.', '1', '5500', '5500').render();
+        new PriceLine('3', 'Соль таблетированная (25кг)', 'меш.', '1', '600', '600').render();
+        new PriceLine('2', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('1', 'Фильтр умягчения 1252 в сборе  Солевой бак на 70 л', 'шт.', '1', '41250', '60750').render();
+        break;
+
+      case '12':
+        console.log('price 12');
+        new PriceLine('4', 'Фильтр угольный ВВ СР10”', 'шт.', '1', '3500', '3500').render();
+        new PriceLine('3', 'Соль таблетированная (25кг)', 'меш.', '1', '600', '600').render();
+        new PriceLine('2', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('1', 'Фильтр умягчения 1054 в сборе  Солевой бак на 70 л', 'шт.', '1', '34875', '54000').render();
+        break;
+
+      case '11':
+        console.log('price 11');
+        new PriceLine('4', 'Фильтр угольный ВВ СР10”', 'шт.', '1', '3500', '3500').render();
+        new PriceLine('3', 'Соль таблетированная (25кг)', 'меш.', '1', '600', '600').render();
+        new PriceLine('2', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('1', 'Фильтр умягчения 1035 в сборе  Солевой бак на 70 л', 'шт.', '1', '28125', '49500').render();
+        break;
+      //схема 2  
+
+      case '24':
+        console.log('price 24');
+        new PriceLine('4', 'Фильтр угольный ВВ СР20”', 'шт.', '1', '5500', '5500').render();
+        new PriceLine('3', 'Соль таблетированная (25кг)', 'меш.', '1', '600', '600').render();
+        new PriceLine('2', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('1', 'Фильтр для удаления железа и жесткости 1354 в сборе  Солевой бак на 70 л', 'шт.', '1', '55500', '75000').render();
+        break;
+
+      case '23':
+        console.log('price 23');
+        new PriceLine('4', 'Фильтр угольный ВВ СР20”', 'шт.', '1', '5500', '5500').render();
+        new PriceLine('3', 'Соль таблетированная (25кг)', 'меш.', '1', '600', '600').render();
+        new PriceLine('2', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('1', 'Фильтр для удаления железа и жесткости 1252 в сборе  Солевой бак на 70 л', 'шт.', '1', '48750', '67500').render();
+        break;
+
+      case '22':
+        console.log('price 22');
+        new PriceLine('4', 'Фильтр угольный ВВ СР10”', 'шт.', '1', '3500', '3500').render();
+        new PriceLine('3', 'Соль таблетированная (25кг)', 'меш.', '1', '600', '600').render();
+        new PriceLine('2', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('1', 'Фильтр для удаления железа и жесткости 1054 в сборе  Солевой бак на 70 л', 'шт.', '1', '40500', '59250').render();
+        break;
+
+      case '21':
+        console.log('price 21');
+        new PriceLine('4', 'Фильтр угольный ВВ СР10”', 'шт.', '1', '3500', '3500').render();
+        new PriceLine('3', 'Соль таблетированная (25кг)', 'меш.', '1', '600', '600').render();
+        new PriceLine('2', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('1', 'Фильтр для удаления железа и жесткости 1035 в сборе  Солевой бак на 70 л', 'шт.', '1', '31500', '52875').render();
+        break;
+      //схема 3  
+
+      case '34':
+        console.log('price 34');
+        new PriceLine('3', 'Фильтр угольный ВВ СР20”', 'шт.', '1', '5500', '5500').render();
+        new PriceLine('2', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('1', 'Фильтр для удаления железа и марганца 1665 в сборе', 'шт.', '1', '36375', '54750').render();
+        break;
+
+      case '33':
+        console.log('price 33');
+        new PriceLine('3', 'Фильтр угольный ВВ СР20”', 'шт.', '1', '5500', '5500').render();
+        new PriceLine('2', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('1', 'Фильтр для удаления железа и марганца 1465 в сборе', 'шт.', '1', '31500', '50250').render();
+        break;
+
+      case '32':
+        console.log('price 32');
+        new PriceLine('3', 'Фильтр угольный ВВ СР10”', 'шт.', '1', '3500', '3500').render();
+        new PriceLine('2', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('1', 'Фильтр для удаления железа и марганца 1354 в сборе', 'шт.', '1', '24750', '41250').render();
+        break;
+
+      case '31':
+        console.log('price 31');
+        new PriceLine('3', 'Фильтр угольный ВВ СР10”', 'шт.', '1', '3500', '3500').render();
+        new PriceLine('2', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('1', 'Фильтр для удаления железа и марганца 1252 в сборе', 'шт.', '1', '31500', '52875').render();
+        break;
+      //схема 4                       
+
+      case '44':
+        console.log('price 44');
+        new PriceLine('5', 'Фильтр угольный ВВ СР20”', 'шт.', '1', '5500', '5500').render();
+        new PriceLine('4', 'Соль таблетированная (25кг)', 'меш.', '1', '600', '600').render();
+        new PriceLine('3', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('2', 'Фильтр умягчения 1354 в сборе  Солевой бак на 70 л', 'шт.', '1', '47250', '66750').render();
+        new PriceLine('1', 'Фильтр для удаления железа и марганца 1665 в сборе', 'шт.', '1', '36375', '54750').render();
+        break;
+
+      case '43':
+        console.log('price 43');
+        new PriceLine('5', 'Фильтр угольный ВВ СР20”', 'шт.', '1', '5500', '5500').render();
+        new PriceLine('4', 'Соль таблетированная (25кг)', 'меш.', '1', '600', '600').render();
+        new PriceLine('3', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('2', 'Фильтр умягчения 1252 в сборе  Солевой бак на 70 л', 'шт.', '1', '41250', '60750').render();
+        new PriceLine('1', 'Фильтр для удаления железа и марганца 1465 в сборе', 'шт.', '1', '31500', '50250').render();
+        break;
+
+      case '42':
+        console.log('price 42');
+        new PriceLine('5', 'Фильтр угольный ВВ СР10”', 'шт.', '1', '3500', '3500').render();
+        new PriceLine('4', 'Соль таблетированная (25кг)', 'меш.', '1', '600', '600').render();
+        new PriceLine('3', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('2', 'Фильтр умягчения 1054 в сборе  Солевой бак на 70 л', 'шт.', '1', '34875', '54000').render();
+        new PriceLine('1', 'Фильтр для удаления железа и марганца 1354 в сборе', 'шт.', '1', '24750', '41250').render();
+        break;
+
+      case '41':
+        console.log('price 41');
+        new PriceLine('5', 'Фильтр угольный ВВ СР10”', 'шт.', '1', '3500', '3500').render();
+        new PriceLine('4', 'Соль таблетированная (25кг)', 'меш.', '1', '600', '600').render();
+        new PriceLine('3', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('2', 'Фильтр умягчения 1035 в сборе  Солевой бак на 70 л', 'шт.', '1', '28125', '49500').render();
+        new PriceLine('1', 'Фильтр для удаления железа и марганца 1252 в сборе', 'шт.', '1', '22125', '39000').render();
+        break;
+      //схема 5  
+
+      case '54':
+        console.log('price 54');
+        new PriceLine('4', 'Фильтр угольный ВВ СР20”', 'шт.', '1', '5500', '5500').render();
+        new PriceLine('3', 'Соль таблетированная (25кг)', 'меш.', '1', '600', '600').render();
+        new PriceLine('2', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('1', 'Фильтр для удаления железа, жесткости и ПМО 1354 в сборе  Солевой бак на 70 л', 'шт.', '1', '57000', '76500').render();
+        break;
+
+      case '53':
+        console.log('price 53');
+        new PriceLine('4', 'Фильтр угольный ВВ СР20”', 'шт.', '1', '5500', '5500').render();
+        new PriceLine('3', 'Соль таблетированная (25кг)', 'меш.', '1', '600', '600').render();
+        new PriceLine('2', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('1', 'Фильтр для удаления железа, жесткости и ПМО 1252 в сборе  Солевой бак на 70 л', 'шт.', '1', '49500', '69000').render();
+        break;
+
+      case '52':
+        console.log('price 52');
+        new PriceLine('4', 'Фильтр угольный ВВ СР10”', 'шт.', '1', '3500', '3500').render();
+        new PriceLine('3', 'Соль таблетированная (25кг)', 'меш.', '1', '600', '600').render();
+        new PriceLine('2', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('1', 'Фильтр для удаления железа, жесткости и ПМО 1054 в сборе  Солевой бак на 70 л', 'шт.', '1', '41250', '60750').render();
+        break;
+
+      case '51':
+        console.log('price 51');
+        new PriceLine('4', 'Фильтр угольный ВВ СР10”', 'шт.', '1', '3500', '3500').render();
+        new PriceLine('3', 'Соль таблетированная (25кг)', 'меш.', '1', '600', '600').render();
+        new PriceLine('2', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('1', 'Фильтр для удаления железа, жесткости и ПМО 1035 в сборе  Солевой бак на 70 л', 'шт.', '1', '32250', '53625').render();
+        break;
+      //схема 6  
+
+      case '64':
+        console.log('price 64');
+        new PriceLine('4', 'Фильтр угольный ВВ СР20”', 'шт.', '1', '5500', '5500').render();
+        new PriceLine('3', 'Соль таблетированная (25кг)', 'меш.', '1', '600', '600').render();
+        new PriceLine('2', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('1', 'Фильтр для удаления железа, жесткости и нитратов 1354 в сборе  Солевой бак на 70 л', 'шт.', '1', '61500', '81000').render();
+        break;
+
+      case '63':
+        console.log('price 63');
+        new PriceLine('4', 'Фильтр угольный ВВ СР20”', 'шт.', '1', '5500', '5500').render();
+        new PriceLine('3', 'Соль таблетированная (25кг)', 'меш.', '1', '600', '600').render();
+        new PriceLine('2', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('1', 'Фильтр для удаления железа, жесткости и нитратов 1252 в сборе  Солевой бак на 70 л', 'шт.', '1', '54750', '74250').render();
+        break;
+
+      case '62':
+        console.log('price 62');
+        new PriceLine('4', 'Фильтр угольный ВВ СР10”', 'шт.', '1', '3500', '3500').render();
+        new PriceLine('3', 'Соль таблетированная (25кг)', 'меш.', '1', '600', '600').render();
+        new PriceLine('2', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('1', 'Фильтр для удаления железа, жесткости и нитратов 1054 в сборе  Солевой бак на 70 л', 'шт.', '1', '46500', '66000').render();
+        break;
+
+      case '61':
+        console.log('price 61');
+        new PriceLine('4', 'Фильтр угольный ВВ СР10”', 'шт.', '1', '3500', '3500').render();
+        new PriceLine('3', 'Соль таблетированная (25кг)', 'меш.', '1', '600', '600').render();
+        new PriceLine('2', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('1', 'Фильтр для удаления железа, жесткости и нитратов 1035 в сборе  Солевой бак на 70 л', 'шт.', '1', '35250', '57000').render();
+        break;
+      //схема 7  
+
+      case '74':
+        console.log('price 64');
+        new PriceLine('4', 'Фильтр угольный ВВ СР20”', 'шт.', '1', '5500', '5500').render();
+        new PriceLine('3', 'Соль таблетированная (25кг)', 'меш.', '1', '600', '600').render();
+        new PriceLine('2', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('1', 'Фильтр для удаления железа, жесткости, аммония и ПМО 1354 в сборе  Солевой бак на 70 л', 'шт.', '1', '64500', '84000').render();
+        break;
+
+      case '73':
+        console.log('price 73');
+        new PriceLine('4', 'Фильтр угольный ВВ СР20”', 'шт.', '1', '5500', '5500').render();
+        new PriceLine('3', 'Соль таблетированная (25кг)', 'меш.', '1', '600', '600').render();
+        new PriceLine('2', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('1', 'Фильтр для удаления железа, жесткости, аммония и ПМО 1252 в сборе  Солевой бак на 70 л', 'шт.', '1', '56250', '75750').render();
+        break;
+
+      case '72':
+        console.log('price 72');
+        new PriceLine('4', 'Фильтр угольный ВВ СР10”', 'шт.', '1', '3500', '3500').render();
+        new PriceLine('3', 'Соль таблетированная (25кг)', 'меш.', '1', '600', '600').render();
+        new PriceLine('2', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('1', 'Фильтр для удаления железа, жесткости, аммония и ПМО 1054 в сборе  Солевой бак на 70 л', 'шт.', '1', '46500', '65625').render();
+        break;
+
+      case '71':
+        console.log('price 71');
+        new PriceLine('4', 'Фильтр угольный ВВ СР10”', 'шт.', '1', '3500', '3500').render();
+        new PriceLine('3', 'Соль таблетированная (25кг)', 'меш.', '1', '600', '600').render();
+        new PriceLine('2', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('1', 'Фильтр для удаления железа, жесткости, аммония и ПМО 1035 в сборе  Солевой бак на 70 л', 'шт.', '1', '35250', '56625').render();
+        break;
+      //схема 8                       
+
+      case '84':
+        console.log('price 84');
+        new PriceLine('4', 'Фильтр угольный ВВ СР20”', 'шт.', '1', '5500', '5500').render();
+        new PriceLine('3', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('2', 'Фильтр для удаления железа и марганца 1665 в сборе', 'шт.', '1', '36375', '54750').render();
+        new PriceLine('1', 'Система напорной аэрации 1354 в сборе', 'шт.', '1', '81000', '81000').render();
+        break;
+
+      case '83':
+        console.log('price 83');
+        new PriceLine('4', 'Фильтр угольный ВВ СР20”', 'шт.', '1', '5500', '5500').render();
+        new PriceLine('3', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('2', 'Фильтр для удаления железа и марганца 1465 в сборе', 'шт.', '1', '31500', '50250').render();
+        new PriceLine('1', 'Система напорной аэрации 1252 в сборе', 'шт.', '1', '69000', '69000').render();
+        break;
+
+      case '82':
+        console.log('price 82');
+        new PriceLine('4', 'Фильтр угольный ВВ СР10”', 'шт.', '1', '3500', '3500').render();
+        new PriceLine('3', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('2', 'Фильтр для удаления железа и марганца 1354 в сборе', 'шт.', '1', '24750', '41250').render();
+        new PriceLine('1', 'Система напорной аэрации 1054 в сборе', 'шт.', '1', '66750', '66750').render();
+        break;
+
+      case '81':
+        console.log('price 81');
+        new PriceLine('4', 'Фильтр угольный ВВ СР10”', 'шт.', '1', '3500', '3500').render();
+        new PriceLine('3', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('2', 'Фильтр для удаления железа и марганца 1252 в сборе', 'шт.', '1', '22125', '39000').render();
+        new PriceLine('1', 'Система напорной аэрации 0844 в сборе', 'шт.', '1', '64500', '64500').render();
+        break;
+      //схема 9 
+
+      case '94':
+        console.log('price 94');
+        new PriceLine('2', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('1', 'Фильтр для удаления цветности, мутности  и хлора в сборе 1665 в сборе', 'шт.', '1', '49500', '67500').render();
+        break;
+
+      case '93':
+        console.log('price 93');
+        new PriceLine('2', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('1', 'Фильтр для удаления цветности, мутности  и хлора в сборе 1465 в сборе', 'шт.', '1', '42000', '60750').render();
+        break;
+
+      case '92':
+        console.log('price 92');
+        new PriceLine('2', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('1', 'Фильтр для удаления цветности, мутности  и хлора в сборе 1354 в сборе', 'шт.', '1', '32625', '49500').render();
+        break;
+
+      case '91':
+        console.log('price 91');
+        new PriceLine('2', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('1', 'Фильтр для удаления цветности, мутности  и хлора в сборе 1252 в сборе', 'шт.', '1', '28500', '45750').render();
+        break;
+      //схема 10                       
+
+      case '104':
+        console.log('price 104');
+        new PriceLine('6', 'Фильтр угольный ВВ СР20”', 'шт.', '1', '5500', '5500').render();
+        new PriceLine('5', 'Соль таблетированная (25кг)', 'меш.', '1', '600', '600').render();
+        new PriceLine('4', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('3', 'Фильтр умягчения 1354 в сборе  Солевой бак на 70 л', 'шт.', '1', '47250', '66750').render();
+        new PriceLine('2', 'Фильтр для удаления железа, марганца, цветности и мутности 1665 в сборе', 'шт.', '1', '36375', '54750').render();
+        new PriceLine('1', 'Система напорной аэрации 1354 в сборе', 'шт.', '1', '81000', '81000').render();
+        break;
+
+      case '103':
+        console.log('price 103');
+        new PriceLine('6', 'Фильтр угольный ВВ СР20”', 'шт.', '1', '5500', '5500').render();
+        new PriceLine('5', 'Соль таблетированная (25кг)', 'меш.', '1', '600', '600').render();
+        new PriceLine('4', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('3', 'Фильтр умягчения 1252 в сборе  Солевой бак на 70 л', 'шт.', '1', '41250', '60750').render();
+        new PriceLine('2', 'Фильтр для удаления железа, марганца, цветности и мутности 1465 в сборе', 'шт.', '1', '31500', '50250').render();
+        new PriceLine('1', 'Система напорной аэрации 1252 в сборе', 'шт.', '1', '69000', '69000').render();
+        break;
+
+      case '102':
+        console.log('price 102');
+        new PriceLine('6', 'Фильтр угольный ВВ СР10”', 'шт.', '1', '3500', '3500').render();
+        new PriceLine('5', 'Соль таблетированная (25кг)', 'меш.', '1', '600', '600').render();
+        new PriceLine('4', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('3', 'Фильтр умягчения 1054 в сборе  Солевой бак на 70 л', 'шт.', '1', '34875', '54000').render();
+        new PriceLine('2', 'Фильтр для удаления железа, марганца, цветности и мутности 1354 в сборе', 'шт.', '1', '24750', '41250').render();
+        new PriceLine('1', 'Система напорной аэрации 1054 в сборе', 'шт.', '1', '66750', '66750').render();
+        break;
+
+      case '101':
+        console.log('price 101');
+        new PriceLine('6', 'Фильтр угольный ВВ СР10”', 'шт.', '1', '3500', '3500').render();
+        new PriceLine('5', 'Соль таблетированная (25кг)', 'меш.', '1', '600', '600').render();
+        new PriceLine('4', 'Фильтр CEPEX LF 1" (130мкм) (Испания)', 'шт.', '1', '1400', '1400').render();
+        new PriceLine('3', 'Фильтр умягчения 1035 в сборе  Солевой бак на 70 л', 'шт.', '1', '28125', '49500').render();
+        new PriceLine('2', 'Фильтр для удаления железа, марганца, цветности и мутности 1252 в сборе', 'шт.', '1', '22125', '39000').render();
+        new PriceLine('1', 'Система напорной аэрации 0844 в сборе', 'шт.', '1', '64500', '64500').render();
+        break;
+
+      default:
+        console.log('switch не сработал');
+        break;
+    }
+  }
+
+  function setData() {
+    // собираем офер
+    getPrice();
+    console.log('offerDescription', offerDescription); // получили первую часть офера
+
+    console.log('offerPrice', offerPrice); // получили вторую часть офера
+
+    console.log('offerBlock', offerBlock); // получили блок офера
+  } //send offer
+
 
   sendScheme.addEventListener('click', function () {
+    // отправляем офер на почту
     calcFormPart2.classList.add('hide');
     setData('.calc__form');
-    calcForm.innerHTML = "\n            <h3 class=\"text-success\">".concat(userName.value, " \u0440\u0430\u0441\u0447\u0435\u0442 \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u0435\u043D \u043D\u0430 \u0443\u043A\u0430\u0437\u0430\u043D\u043D\u0443\u044E \u0432\u0430\u043C\u0438 \u043F\u043E\u0447\u0442\u0443 ").concat(userEmail.value, "*</h3>\n            <p class=\"text-danger\">*\u0438\u043D\u043E\u0433\u0434\u0430 \u043F\u0438\u0441\u044C\u043C\u0430 \u043F\u043E\u043F\u0430\u0434\u0430\u044E\u0442 \u0432 \u0441\u043F\u0430\u043C</p>        \n        ");
+    calcForm.innerHTML = "\n            <h3 class=\"text-success\">".concat(userName.value, " \u0440\u0430\u0441\u0447\u0435\u0442 \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u0435\u043D \u043D\u0430 \u0443\u043A\u0430\u0437\u0430\u043D\u043D\u0443\u044E \u0432\u0430\u043C\u0438 \u043F\u043E\u0447\u0442\u0443 ").concat(userEmail.value, "*</h3>\n            <p class=\"text-danger\">*\u0438\u043D\u043E\u0433\u0434\u0430 \u043F\u0438\u0441\u044C\u043C\u0430 \u043F\u043E\u043F\u0430\u0434\u0430\u044E\u0442 \u0432 \u0441\u043F\u0430\u043C</p>        \n        "); //   let formData = new FormData(formSelector); 
   }); //func getData
   //------------------------calc-end---------------------//
 }

@@ -35,7 +35,7 @@ div.btn:hover {
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
 header .bg-image .text-title {
