@@ -16,13 +16,13 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 
     try {
-        date('.footer__date');        
+        date('.footer__date');
     } catch (error) {
         console.log(error);
     }
 
     try {
-        dateOffer('[data-toggle=dataOffer]');        
+        dateOffer('[data-toggle=dataOffer]');
     } catch (error) {
         console.log(error);
     }
@@ -32,6 +32,8 @@ window.addEventListener("DOMContentLoaded", () => {
     } catch (error) {
         console.log(error);
     }
+
+
 
 
 

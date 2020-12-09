@@ -9,6 +9,7 @@ let path = {
         css: projectFolder + "/css/",
         js: projectFolder + "/js/",
         jsmap: projectFolder + "/js/",        
+        html2pdf: projectFolder + "/js/",        
         doc: projectFolder + "/doc/",
         img: projectFolder + "/media/",
         video: projectFolder + "/media/",
@@ -20,6 +21,7 @@ let path = {
         js: sourceFolder + "/js/bundle.js",
         doc: sourceFolder + "/doc/*.pdf",
         jsmap: sourceFolder + "/js/bundle.js.map",
+        html2pdf: sourceFolder + "/js/html2pdf.js",
         img: sourceFolder + "/media/**/*.{jpg,png,svg,gif,ico,webp}",
         video: sourceFolder + "/media/**/*.mp4",
         fonts: sourceFolder + "/fonts/**/*.ttf",
@@ -29,6 +31,7 @@ let path = {
         css: sourceFolder + "/scss/**/*.scss",
         js: sourceFolder + "/js/**/*.js",
         jsmap: sourceFolder + "/js/bundle.js.map",
+        html2pdf: sourceFolder + "/js/html2pdf.js",
         doc: sourceFolder + "/doc/*.pdf",
         img: sourceFolder + "/media/**/*.{jpg,png,svg,gif,ico,webp}",
         video: sourceFolder + "/media/**/*.mp4",
@@ -123,6 +126,11 @@ function js(params) {
 function jsmap(params) {
     return src(path.src.jsmap)
         .pipe(dest(path.build.jsmap));
+}
+
+function html2pdf(params) {
+    return src(path.src.html2pdf)
+        .pipe(dest(path.build.html2pdf));
 }
 
 function doc(params) {
@@ -229,7 +237,7 @@ function clean(params) {
     return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, jsmap, doc, css, html, images, video, fonts), fontsStyle);
+let build = gulp.series(clean, gulp.parallel(js, jsmap, html2pdf, doc, css, html, images, video, fonts), fontsStyle);
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.fontsStyle = fontsStyle;
@@ -238,6 +246,7 @@ exports.images = images;
 exports.video = video;
 exports.js = js;
 exports.jsmap = jsmap;
+exports.html2pdf = html2pdf;
 exports.doc = doc;
 exports.css = css;
 exports.html = html;

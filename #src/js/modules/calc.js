@@ -13,6 +13,7 @@ function calc() {
               modalBody = document.querySelector('#basicExampleModal'),
               modalBtnClose = document.querySelectorAll('[data-form=btnClose]'),
               userName = document.querySelector('[data-form=userName]'),
+              userNameOffer = document.querySelector('[data-form=userNameOffer]'),
               userEmail = document.querySelector('[data-form=userEmail]'),
               schemeTitle = document.querySelector('[data-form=schemeTitle]'),
               schemeImg = document.querySelector('[data-form=schemeImg]'),
@@ -730,17 +731,12 @@ function calc() {
        }
 
        btnChangeScheme.addEventListener('click', () => {
-              // offerPrice.classList.add('hide');
+              offerPrice.classList.add('hide');
               calcFormPart2.classList.remove('hide');
               calcFormPart1.classList.add('hide');
               getData('.calc__form--part1 .calc__input');
               getData('.calc__form--part1 .calc__option');
        });
-
-       
-
-       console.log('sumLowPriceItemPrice pre', sumLowPriceItemPrice.innerText);
-       console.log('sumHightPriceItemPrice pre', sumHightPriceItemPrice.innerText);
 
        // создаем класс прайса
        class PriceLine {
@@ -775,8 +771,7 @@ function calc() {
 
        function getPrice() { // собираем прайс
               offerNumber = String(schemeNumber) + Number(points.selectedIndex + 1);
-              console.log('offerNumber ', offerNumber);
-
+              
               switch (offerNumber) {
                      //схема 1
                      case '14':
@@ -2206,19 +2201,34 @@ function calc() {
 
        function setData() { // собираем офер
               getPrice();
-              console.log('offerDescription', offerDescription); // получили первую часть офера
-              console.log('offerPrice', offerPrice); // получили вторую часть офера
+              
               console.log('offerBlock', offerBlock); // получили блок офера
        }
 
        //send offer
        sendScheme.addEventListener('click', () => { // отправляем офер на почту
+              offerPrice.classList.remove('hide');
               calcFormPart2.classList.add('hide');
               setData('.calc__form');
               calcForm.innerHTML = `
-            <h3 class="text-success">${userName.value} расчет отправлен на указанную вами почту ${userEmail.value}*</h3>
-            <p class="text-danger">*иногда письма попадают в спам</p>        
-        `;
+                     <h3 class="text-success">${userName.value} расчет отправлен в загрузку. Мы получили ваши контакты и в ближайшее время с вами свяжемся</h3>;`
+              userNameOffer.textContent = userName.value;
+              const offer = html2pdf(offerBlock);
+              offer.set(
+                     {
+                     format: 'letter', 
+                     orientation: 'portrait',
+                     unit: 'in',
+                     format: 'a4',
+                     pagebreak: {mode: 'avoid-all', after: '#page1', avoid: 'img'}, 
+                     jsPDF: {
+                            orientation: 'portrait', 
+                            unit: 'in', 
+                            format: 'a4'
+                     },
+                     margin: 15
+                     }
+              );
               //   let formData = new FormData(formSelector); 
        });
 

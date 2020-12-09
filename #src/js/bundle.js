@@ -113,6 +113,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -131,6 +133,7 @@ function calc() {
       modalBody = document.querySelector('#basicExampleModal'),
       modalBtnClose = document.querySelectorAll('[data-form=btnClose]'),
       userName = document.querySelector('[data-form=userName]'),
+      userNameOffer = document.querySelector('[data-form=userNameOffer]'),
       userEmail = document.querySelector('[data-form=userEmail]'),
       schemeTitle = document.querySelector('[data-form=schemeTitle]'),
       schemeImg = document.querySelector('[data-form=schemeImg]'),
@@ -441,14 +444,12 @@ function calc() {
   }
 
   btnChangeScheme.addEventListener('click', function () {
-    // offerPrice.classList.add('hide');
+    offerPrice.classList.add('hide');
     calcFormPart2.classList.remove('hide');
     calcFormPart1.classList.add('hide');
     getData('.calc__form--part1 .calc__input');
     getData('.calc__form--part1 .calc__option');
-  });
-  console.log('sumLowPriceItemPrice pre', sumLowPriceItemPrice.innerText);
-  console.log('sumHightPriceItemPrice pre', sumHightPriceItemPrice.innerText); // создаем класс прайса
+  }); // создаем класс прайса
 
   var PriceLine = /*#__PURE__*/function () {
     function PriceLine(numberItem, nameItem, unitsItem, volumeItem, lowPriceItem, highPriceItem) {
@@ -481,7 +482,6 @@ function calc() {
   function getPrice() {
     // собираем прайс
     offerNumber = String(schemeNumber) + Number(points.selectedIndex + 1);
-    console.log('offerNumber ', offerNumber);
 
     switch (offerNumber) {
       //схема 1
@@ -823,19 +823,33 @@ function calc() {
   function setData() {
     // собираем офер
     getPrice();
-    console.log('offerDescription', offerDescription); // получили первую часть офера
-
-    console.log('offerPrice', offerPrice); // получили вторую часть офера
-
     console.log('offerBlock', offerBlock); // получили блок офера
   } //send offer
 
 
   sendScheme.addEventListener('click', function () {
+    var _offer$set;
+
     // отправляем офер на почту
+    offerPrice.classList.remove('hide');
     calcFormPart2.classList.add('hide');
     setData('.calc__form');
-    calcForm.innerHTML = "\n            <h3 class=\"text-success\">".concat(userName.value, " \u0440\u0430\u0441\u0447\u0435\u0442 \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u0435\u043D \u043D\u0430 \u0443\u043A\u0430\u0437\u0430\u043D\u043D\u0443\u044E \u0432\u0430\u043C\u0438 \u043F\u043E\u0447\u0442\u0443 ").concat(userEmail.value, "*</h3>\n            <p class=\"text-danger\">*\u0438\u043D\u043E\u0433\u0434\u0430 \u043F\u0438\u0441\u044C\u043C\u0430 \u043F\u043E\u043F\u0430\u0434\u0430\u044E\u0442 \u0432 \u0441\u043F\u0430\u043C</p>        \n        "); //   let formData = new FormData(formSelector); 
+    calcForm.innerHTML = "\n                     <h3 class=\"text-success\">".concat(userName.value, " \u0440\u0430\u0441\u0447\u0435\u0442 \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u0435\u043D \u0432 \u0437\u0430\u0433\u0440\u0443\u0437\u043A\u0443. \u041C\u044B \u043F\u043E\u043B\u0443\u0447\u0438\u043B\u0438 \u0432\u0430\u0448\u0438 \u043A\u043E\u043D\u0442\u0430\u043A\u0442\u044B \u0438 \u0432 \u0431\u043B\u0438\u0436\u0430\u0439\u0448\u0435\u0435 \u0432\u0440\u0435\u043C\u044F \u0441 \u0432\u0430\u043C\u0438 \u0441\u0432\u044F\u0436\u0435\u043C\u0441\u044F</h3>;");
+    userNameOffer.textContent = userName.value;
+    var offer = html2pdf(offerBlock);
+    offer.set((_offer$set = {
+      format: 'letter',
+      orientation: 'portrait',
+      unit: 'in'
+    }, _defineProperty(_offer$set, "format", 'a4'), _defineProperty(_offer$set, "pagebreak", {
+      mode: 'avoid-all',
+      after: '#page1',
+      avoid: 'img'
+    }), _defineProperty(_offer$set, "jsPDF", {
+      orientation: 'portrait',
+      unit: 'in',
+      format: 'a4'
+    }), _defineProperty(_offer$set, "margin", 15), _offer$set)); //   let formData = new FormData(formSelector); 
   }); //func getData
   //------------------------calc-end---------------------//
 }
@@ -4449,9 +4463,9 @@ for (var COLLECTION_NAME in DOMIterables) {
 /***/ }),
 
 /***/ "./node_modules/webpack/buildin/global.js":
-/*!************************************************!*\
-  !*** ./node_modules/webpack/buildin/global.js ***!
-  \************************************************/
+/*!***********************************!*\
+  !*** (webpack)/buildin/global.js ***!
+  \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
