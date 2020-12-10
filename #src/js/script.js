@@ -3,11 +3,8 @@
 import scrollTo from './modules/scroll-to';
 import date from './modules/date';
 import dateOffer from './modules/dateOffer';
-import calc from './modules/calc';
-
 
 window.addEventListener("DOMContentLoaded", () => {
-
 
     try {
         scrollTo('a.scroll-to');
@@ -26,16 +23,5 @@ window.addEventListener("DOMContentLoaded", () => {
     } catch (error) {
         console.log(error);
     }
-
-    try {
-        calc();
-    } catch (error) {
-        console.log(error);
-    }
-
-
-
-
-
 
 });
