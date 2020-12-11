@@ -3,6 +3,7 @@
 import scrollTo from './modules/scroll-to';
 import date from './modules/date';
 import dateOffer from './modules/dateOffer';
+import analisesDescr from './modules/analisesDescr';
 import modalOpen from './modules/modal';
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -27,6 +28,12 @@ window.addEventListener("DOMContentLoaded", () => {
 
     try {
         modalOpen();
+    } catch (error) {
+        console.log(error);
+    }
+
+    try {
+        analisesDescr();
     } catch (error) {
         console.log(error);
     }

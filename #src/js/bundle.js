@@ -86,6 +86,64 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./#src/js/modules/analisesDescr.js":
+/*!******************************************!*\
+  !*** ./#src/js/modules/analisesDescr.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.for-each */ "./node_modules/core-js/modules/es.array.for-each.js");
+/* harmony import */ var core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+function analisesDescr() {
+  var btn = document.querySelectorAll('.modal__link'),
+      btnClose = document.querySelectorAll('[data-modal=close]'),
+      modalBody = document.querySelector('[data-modal=body]'),
+      modalContent = document.querySelector('[data-modal=content]'),
+      modalAnalysisTitle = document.querySelector('[data-modal=analysis-modal-title]'),
+      modalAnalysisText = document.querySelector('[data-modal=analysis-modal-content]');
+  btn.forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      var key = e.target.dataset.modal;
+      modalBody.style.visibility = 'visible';
+      modalContent.style.marginTop = '50px';
+
+      switch (key) {
+        case 'simple':
+          modalAnalysisTitle.textContent = 'Анализ «Сокращённый»';
+          modalAnalysisText.innerHTML = "\n                    <p><strong>\u0412\u043A\u043B\u044E\u0447\u0430\u0435\u0442 5 \u043E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u0445 \u0437\u0430\u0433\u0440\u044F\u0437\u043D\u0438\u0442\u0435\u043B\u0435\u0439, \u043A\u043E\u0442\u043E\u0440\u044B\u0435 \u0432\u0441\u0442\u0440\u0435\u0447\u0430\u044E\u0442\u0441\u044F \u0432 \u043F\u0438\u0442\u044C\u0435\u0432\u043E\u0439 \u0432\u043E\u0434\u0435:</strong></p>\n                    <ul>\n                        <li>\u0441\u0443\u0445\u043E\u0439 \u043E\u0441\u0442\u0430\u0442\u043E\u043A;</li>\n                        <li>\u0432\u043E\u0434\u043E\u0440\u043E\u0434\u043D\u044B\u0439 \u043F\u043E\u043A\u0430\u0437\u0430\u0442\u0435\u043B\u044C;</li>\n                        <li>\u043C\u0443\u0442\u043D\u043E\u0441\u0442\u044C;</li>\n                        <li>\u0436\u0451\u0441\u0442\u043A\u043E\u0441\u0442\u044C;</li>\n                        <li>\u0436\u0435\u043B\u0435\u0437\u043E</li>\n                    </ul>\n                    <p><strong>\u041E\u0431\u0440\u0430\u0442\u0438\u0442\u0435 \u0432\u043D\u0438\u043C\u0430\u043D\u0438\u0435:</strong></p>\n                    <ul>\n                        <li>\u041D\u0435 \u043F\u043E\u0434\u0445\u043E\u0434\u0438\u0442 \u0434\u043B\u044F \u0432\u043E\u0434\u044B, \u043F\u0440\u0438\u043C\u0435\u043D\u044F\u0435\u043C\u043E\u0439 \u0432 \u043F\u0438\u0442\u044C\u0435\u0432\u044B\u0445 \u0446\u0435\u043B\u044F\u0445.</li>\n                        <li>\u041D\u0435 \u043F\u043E\u0434\u0445\u043E\u0434\u0438\u0442 \u0434\u043B\u044F \u043A\u043E\u0440\u0440\u0435\u043A\u0442\u043D\u043E\u0433\u043E \u043F\u043E\u0434\u0431\u043E\u0440\u0430/\u043E\u0446\u0435\u043D\u043A\u0438 \u0440\u0430\u0431\u043E\u0442\u044B \u0444\u0438\u043B\u044C\u0442\u0440\u043E\u0432.</li>\n                    </ul>\n                    ";
+          break;
+
+        case 'hard':
+          modalAnalysisTitle.textContent = 'Анализ «Расширенный»';
+          modalAnalysisText.innerHTML = "\n                        <p><strong>\u041F\u0440\u0435\u0434\u043D\u0430\u0437\u043D\u0430\u0447\u0435\u043D \u0434\u043B\u044F \u043E\u0431\u043D\u0430\u0440\u0443\u0436\u0435\u043D\u0438\u044F \u043D\u0430\u0438\u0431\u043E\u043B\u0435\u0435 \u0447\u0430\u0441\u0442\u043E \u0432\u0441\u0442\u0440\u0435\u0447\u0430\u044E\u0449\u0438\u0445\u0441\u044F \u0432\u0440\u0435\u0434\u043D\u044B\u0445 \u0432\u0435\u0449\u0435\u0441\u0442\u0432 \u0432 \u043F\u0438\u0442\u044C\u0435\u0432\u043E\u0439 \u0432\u043E\u0434\u0435 \u0438 \u0432\u043A\u043B\u044E\u0447\u0430\u0435\u0442 19 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u043E\u0432:</strong></p>\n                        <ul>    \n                        <li>\u0417\u0430\u043F\u0430\u0445</li>\n                        <li>\u0426\u0432\u0435\u0442\u043D\u043E\u0441\u0442\u044C</li>\n                        <li>\u041C\u0443\u0442\u043D\u043E\u0441\u0442\u044C</li>\n                        <li>\u0412\u043E\u0434\u043E\u0440\u043E\u0434\u043D\u044B\u0439 \u043F\u043E\u043A\u0430\u0437\u0430\u0442\u0435\u043B\u044C</li>\n                        <li>\u041F\u0435\u0440\u043C\u0430\u043D\u0433\u0430\u043D\u0430\u0442\u043D\u0430\u044F \u043E\u043A\u0438\u0441\u043B\u044F\u0435\u043C\u043E\u0441\u0442\u044C \u041E2</li>\n                        <li>\u0421\u0443\u0445\u043E\u0439 \u043E\u0441\u0442\u0430\u0442\u043E\u043A</li>\n                        <li>\u0429\u0435\u043B\u043E\u0447\u043D\u043E\u0441\u0442\u044C (\u0421\u041E3)</li>\n                        <li>\u041E\u0431\u0449\u0430\u044F \u0449\u0435\u043B\u043E\u0447\u043D\u043E\u0441\u0442\u044C (\u041D\u0421\u041E3)</li>\n                        <li>\u0425\u043B\u043E\u0440\u0438\u0434\u044B (Cl)</li>\n                        <li>\u0421\u0443\u043B\u044C\u0444\u0430\u0442\u044B (SO4)</li>\n                        <li>\u041A\u0430\u043B\u044C\u0446\u0438\u0439 (Ca)</li>\n                        <li>\u041C\u0430\u0433\u043D\u0438\u0439 (Mg)</li>\n                        <li>K+Na \u043F\u043E \u0440\u0430\u0437\u043D\u043E\u0441\u0442\u0438</li>\n                        <li>\u041E\u0431\u0449\u0430\u044F \u0436\u0451\u0441\u0442\u043A\u043E\u0441\u0442\u044C</li>\n                        <li>\u041E\u0431\u0449\u0435\u0435 \u0436\u0435\u043B\u0435\u0437\u043E (Fe)</li>\n                        <li>\u0418\u043E\u043D\u044B \u0430\u043C\u043C\u043E\u043D\u0438\u044F (NH4)</li>\n                        <li>\u041D\u0438\u0442\u0440\u0438\u0442-\u0438\u043E\u043D\u044B (NO2)</li>\n                        <li>\u041D\u0438\u0442\u0440\u0430\u0442-\u0438\u043E\u043D\u044B (NO3)</li>\n                        <li>\u041C\u0430\u0440\u0433\u0430\u043D\u0435\u0446 (Mn)</li>\n                        </ul>\n                        <p><strong>\u041E\u0431\u0440\u0430\u0442\u0438\u0442\u0435 \u0432\u043D\u0438\u043C\u0430\u043D\u0438\u0435:</strong></p>\n                        <ul>\n                        <li>\u041F\u043E\u0437\u0432\u043E\u043B\u044F\u0435\u0442 \u043A\u043E\u0440\u0440\u0435\u043A\u0442\u043D\u043E \u043F\u043E\u0434\u043E\u0431\u0440\u0430\u0442\u044C \u0438 \u043D\u0430\u0441\u0442\u0440\u043E\u0438\u0442\u044C \u0432\u043E\u0434\u043E\u043E\u0447\u0438\u0441\u0442\u043D\u043E\u0435 \u043E\u0431\u043E\u0440\u0443\u0434\u043E\u0432\u0430\u043D\u0438\u0435.</li>\n                        </ul>\n                        \n                    ";
+          break;
+
+        default:
+          console.log('click - default');
+          break;
+      }
+    });
+  });
+  btnClose.forEach(function (btnClose) {
+    btnClose.addEventListener('click', function () {
+      modalBody.style.visibility = 'hidden';
+      modalContent.style.marginTop = '-1000px';
+    });
+  });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (analisesDescr());
+
+/***/ }),
+
 /***/ "./#src/js/modules/date.js":
 /*!*********************************!*\
   !*** ./#src/js/modules/date.js ***!
@@ -146,17 +204,16 @@ __webpack_require__.r(__webpack_exports__);
 function modalOpen() {
   var modal = document.getElementById('exampleModal');
   var modalBtnClose = document.querySelector('[data-dismiss=modal]');
-  var div = document.createElement('div');
-  console.log(modal);
-  setTimeout(function () {
-    modal.style = "padding-right: 5px; display: block;";
-    modal.classList.add('show');
-    modal.removeAttribute('aria-hidden');
-    modal.setAttribute('aria-modal', 'true');
-    modal.setAttribute('role', 'dialog');
-    div.classList.add('modal-backdrop', 'fade', 'show');
-    document.body.append(div);
-  }, 3000);
+  var div = document.createElement('div'); // setTimeout(() => {
+  //     modal.style = "padding-right: 5px; display: block;";
+  //     modal.classList.add('show');
+  //     modal.removeAttribute('aria-hidden');
+  //     modal.setAttribute('aria-modal', 'true');
+  //     modal.setAttribute('role', 'dialog');
+  //     div.classList.add('modal-backdrop', 'fade', 'show');
+  //     document.body.append(div);   
+  // }, 3000);
+
   modalBtnClose.addEventListener('click', function () {
     modal.style = null;
     modal.classList.remove('show');
@@ -267,7 +324,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_scroll_to__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/scroll-to */ "./#src/js/modules/scroll-to.js");
 /* harmony import */ var _modules_date__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/date */ "./#src/js/modules/date.js");
 /* harmony import */ var _modules_dateOffer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/dateOffer */ "./#src/js/modules/dateOffer.js");
-/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/modal */ "./#src/js/modules/modal.js");
+/* harmony import */ var _modules_analisesDescr__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/analisesDescr */ "./#src/js/modules/analisesDescr.js");
+/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/modal */ "./#src/js/modules/modal.js");
+
 
 
 
@@ -294,7 +353,13 @@ window.addEventListener("DOMContentLoaded", function () {
   }
 
   try {
-    Object(_modules_modal__WEBPACK_IMPORTED_MODULE_3__["default"])();
+    Object(_modules_modal__WEBPACK_IMPORTED_MODULE_4__["default"])();
+  } catch (error) {
+    console.log(error);
+  }
+
+  try {
+    Object(_modules_analisesDescr__WEBPACK_IMPORTED_MODULE_3__["default"])();
   } catch (error) {
     console.log(error);
   }
@@ -381,6 +446,31 @@ module.exports = function (it) {
     throw TypeError(String(it) + ' is not an object');
   } return it;
 };
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/array-for-each.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/core-js/internals/array-for-each.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var $forEach = __webpack_require__(/*! ../internals/array-iteration */ "./node_modules/core-js/internals/array-iteration.js").forEach;
+var arrayMethodIsStrict = __webpack_require__(/*! ../internals/array-method-is-strict */ "./node_modules/core-js/internals/array-method-is-strict.js");
+var arrayMethodUsesToLength = __webpack_require__(/*! ../internals/array-method-uses-to-length */ "./node_modules/core-js/internals/array-method-uses-to-length.js");
+
+var STRICT_METHOD = arrayMethodIsStrict('forEach');
+var USES_TO_LENGTH = arrayMethodUsesToLength('forEach');
+
+// `Array.prototype.forEach` method implementation
+// https://tc39.github.io/ecma262/#sec-array.prototype.foreach
+module.exports = (!STRICT_METHOD || !USES_TO_LENGTH) ? function forEach(callbackfn /* , thisArg */) {
+  return $forEach(this, callbackfn, arguments.length > 1 ? arguments[1] : undefined);
+} : [].forEach;
 
 
 /***/ }),
@@ -581,6 +671,28 @@ module.exports = function (METHOD_NAME) {
       return { foo: 1 };
     };
     return array[METHOD_NAME](Boolean).foo !== 1;
+  });
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/array-method-is-strict.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/core-js/internals/array-method-is-strict.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var fails = __webpack_require__(/*! ../internals/fails */ "./node_modules/core-js/internals/fails.js");
+
+module.exports = function (METHOD_NAME, argument) {
+  var method = [][METHOD_NAME];
+  return !!method && fails(function () {
+    // eslint-disable-next-line no-useless-call,no-throw-literal
+    method.call(null, argument || function () { throw 1; }, 1);
   });
 };
 
@@ -2635,6 +2747,27 @@ module.exports = function (name) {
 
 /***/ }),
 
+/***/ "./node_modules/core-js/modules/es.array.for-each.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/core-js/modules/es.array.for-each.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var $ = __webpack_require__(/*! ../internals/export */ "./node_modules/core-js/internals/export.js");
+var forEach = __webpack_require__(/*! ../internals/array-for-each */ "./node_modules/core-js/internals/array-for-each.js");
+
+// `Array.prototype.forEach` method
+// https://tc39.github.io/ecma262/#sec-array.prototype.foreach
+$({ target: 'Array', proto: true, forced: [].forEach != forEach }, {
+  forEach: forEach
+});
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/modules/es.array.from.js":
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/modules/es.array.from.js ***!
@@ -3313,6 +3446,32 @@ if (!$Symbol[PROTOTYPE][TO_PRIMITIVE]) {
 setToStringTag($Symbol, SYMBOL);
 
 hiddenKeys[HIDDEN] = true;
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/web.dom-collections.for-each.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/core-js/modules/web.dom-collections.for-each.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var global = __webpack_require__(/*! ../internals/global */ "./node_modules/core-js/internals/global.js");
+var DOMIterables = __webpack_require__(/*! ../internals/dom-iterables */ "./node_modules/core-js/internals/dom-iterables.js");
+var forEach = __webpack_require__(/*! ../internals/array-for-each */ "./node_modules/core-js/internals/array-for-each.js");
+var createNonEnumerableProperty = __webpack_require__(/*! ../internals/create-non-enumerable-property */ "./node_modules/core-js/internals/create-non-enumerable-property.js");
+
+for (var COLLECTION_NAME in DOMIterables) {
+  var Collection = global[COLLECTION_NAME];
+  var CollectionPrototype = Collection && Collection.prototype;
+  // some Chrome versions have non-configurable methods on DOMTokenList
+  if (CollectionPrototype && CollectionPrototype.forEach !== forEach) try {
+    createNonEnumerableProperty(CollectionPrototype, 'forEach', forEach);
+  } catch (error) {
+    CollectionPrototype.forEach = forEach;
+  }
+}
 
 
 /***/ }),

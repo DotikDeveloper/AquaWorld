@@ -1,0 +1,19 @@
+.analysis {
+    &__intro{
+        text-align: left;
+    }
+    &__list{
+        list-style-type: none;
+    }
+
+    &__list-item{
+        &::before{
+            content: url(../media/analysis/icon-check.png);
+            margin-right: 1em;
+        }
+        font-size: 1.35em;
+        color: #fff;
+        text-transform: uppercase;
+        margin-bottom: .5em;
+    }
+}

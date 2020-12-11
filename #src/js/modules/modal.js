@@ -2,17 +2,16 @@ function modalOpen() {
     const modal = document.getElementById('exampleModal');
     const modalBtnClose = document.querySelector('[data-dismiss=modal]');
     let div = document.createElement('div');
-    console.log(modal);
 
-    setTimeout(() => {
-        modal.style = "padding-right: 5px; display: block;";
-        modal.classList.add('show');
-        modal.removeAttribute('aria-hidden');
-        modal.setAttribute('aria-modal', 'true');
-        modal.setAttribute('role', 'dialog');
-        div.classList.add('modal-backdrop', 'fade', 'show');
-        document.body.append(div);   
-    }, 3000);
+    // setTimeout(() => {
+    //     modal.style = "padding-right: 5px; display: block;";
+    //     modal.classList.add('show');
+    //     modal.removeAttribute('aria-hidden');
+    //     modal.setAttribute('aria-modal', 'true');
+    //     modal.setAttribute('role', 'dialog');
+    //     div.classList.add('modal-backdrop', 'fade', 'show');
+    //     document.body.append(div);   
+    // }, 3000);
 
     modalBtnClose.addEventListener('click', () => {
             modal.style = null;
@@ -23,6 +22,8 @@ function modalOpen() {
             div.classList.add('modal-backdrop', 'fade', 'show');
             div.remove();        
         });   
+
+    
 }
 
 export default modalOpen;

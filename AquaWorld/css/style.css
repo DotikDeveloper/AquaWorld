@@ -1,12 +1,3 @@
-/* @font-face kit by Fonts2u (https://fonts2u.com) */
-
-@font-face {
-  font-family: "Jingleberry";
-  src: url("Jingleberry.eot?") format("eot"), url("Jingleberry.woff") format("woff"), url("Jingleberry.ttf") format("truetype"), url("Jingleberry.svg#Jingleberry") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
 * {
   color: #989798;
   font-family: 'Raleway', sans-serif;
@@ -47,11 +38,71 @@ div.btn:hover {
   display: none !important;
 }
 
+/* @font-face kit by Fonts2u (https://fonts2u.com) */
+
+@font-face {
+  font-family: "Jingleberry";
+  src: url("Jingleberry.eot?") format("eot"), url("Jingleberry.woff") format("woff"), url("Jingleberry.ttf") format("truetype"), url("Jingleberry.svg#Jingleberry") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .btn[data-btn=modal] {
   color: #f7f6f1;
   background-color: #39999c;
   font-family: Jingleberry;
   letter-spacing: .1em;
+}
+
+#exampleModalLabel {
+  color: #c7383b;
+  font-family: Jingleberry;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+a.modal__link {
+  text-decoration: none;
+  cursor: pointer;
+  color: #2f406a;
+  padding: 0.25em;
+}
+
+a.modal__link:hover {
+  color: #3fab2d;
+  background-color: rgba(0, 117, 184, 0.03);
+}
+
+div[data-modal=body] {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: rgba(121, 111, 111, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+div[data-modal=content] {
+  margin-top: -650px;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1500;
 }
 
 header .bg-image .text-title {
@@ -291,39 +342,24 @@ section.contacts button.btn:hover {
   opacity: .75;
 }
 
-.calc {
-  font-size: 1rem;
-}
-
-.calc__label {
+.analysis__intro {
   text-align: left;
-  color: #858485;
 }
 
-.calc__select,
-.calc__input {
-  height: 35px;
-  padding: 5px 7px;
-  border: 2px solid #a9bfcf;
-  text-align: right;
-  color: #566e8f;
+.analysis__list {
+  list-style-type: none;
 }
 
-.calc__select:hover,
-.calc__input:hover {
-  -webkit-box-shadow: 0 0 7px 3px #bccdda8a;
-          box-shadow: 0 0 7px 3px #bccdda8a;
-  background-color: #c0d9e71a;
+.analysis__list-item {
+  font-size: 1.35em;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: .5em;
 }
 
-.calc__select:focus,
-.calc__input:focus {
-  border: 2px solid #5378928a;
-}
-
-.calc__select:active,
-.calc__input:active {
-  border: 2px solid #5378928a;
+.analysis__list-item::before {
+  content: url(../media/analysis/icon-check.png);
+  margin-right: 1em;
 }
 
 @font-face {
