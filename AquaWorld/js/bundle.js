@@ -204,16 +204,16 @@ __webpack_require__.r(__webpack_exports__);
 function modalOpen() {
   var modal = document.getElementById('exampleModal');
   var modalBtnClose = document.querySelector('[data-dismiss=modal]');
-  var div = document.createElement('div'); // setTimeout(() => {
-  //     modal.style = "padding-right: 5px; display: block;";
-  //     modal.classList.add('show');
-  //     modal.removeAttribute('aria-hidden');
-  //     modal.setAttribute('aria-modal', 'true');
-  //     modal.setAttribute('role', 'dialog');
-  //     div.classList.add('modal-backdrop', 'fade', 'show');
-  //     document.body.append(div);   
-  // }, 3000);
-
+  var div = document.createElement('div');
+  setTimeout(function () {
+    modal.style = "padding-right: 5px; display: block;";
+    modal.classList.add('show');
+    modal.removeAttribute('aria-hidden');
+    modal.setAttribute('aria-modal', 'true');
+    modal.setAttribute('role', 'dialog');
+    div.classList.add('modal-backdrop', 'fade', 'show');
+    document.body.append(div);
+  }, 3000);
   modalBtnClose.addEventListener('click', function () {
     modal.style = null;
     modal.classList.remove('show');
