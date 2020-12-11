@@ -47,7 +47,7 @@ div.btn:hover {
   display: none !important;
 }
 
-.btn[data-dismiss=modal] {
+.btn[data-btn=modal] {
   color: #f7f6f1;
   background-color: #39999c;
   font-family: Jingleberry;
