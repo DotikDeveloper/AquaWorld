@@ -20,7 +20,7 @@ let path = {
         js: sourceFolder + "/js/bundle.js",
         doc: sourceFolder + "/doc/*.pdf",
         jsmap: sourceFolder + "/js/bundle.js.map",
-        img: sourceFolder + "/media/**/*.{jpg,png,svg,gif,ico,webp}",
+        img: sourceFolder + "/media/**/*.{jpg,jpeg,png,svg,gif,ico,webp}",
         video: sourceFolder + "/media/**/*.mp4",
         fonts: sourceFolder + "/fonts/**/*.ttf",
     },

@@ -3,6 +3,7 @@
 import scrollTo from './modules/scroll-to';
 import date from './modules/date';
 import dateOffer from './modules/dateOffer';
+import modalOpen from './modules/modal';
 
 window.addEventListener("DOMContentLoaded", () => {
 
@@ -20,6 +21,12 @@ window.addEventListener("DOMContentLoaded", () => {
 
     try {
         dateOffer('[data-toggle=dataOffer]');
+    } catch (error) {
+        console.log(error);
+    }
+
+    try {
+        modalOpen();
     } catch (error) {
         console.log(error);
     }
