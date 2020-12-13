@@ -18,3 +18,9 @@
         margin-bottom: .5em;
     }
 }
+
+img[data-analysis=img] {
+    max-width: 650px; 
+    float: right;
+    margin:   0 0 25px 25px;
+}
